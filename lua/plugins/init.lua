@@ -16,13 +16,7 @@ return require('packer').startup(function(use)
     end
   }
   
-  -- Theme like monokai of sublime text
-  use {
-    'ofirgall/ofirkai.nvim',
-    config = function() 
-      require'ofirkai'.setup{}
-    end
-  }
+  use 'Mofiqul/vscode.nvim'
   
   -- Telescope
   use {
@@ -37,5 +31,4 @@ return require('packer').startup(function(use)
       require("telescope").load_extension "file_browser"
     end
   }
-
 end)

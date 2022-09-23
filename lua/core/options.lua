@@ -31,8 +31,4 @@ opt.undofile = true
 -- disable nvim intro
 opt.shortmess:append "sI"
 
-vim.cmd[[
-  colorscheme ofirkai
-]]
-
 g.mapleader = " "
