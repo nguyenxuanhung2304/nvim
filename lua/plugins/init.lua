@@ -23,5 +23,19 @@ return require('packer').startup(function(use)
       require'ofirkai'.setup{}
     end
   }
+  
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    config = function()
+      require "plugins.configs.telescope"
+    end
+  }
+  use { 
+    "nvim-telescope/telescope-file-browser.nvim",
+    config = function() 
+      require("telescope").load_extension "file_browser"
+    end
+  }
 
 end)
