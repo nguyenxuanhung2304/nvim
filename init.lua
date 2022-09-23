@@ -4,3 +4,4 @@ end, 0)
 
 
 require "plugins"
+require "core.mappings"
