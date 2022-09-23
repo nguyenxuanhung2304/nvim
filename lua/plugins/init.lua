@@ -7,4 +7,12 @@ return require('packer').startup(function(use)
   use "nvim-lua/plenary.nvim"
 
   use "lewis6991/impatient.nvim"
+
+  use {
+  'phaazon/hop.nvim',
+  branch = 'v2', -- optional but strongly recommended
+  config = function()
+    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  end
+}
 end)
