@@ -6,6 +6,10 @@ return require('packer').startup(function(use)
 
   use "nvim-lua/plenary.nvim"
 
+  use 'kyazdani42/nvim-web-devicons' -- optional, for file icons
+
+
+  -- Improve startup time for neovim
   use "lewis6991/impatient.nvim"
 
   use {
@@ -25,10 +29,12 @@ return require('packer').startup(function(use)
       require "plugins.configs.telescope"
     end
   }
-  use { 
-    "nvim-telescope/telescope-file-browser.nvim",
-    config = function() 
-      require("telescope").load_extension "file_browser"
+
+  -- Explorer file and folder
+  use {
+    'kyazdani42/nvim-tree.lua',
+    config = function()
+      require "plugins.configs.nvim-tree"
     end
   }
 end)

@@ -1,7 +1,7 @@
 local present, telescope = pcall(require, "telescope")
 
 if not present then
-  print "Telescope is not installed yet !!!"
+  print "Telescope is not installed yet!"
   return
 end
 
@@ -52,22 +52,6 @@ local options = {
     buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
     mappings = {
       n = { ["q"] = require("telescope.actions").close },
-    },
-  },
-
-  extension = {
-    file_browser = {
-      theme = "ivy",
-      -- disables netrw and use telescope-file-browser in its place
-      hijack_netrw = true,
-      mappings = {
-        ["i"] = {
-          -- your custom insert mode mappings
-        },
-        ["n"] = {
-          -- your custom normal mode mappings
-        },
-      },
     },
   },
 
