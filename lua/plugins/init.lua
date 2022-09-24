@@ -2,7 +2,12 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use { 
+    'wbthomason/packer.nvim',
+    config = function()
+      require "plugins.configs.packer"
+    end
+  }
 
   use "nvim-lua/plenary.nvim"
 
