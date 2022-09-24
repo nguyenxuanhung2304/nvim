@@ -59,4 +59,12 @@ return require('packer').startup(function(use)
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
+
+  -- Syntax highlight
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require "plugins.configs.treesitter"
+    end
+  } 
 end)
