@@ -98,5 +98,29 @@ return require('packer').startup(function(use)
       require "plugins.configs.neoscroll"
     end
   }
-  
+
+  use { "ggandor/lightspeed.nvim" }
+
+  -- Mason: like lsp-installer
+  use {
+    "williamboman/mason.nvim",
+    config = function()
+      require "plugins.configs.mason"
+    end
+  }
+
+  use {
+    "williamboman/mason-lspconfig.nvim"
+  }
+
+  -- Lsp config
+  use { 
+    'neovim/nvim-lspconfig' 
+  }
+
+  use "jose-elias-alvarez/null-ls.nvim"
+
+  -- Cmp
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/nvim-cmp"
 end)
