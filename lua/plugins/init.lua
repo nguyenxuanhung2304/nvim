@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
     end
   }
   
+  -- Dark theme like vscode dark
   use 'Mofiqul/vscode.nvim'
   
   -- Telescope
@@ -43,6 +44,14 @@ return require('packer').startup(function(use)
     'goolord/alpha-nvim',
     config = function ()
       require "plugins.configs.alpha"
+    end
+  }
+
+  -- Indent line
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require "plugins.configs.indent-blankline"
     end
   }
 end)
