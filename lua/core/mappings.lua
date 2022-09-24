@@ -8,10 +8,6 @@ keymap("n", "<leader>f", "<cmd>Telescope grep_string<cr>")
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
 
--- Trouble
-keymap("n", "<leader>tw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
-keymap("n", "<leader>td", "<cmd>TroubleToggle document_diagnostics<cr>")
-
 -- Navigator between window
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

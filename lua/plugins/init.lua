@@ -119,4 +119,15 @@ return require('packer').startup(function(use)
   use {
     "folke/trouble.nvim"
   }
+
+  -- Which key
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require "plugins.configs.whichkey"
+    end
+  }
+
+  -- Delete buffer
+  use "famiu/bufdelete.nvim"
 end)
