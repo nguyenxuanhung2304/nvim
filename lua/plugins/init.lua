@@ -19,10 +19,7 @@ return require('packer').startup(function(use)
       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
-  
-  -- Dark theme like vscode dark
-  use 'Mofiqul/vscode.nvim'
-  
+   
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -30,6 +27,14 @@ return require('packer').startup(function(use)
       require "plugins.configs.telescope"
     end
   }
+
+  use {
+    "nvim-telescope/telescope-project.nvim",
+    config = function()
+      require "plugins.configs.telescope.project"
+    end
+  }
+
 
   -- Explorer file and folder
   use {
@@ -67,4 +72,16 @@ return require('packer').startup(function(use)
       require "plugins.configs.treesitter"
     end
   } 
+
+  -- Buffer
+  use {
+    'akinsho/bufferline.nvim', 
+    tag = "v2.*",
+    config = function()
+      require "plugins.configs.bufferline"
+    end
+  }
+
+  -- Theme tokyonight
+  use 'folke/tokyonight.nvim'
 end)
