@@ -12,14 +12,6 @@ return require('packer').startup(function(use)
   -- Improve startup time for neovim
   use "lewis6991/impatient.nvim"
 
-  use {
-    'phaazon/hop.nvim',
-    branch = 'v2', -- optional but strongly recommended
-    config = function()
-      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-    end
-  }
-   
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -70,11 +62,11 @@ return require('packer').startup(function(use)
     config = function()
       require "plugins.configs.treesitter"
     end
-  } 
+  }
 
   -- Buffer
   use {
-    'akinsho/bufferline.nvim', 
+    'akinsho/bufferline.nvim',
     tag = "v2.*",
     config = function()
       require "plugins.configs.bufferline"
@@ -114,8 +106,8 @@ return require('packer').startup(function(use)
   }
 
   -- Lsp config
-  use { 
-    'neovim/nvim-lspconfig' 
+  use {
+    'neovim/nvim-lspconfig'
   }
 
   use "jose-elias-alvarez/null-ls.nvim"
@@ -123,4 +115,8 @@ return require('packer').startup(function(use)
   -- Cmp
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/nvim-cmp"
+
+  use {
+    "folke/trouble.nvim"
+  }
 end)
