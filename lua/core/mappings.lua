@@ -5,7 +5,7 @@ keymap("n", "<C-p>", "<cmd>Telescope find_files<cr>")
 keymap("n", "<C-f>", "<cmd>Telescope grep_string<cr>")
 
 -- NvimTree
-keymap("n", "<C-e>", "<cmd>NvimTreeToggle<cr>")
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
 
 -- Navigator between window
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -28,3 +28,4 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+

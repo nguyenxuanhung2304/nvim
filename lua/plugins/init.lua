@@ -84,10 +84,18 @@ return require('packer').startup(function(use)
   -- Theme tokyonight
   use 'folke/tokyonight.nvim'
 
+  -- Status button line
   use {
     'nvim-lualine/lualine.nvim',
     config = function()
       require "plugins.configs.lualine"
+    end
+  }
+
+  use {
+    "karb94/neoscroll.nvim",
+    config = function()
+      require "plugins.configs.neoscroll"
     end
   }
   
