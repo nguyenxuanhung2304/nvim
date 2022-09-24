@@ -35,7 +35,6 @@ return require('packer').startup(function(use)
     end
   }
 
-
   -- Explorer file and folder
   use {
     'kyazdani42/nvim-tree.lua',
@@ -84,4 +83,12 @@ return require('packer').startup(function(use)
 
   -- Theme tokyonight
   use 'folke/tokyonight.nvim'
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require "plugins.configs.lualine"
+    end
+  }
+  
 end)
