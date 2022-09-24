@@ -2,12 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use { 
-    'wbthomason/packer.nvim',
-    config = function()
-      require "plugins.configs.packer"
-    end
-  }
+  use { 'wbthomason/packer.nvim' }
 
   use "nvim-lua/plenary.nvim"
 
@@ -58,5 +53,10 @@ return require('packer').startup(function(use)
     config = function()
       require "plugins.configs.indent-blankline"
     end
+  }
+
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
   }
 end)
