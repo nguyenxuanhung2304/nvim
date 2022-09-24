@@ -37,4 +37,12 @@ return require('packer').startup(function(use)
       require "plugins.configs.nvim-tree"
     end
   }
+
+  -- Dashboard
+  use {
+    'goolord/alpha-nvim',
+    config = function ()
+      require "plugins.configs.alpha"
+    end
+  }
 end)
