@@ -4,7 +4,9 @@ local g = vim.g
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
-opt.pumheight = 7
+opt.pumheight = 7 -- Maximum number of items in popup menu
+
+opt.mouse = "a"
 
 opt.title = true
 opt.clipboard = "unnamedplus"
