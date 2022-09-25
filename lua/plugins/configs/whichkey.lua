@@ -127,7 +127,15 @@ local mappings = {
     name = "+Trouble",
     w = {"<cmd>TroubleToggle workspace_diagnostics<cr>", "Toggle workspace diagnostic"},
     d = {"<cmd>TroubleToggle document_diagnostics<cr>", "Toggle document diagnostic"},
+  },
+
+  g = {
+    name = "+G",
+    b = {"<cmdTelescope git_branches<cr>", "Show branches"},
+    s = {"<cmd>Telescope git_status<cr>", "Show status"},
+    l = {"<cmd>Telescope git_commits<cr>", "Show commits"}
   }
+
 }
 
 which_key.setup(setup)

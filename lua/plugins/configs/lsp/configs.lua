@@ -6,7 +6,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "sumneko_lua", "solargraph", "rubocop" }
+local servers = { "sumneko_lua", "solargraph" }
 
 mason_config.setup({
 	ensure_installed = servers,

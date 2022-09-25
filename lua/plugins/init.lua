@@ -73,8 +73,9 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- Theme tokyonight
+  -- Themes
   use 'folke/tokyonight.nvim'
+  use 'tomasiser/vim-code-dark'
 
   -- Status button line
   use {
@@ -115,6 +116,15 @@ return require('packer').startup(function(use)
   -- Cmp
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer" -- buffer words
+  use "hrsh7th/cmp-path" -- filesystem paths
+  use "hrsh7th/cmp-nvim-lua"
+  use "saadparwaiz1/cmp_luasnip"
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
+
 
   use {
     "folke/trouble.nvim"
@@ -130,4 +140,12 @@ return require('packer').startup(function(use)
 
   -- Delete buffer
   use "famiu/bufdelete.nvim"
+
+  -- Git
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require "plugins.configs.gitsigns"
+    end
+  }
 end)

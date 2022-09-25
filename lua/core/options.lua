@@ -4,6 +4,8 @@ local g = vim.g
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
+opt.pumheight = 7
+
 opt.title = true
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
