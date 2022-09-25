@@ -87,6 +87,7 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["T"] = { "<cmd>TroubleToggle", "Toggle Trouble"},
+  ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab"},
 
   p = {
     name = "Packer",
@@ -130,7 +131,7 @@ local mappings = {
     d = {"<cmd>TroubleToggle document_diagnostics<cr>", "Toggle document diagnostic"},
   },
 
-  g = {
+  G = {
     name = "+G",
     b = {"<cmdTelescope git_branches<cr>", "Show branches"},
     s = {"<cmd>Telescope git_status<cr>", "Show status"},

@@ -159,4 +159,5 @@ return require('packer').startup(function(use)
 
   -- Rails
   use "tpope/vim-endwise"
+  use "tpope/vim-rails"
 end)
