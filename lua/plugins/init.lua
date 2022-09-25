@@ -150,4 +150,7 @@ return require('packer').startup(function(use)
   }
 
   use "tpope/vim-fugitive"
+
+  -- Rails
+  use "tpope/vim-endwise"
 end)
