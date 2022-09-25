@@ -86,6 +86,7 @@ local mappings = {
   },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["T"] = { "<cmd>TroubleToggle", "Toggle Trouble"},
 
   p = {
     name = "Packer",

@@ -43,7 +43,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- Indent line
+  -- Utils
   use {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
@@ -55,6 +55,25 @@ return require('packer').startup(function(use)
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
+
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require "plugins.configs.comment"
+    end
+  }
+
+  use {
+    "karb94/neoscroll.nvim",
+    config = function()
+      require "plugins.configs.neoscroll"
+    end
+  }
+
+  use { "ggandor/lightspeed.nvim" } -- Motion
+
+  use "famiu/bufdelete.nvim" -- Delete buffer like ctrl+w in vscode
+
 
   -- Syntax highlight
   use {
@@ -84,15 +103,6 @@ return require('packer').startup(function(use)
       require "plugins.configs.lualine"
     end
   }
-
-  use {
-    "karb94/neoscroll.nvim",
-    config = function()
-      require "plugins.configs.neoscroll"
-    end
-  }
-
-  use { "ggandor/lightspeed.nvim" }
 
   -- Mason: like lsp-installer
   use {
@@ -125,7 +135,6 @@ return require('packer').startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
 
-
   use {
     "folke/trouble.nvim"
   }
@@ -137,9 +146,6 @@ return require('packer').startup(function(use)
       require "plugins.configs.whichkey"
     end
   }
-
-  -- Delete buffer
-  use "famiu/bufdelete.nvim"
 
   -- Git
   use {

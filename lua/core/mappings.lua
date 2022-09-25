@@ -2,11 +2,11 @@ local keymap = require("core.utils").keymap
 local opts = { silent = true, noremap = true}
 
 -- Telescope
-keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>")
-keymap("n", "<leader>f", "<cmd>Telescope grep_string<cr>")
+keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope grep_string<cr>", opts)
 
 -- NvimTree
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Navigator between window
 keymap("n", "<C-h>", "<C-w>h", opts)
