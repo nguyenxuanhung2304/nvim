@@ -74,6 +74,8 @@ return require('packer').startup(function(use)
 
   use "famiu/bufdelete.nvim" -- Delete buffer like ctrl+w in vscode
 
+  use "tpope/vim-surround"
+
 
   -- Syntax highlight
   use {
