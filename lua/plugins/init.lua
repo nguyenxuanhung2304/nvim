@@ -162,4 +162,12 @@ return require('packer').startup(function(use)
   -- Rails
   use "tpope/vim-endwise"
   use "tpope/vim-rails"
+
+  -- Notify
+  use {
+    "rcarriga/nvim-notify",
+    config = function()
+      require "plugins.configs.notify"
+    end
+  }
 end)
