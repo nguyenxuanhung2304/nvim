@@ -148,4 +148,6 @@ return require('packer').startup(function(use)
       require "plugins.configs.gitsigns"
     end
   }
+
+  use "tpope/vim-fugitive"
 end)
