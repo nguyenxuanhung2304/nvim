@@ -170,4 +170,8 @@ return require('packer').startup(function(use)
       require "plugins.configs.notify"
     end
   }
+
+  use {
+    "sindrets/diffview.nvim"
+  }
 end)
