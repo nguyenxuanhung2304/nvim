@@ -143,8 +143,6 @@ local mappings = {
     o = { "<cmd>DiffviewOpen<cr>", "Open diffview" },
     c = { "<cmd>DiffviewClose<cr>", "Close diffview" },
   }
-
-
 }
 
 which_key.setup(setup)
