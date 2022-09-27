@@ -174,4 +174,10 @@ return require('packer').startup(function(use)
   use {
     "sindrets/diffview.nvim"
   }
+
+  -- Tmuxx
+  use({
+    "aserowy/tmux.nvim",
+    config = function() require("plugins.configs.tmux") end
+  })
 end)
