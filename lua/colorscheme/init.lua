@@ -1,4 +1,4 @@
-require "colorscheme.tokyonight"
+require "colorscheme.themes.github"
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme github_dark]]
 
