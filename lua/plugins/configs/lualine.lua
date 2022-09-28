@@ -11,17 +11,20 @@ local diagnostics = {
 	colored = false,
 	update_in_insert = false,
 	always_visible = true,
+  color = { fg = '#ffffff', bg = '#24292E'}
 }
 
 local branch = {
 	"branch",
 	icons_enabled = true,
 	icon = "",
+  color = { fg = '#ffffff', bg = '#24292E'}
 }
 
 local location = {
 	"location",
 	padding = 0,
+  color = { fg = '#ffffff', bg = '#24292E'}
 }
 
 lualine.setup({
@@ -34,17 +37,38 @@ lualine.setup({
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { branch, diagnostics },
-		lualine_b = {},
-    lualine_c = {},
+		lualine_a = {
+      branch,
+      diagnostics
+    },
+		lualine_b = {
+      {
+        '',
+        color = { fg = '#ffffff', bg = '#24292E' }
+      }
+    },
+    lualine_c = {
+      {
+        '',
+        color = { fg = '#ffffff', bg = '#24292E' }
+      }
+    },
 		lualine_x = {
       {
         'filename',
         path = 1,
+        color = { fg = '#ffffff', bg = '#24292E' }
       }
     },
-		lualine_y = { location },
-		lualine_z = {''},
+		lualine_y = {
+      location,
+    },
+		lualine_z = {
+      {
+        '',
+        color = { fg = '#ffffff', bg = '#24292E' }
+      }
+    },
 	},
 	inactive_sections = {
 		lualine_a = {},
