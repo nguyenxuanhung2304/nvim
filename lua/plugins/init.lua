@@ -99,6 +99,14 @@ return require('packer').startup(function(use)
   use 'tomasiser/vim-code-dark'
   use 'projekt0n/github-nvim-theme'
 
+  use({
+    'mvllow/modes.nvim',
+    tag = 'v0.2.0',
+    config = function()
+      require('plugins.configs.modes')
+    end
+  })
+
   -- Status button line
   use {
     'nvim-lualine/lualine.nvim',
