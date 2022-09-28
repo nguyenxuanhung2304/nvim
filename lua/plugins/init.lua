@@ -188,7 +188,10 @@ return require('packer').startup(function(use)
   }
 
   use {
-    "sindrets/diffview.nvim"
+    "sindrets/diffview.nvim",
+    config = function ()
+      require "plugins.configs.diffview"
+    end
   }
 
   -- Tmuxx
