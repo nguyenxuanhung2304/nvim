@@ -180,4 +180,6 @@ return require('packer').startup(function(use)
     "aserowy/tmux.nvim",
     config = function() require("plugins.configs.tmux") end
   })
+
+  use "camgraff/telescope-tmux.nvim"
 end)
