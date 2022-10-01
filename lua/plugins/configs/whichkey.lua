@@ -130,7 +130,7 @@ local mappings = {
 
   G = {
     name = "+G",
-    b = {"<cmdTelescope git_branches<cr>", "Show branches"},
+    b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
     s = {"<cmd>Telescope git_status<cr>", "Show status"},
     l = {"<cmd>Telescope git_commits<cr>", "Show commits"}
   },
