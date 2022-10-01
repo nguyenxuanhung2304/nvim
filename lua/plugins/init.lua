@@ -164,8 +164,14 @@ return require('packer').startup(function(use)
       require "plugins.configs.gitsigns"
     end
   }
-
   use "tpope/vim-fugitive"
+  use {
+    "f-person/git-blame.nvim",
+    config = function ()
+      require "plugins.configs.git-blame"
+    end
+  }
+
 
   -- Rails
   use "tpope/vim-endwise"
@@ -186,5 +192,6 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Markdown preview
   use "iamcco/markdown-preview.nvim"
 end)

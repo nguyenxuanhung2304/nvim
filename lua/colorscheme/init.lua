@@ -18,4 +18,7 @@ vim.cmd [[
   " hi DiffviewStatusRenamed
   " hi DiffviewStatusTypeChange
   " hi DiffviewStatusUnmerged
+
+  hi Cursor guifg=NONE guibg=NONE
+  hi CursorLine guifg=NONE guibg=NONE
 ]]

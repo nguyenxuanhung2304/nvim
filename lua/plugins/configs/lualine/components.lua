@@ -4,6 +4,8 @@ local lualine_color = {
  fg = '#ffffff', bg = '#24292E'
 }
 
+local git_blame = require('gitblame')
+
 M.diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
@@ -45,6 +47,12 @@ M.filename = {
 
 M.progress = {
   "progress",
+  color = lualine_color
+}
+
+M.gitBlame = {
+  git_blame.get_current_blame_text,
+  cond = git_blame.is_blame_text_available,
   color = lualine_color
 }
 
