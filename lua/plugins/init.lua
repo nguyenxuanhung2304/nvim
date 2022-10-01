@@ -186,11 +186,5 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- Tmuxx
-  use({
-    "aserowy/tmux.nvim",
-    config = function() require("plugins.configs.tmux") end
-  })
-
-  use "camgraff/telescope-tmux.nvim"
+  use "iamcco/markdown-preview.nvim"
 end)

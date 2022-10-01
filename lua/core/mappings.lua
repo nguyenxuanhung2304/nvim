@@ -1,6 +1,9 @@
 local keymap = require("core.utils").keymap
 local opts = { silent = true, noremap = true}
 
+keymap('n', "<C-s>", "<cmd>w<cr>", opts)
+keymap('i', "<C-s>", "<cmd>w<cr>", opts)
+
 -- Telescope
 -- keymap('n', '<Leader>p', '<cmd>Telescope find_files<CR>')
 keymap('n', '<leader>p', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", opts)
