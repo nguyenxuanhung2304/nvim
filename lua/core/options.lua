@@ -25,6 +25,8 @@ opt.numberwidth = 2
 opt.ruler = false
 opt.relativenumber = true
 
+opt.fillchars = opt.fillchars + 'diff:╱'
+
 opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.splitright = true
