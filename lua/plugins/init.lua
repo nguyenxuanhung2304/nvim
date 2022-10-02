@@ -171,6 +171,13 @@ return require('packer').startup(function(use)
       require "plugins.configs.git-blame"
     end
   }
+  use {
+    "akinsho/git-conflict.nvim",
+    tag = "*",
+    config = function ()
+      require "plugins.configs.git-conflict"
+    end
+  }
 
 
   -- Rails

@@ -92,10 +92,10 @@ local mappings = {
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
-    c = { "<cmd>PackerClean<cr>", "Clean" },
+    C = { "<cmd>PackerClean<cr>", "Clean" },
     i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
+    S = { "<cmd>PackerSync<cr>", "Sync" },
+    s = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
@@ -140,6 +140,17 @@ local mappings = {
     name = "+Diffview",
     o = { "<cmd>DiffviewOpen<cr>", "Open diffview" },
     c = { "<cmd>DiffviewClose<cr>", "Close diffview" },
+  },
+
+  C = {
+    name = "+Git Conflict",
+    c = {"<cmd>GitConflictChooseOurs<cr>", "Select the current changes"},
+    i = {"<cmd>GitConflictChooseTheirs<cr>", "Select the incoming changes"},
+    b = {"<cmd>GitConflictChooseBoth<cr>", "Select both changes"},
+    N = {"<cmd>GitConflictChooseNone<cr>", "Select none of the changes"},
+    n = {"<cmd>GitConflictNextConflict<cr>", "Move to the next conflict"},
+    p = {"<cmd>GitConflictPrevConflict<cr>", "Move to the previous conflict"},
+    l = {"<cmd>GitConflictListQf<cr>", "Get all conflict to quickfix"}
   }
 }
 
