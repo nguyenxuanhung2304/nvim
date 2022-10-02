@@ -15,10 +15,6 @@ vim.cmd [[
   hi link DiffviewStatusChanged DiffChangedNoBg
   hi link DiffviewStatusModified DiffChangedNoBg
 
-  " hi DiffviewStatusRenamed
-  " hi DiffviewStatusTypeChange
-  " hi DiffviewStatusUnmerged
-
   hi Cursor guifg=NONE guibg=NONE
   hi CursorLine guifg=NONE guibg=NONE
 ]]

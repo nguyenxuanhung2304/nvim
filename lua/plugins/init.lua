@@ -76,14 +76,6 @@ return require('packer').startup(function(use)
 
   use "tpope/vim-surround"
 
-  use {
-    "gelguy/wilder.nvim",
-    config = function ()
-      require "plugins.configs.wilder"
-    end
-  } -- A more adventurous wildmenu
-
-
   -- Syntax highlight
   use {
     'nvim-treesitter/nvim-treesitter',
