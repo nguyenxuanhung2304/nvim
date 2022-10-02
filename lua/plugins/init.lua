@@ -175,6 +175,12 @@ return require('packer').startup(function(use)
   -- Rails
   use "tpope/vim-endwise"
   use "tpope/vim-rails"
+  use {
+    "vim-test/vim-test",
+    config = function ()
+      require "plugins.configs.vim-test"
+    end
+  }
 
   -- Notify
   use {

@@ -86,7 +86,7 @@ local mappings = {
   },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["T"] = { "<cmd>TroubleToggle", "Toggle Trouble"},
+  ["T"] = { "<cmd>TroubleToggle<cr>", "Toggle Trouble"},
   ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab"},
 
   p = {
@@ -124,9 +124,12 @@ local mappings = {
   },
 
   t = {
-    name = "+Trouble",
-    w = {"<cmd>TroubleToggle workspace_diagnostics<cr>", "Toggle workspace diagnostic"},
-    d = {"<cmd>TroubleToggle document_diagnostics<cr>", "Toggle document diagnostic"},
+    name = "+Test",
+    c = {"<cmd>TestNearest<cr>", "Run test bellow cursor"},
+    f = {"<cmd>TestFile<cr>", "Run current test file"},
+    s = {"<cmd>TestSuite<cr>", "Run all test files"},
+    l = {"<cmd>TestLast<cr>", "Run last test file"},
+    v = {"<cmd>TestVisit<cr>", "Open last test file"}
   },
 
   G = {
