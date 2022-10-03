@@ -63,18 +63,24 @@ return require('packer').startup(function(use)
     end
   }
 
-  use {
-    "karb94/neoscroll.nvim",
-    config = function()
-      require "plugins.configs.neoscroll"
-    end
-  }
+  -- use {
+  --   "karb94/neoscroll.nvim",
+  --   config = function()
+  --     require "plugins.configs.neoscroll"
+  --   end
+  -- }
 
   use { "ggandor/lightspeed.nvim" } -- Motion
 
   use "famiu/bufdelete.nvim" -- Delete buffer like ctrl+w in vscode
 
   use "tpope/vim-surround"
+
+  use {
+    'mg979/vim-visual-multi',
+    branch = 'master'
+  }
+
 
   -- Syntax highlight
   use {
