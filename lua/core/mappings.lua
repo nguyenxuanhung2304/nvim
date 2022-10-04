@@ -5,9 +5,8 @@ keymap('n', "<C-s>", "<cmd>w<cr>", opts)
 keymap('i', "<C-s>", "<cmd>w<cr>", opts)
 
 -- Telescope
--- keymap('n', '<Leader>p', '<cmd>Telescope find_files<CR>')
 keymap('n', '<leader>p', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", opts)
-keymap("n", "<leader>f", "<cmd>Telescope grep_string<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)

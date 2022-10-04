@@ -4,10 +4,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use { 'wbthomason/packer.nvim' }
 
+  -- Dependences
   use "nvim-lua/plenary.nvim"
-
   use 'kyazdani42/nvim-web-devicons' -- optional, for file icons
-
 
   -- Improve startup time for neovim
   use "lewis6991/impatient.nvim"
@@ -25,6 +24,11 @@ return require('packer').startup(function(use)
     config = function()
       require "plugins.configs.telescope.project"
     end
+  }
+
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   }
 
   -- Explorer file and folder
@@ -80,7 +84,6 @@ return require('packer').startup(function(use)
     'mg979/vim-visual-multi',
     branch = 'master'
   }
-
 
   -- Syntax highlight
   use {
@@ -176,7 +179,6 @@ return require('packer').startup(function(use)
       require "plugins.configs.git-conflict"
     end
   }
-
 
   -- Rails
   use "tpope/vim-endwise"
