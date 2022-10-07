@@ -48,6 +48,11 @@ require('telescope').setup {
       initial_mode = "normal",
     }
   },
+  defaults = {
+    file_ignore_patterns = {
+     "node_modules", "build", "dist", "yarn.lock", "git"
+   },
+  },
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching

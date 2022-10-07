@@ -1,4 +1,5 @@
-local keymap = require("core.utils").keymap
+local utils = require("user.core.utils")
+local keymap = utils.keymap
 local opts = { silent = true, noremap = true}
 
 keymap('n', "<C-s>", "<cmd>w<cr>", opts)
@@ -6,7 +7,7 @@ keymap('i', "<C-s>", "<cmd>w<cr>", opts)
 
 -- Telescope
 keymap('n', '<leader>p', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", opts)
-keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)

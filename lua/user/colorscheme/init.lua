@@ -1,4 +1,4 @@
-require "colorscheme.themes.github"
+require "user.colorscheme.themes.github"
 
 vim.cmd[[colorscheme github_dark]]
 

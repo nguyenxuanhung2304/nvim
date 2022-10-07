@@ -1,7 +1,7 @@
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then return end
 
-local components = require "plugins.configs.lualine.components"
+local components = require "user.plugins.configs.lualine.components"
 
 lualine.setup({
 	options = {

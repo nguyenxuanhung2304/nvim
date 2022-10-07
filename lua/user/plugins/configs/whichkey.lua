@@ -86,8 +86,9 @@ local mappings = {
   },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["T"] = { "<cmd>TroubleToggle<cr>", "Toggle Trouble"},
+  ["t"] = { "<cmd>TroubleToggle<cr>", "Toggle Trouble"},
   ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab"},
+  ["l"] = { string.format("<cmd>luafile %s<cr>", vim.env.MYVIMRC), "Reload neovim config"},
 
   p = {
     name = "Packer",
@@ -100,7 +101,7 @@ local mappings = {
   },
 
 
-  l = {
+  L = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     i = { "<cmd>LspInfo<cr>", "Info" },
@@ -114,7 +115,7 @@ local mappings = {
       "Workspace Symbols",
     },
   },
-  s = {
+  S = {
     name = "+Search",
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
@@ -123,7 +124,7 @@ local mappings = {
     w = { "<cmd>Telescope tmux windows<cr>", "Find tmux windows"}
   },
 
-  t = {
+  T = {
     name = "+Test",
     c = {"<cmd>TestNearest<cr>", "Run test bellow cursor"},
     f = {"<cmd>TestFile<cr>", "Run current test file"},
@@ -139,7 +140,7 @@ local mappings = {
     l = {"<cmd>Telescope git_commits<cr>", "Show commits"}
   },
 
-  d = {
+  D = {
     name = "+Diffview",
     o = { "<cmd>DiffviewOpen<cr>", "Open diffview" },
     c = { "<cmd>DiffviewClose<cr>", "Close diffview" },

@@ -15,14 +15,14 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     config = function()
-      require "plugins.configs.telescope"
+      require "user.plugins.configs.telescope"
     end
   }
 
   use {
     "nvim-telescope/telescope-project.nvim",
     config = function()
-      require "plugins.configs.telescope.project"
+      require "user.plugins.configs.telescope.project"
     end
   }
 
@@ -35,7 +35,7 @@ return require('packer').startup(function(use)
   use {
     'kyazdani42/nvim-tree.lua',
     config = function()
-      require "plugins.configs.nvim-tree"
+      require "user.plugins.configs.nvim-tree"
     end
   }
 
@@ -43,7 +43,7 @@ return require('packer').startup(function(use)
   use {
     'goolord/alpha-nvim',
     config = function ()
-      require "plugins.configs.alpha"
+      require "user.plugins.configs.alpha"
     end
   }
 
@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
   use {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require "plugins.configs.indent-blankline"
+      require "user.plugins.configs.indent-blankline"
     end
   }
 
@@ -63,14 +63,14 @@ return require('packer').startup(function(use)
   use {
     'numToStr/Comment.nvim',
     config = function()
-        require "plugins.configs.comment"
+        require "user.plugins.configs.comment"
     end
   }
 
   -- use {
   --   "karb94/neoscroll.nvim",
   --   config = function()
-  --     require "plugins.configs.neoscroll"
+  --     require "user.plugins.configs.neoscroll"
   --   end
   -- }
 
@@ -89,7 +89,7 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      require "plugins.configs.treesitter"
+      require "user.plugins.configs.treesitter"
     end
   }
 
@@ -98,7 +98,7 @@ return require('packer').startup(function(use)
     'akinsho/bufferline.nvim',
     tag = "v2.*",
     config = function()
-      require "plugins.configs.bufferline"
+      require "user.plugins.configs.bufferline"
     end
   }
 
@@ -111,7 +111,7 @@ return require('packer').startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     config = function()
-      require "plugins.configs.lualine"
+      require "user.plugins.configs.lualine"
     end
   }
 
@@ -119,7 +119,7 @@ return require('packer').startup(function(use)
   use {
     "williamboman/mason.nvim",
     config = function()
-      require "plugins.configs.mason"
+      require "user.plugins.configs.mason"
     end
   }
 
@@ -154,7 +154,7 @@ return require('packer').startup(function(use)
   use {
     "folke/which-key.nvim",
     config = function()
-      require "plugins.configs.whichkey"
+      require "user.plugins.configs.whichkey"
     end
   }
 
@@ -162,21 +162,21 @@ return require('packer').startup(function(use)
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
-      require "plugins.configs.gitsigns"
+      require "user.plugins.configs.gitsigns"
     end
   }
   use "tpope/vim-fugitive"
   use {
     "f-person/git-blame.nvim",
     config = function ()
-      require "plugins.configs.git-blame"
+      require "user.plugins.configs.git-blame"
     end
   }
   use {
     "akinsho/git-conflict.nvim",
     tag = "*",
     config = function ()
-      require "plugins.configs.git-conflict"
+      require "user.plugins.configs.git-conflict"
     end
   }
 
@@ -186,7 +186,7 @@ return require('packer').startup(function(use)
   use {
     "vim-test/vim-test",
     config = function ()
-      require "plugins.configs.vim-test"
+      require "user.plugins.configs.vim-test"
     end
   }
 
@@ -194,14 +194,14 @@ return require('packer').startup(function(use)
   use {
     "rcarriga/nvim-notify",
     config = function()
-      require "plugins.configs.notify"
+      require "user.plugins.configs.notify"
     end
   }
 
   use {
     "sindrets/diffview.nvim",
     config = function ()
-      require "plugins.configs.diffview"
+      require "user.plugins.configs.diffview"
     end
   }
 
