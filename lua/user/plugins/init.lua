@@ -207,4 +207,12 @@ return require('packer').startup(function(use)
 
   -- Markdown preview
   use "iamcco/markdown-preview.nvim"
+
+  -- Terminal
+  use {
+    "akinsho/toggleterm.nvim",
+    tag = '*', config = function()
+      require("toggleterm").setup()
+    end
+  }
 end)
