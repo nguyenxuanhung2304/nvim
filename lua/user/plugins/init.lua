@@ -106,6 +106,7 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'tomasiser/vim-code-dark'
   use 'projekt0n/github-nvim-theme'
+  use 'sainnhe/gruvbox-material'
 
   -- Status button line
   use {

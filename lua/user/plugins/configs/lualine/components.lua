@@ -1,8 +1,14 @@
 local M = {}
 
-local lualine_color = {
- fg = '#ffffff', bg = '#24292E'
+local lualine_color = {}
+local github_theme_color = {
+  fg = '#ffffff',
+  bg = '#24292E'
 }
+
+if (vim.g.colors_name == 'github_theme') then
+  lualine_color = github_theme_color
+end
 
 local git_blame = require('gitblame')
 
@@ -14,7 +20,7 @@ M.diagnostics = {
 	colored = false,
 	update_in_insert = false,
 	always_visible = true,
-  color = { fg = '#ffffff', bg = '#24292E'}
+  color = lualine_color
 }
 
 M.branch = {

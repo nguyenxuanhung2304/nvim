@@ -1,6 +1,9 @@
-require "user.colorscheme.themes.github"
-
-vim.cmd[[colorscheme github_dark]]
+vim.cmd[[
+  set background=dark
+  let g:gruvbox_material_background = 'medium'
+  let g:gruvbox_material_better_performance = 1
+  colorscheme gruvbox-material
+]]
 
 vim.cmd [[
   hi DiffAddNoBg guibg=NONE ctermbg=4 guifg=#56d364
@@ -10,11 +13,10 @@ vim.cmd [[
   hi DiffviewStatusTypeChangeNoBg guibg=NONE
   hi DiffviewStatusUnmergedNoBg guibg=NONE
 
-  hi link DiffviewStatusAdded DiffAddNoBg 
+  hi link DiffviewStatusAdded DiffAddNoBg
   hi link DiffviewStatusDeleted DiffviewStatusDeletedNoBg
   hi link DiffviewStatusChanged DiffChangedNoBg
   hi link DiffviewStatusModified DiffChangedNoBg
 
-  hi Cursor guifg=NONE guibg=NONE
-  hi CursorLine guifg=NONE guibg=NONE
+  hi Cursor guibg=#fbf1c7
 ]]
