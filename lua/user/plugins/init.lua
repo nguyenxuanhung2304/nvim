@@ -103,10 +103,25 @@ return require('packer').startup(function(use)
   }
 
   -- Themes
-  use 'folke/tokyonight.nvim'
-  use 'tomasiser/vim-code-dark'
-  use 'projekt0n/github-nvim-theme'
+  use {
+    'folke/tokyonight.nvim',
+    config = function ()
+      require 'user.plugins.configs.themes.tokyonight'
+    end
+  }
+  use {
+    'projekt0n/github-nvim-theme',
+    config = function ()
+      require 'user.plugins.configs.themes.github'
+    end
+  }
   use 'sainnhe/gruvbox-material'
+  use {
+    'sam4llis/nvim-tundra',
+    config = function ()
+      require 'user.plugins.configs.themes.tundra'
+    end
+  }
 
   -- Status button line
   use {

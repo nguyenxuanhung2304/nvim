@@ -7,3 +7,4 @@ require("github-theme").setup({
   function_style = "italic",
   variable_style = "italic"
 })
+
