@@ -90,7 +90,7 @@ local mappings = {
   ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab"},
   ["l"] = { string.format("<cmd>luafile %s<cr>", vim.env.MYVIMRC), "Reload neovim config"},
 
-  p = {
+  P = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
     C = { "<cmd>PackerClean<cr>", "Clean" },

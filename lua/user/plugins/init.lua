@@ -67,14 +67,13 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- use {
-  --   "karb94/neoscroll.nvim",
-  --   config = function()
-  --     require "user.plugins.configs.neoscroll"
-  --   end
-  -- }
-
-  use { "ggandor/lightspeed.nvim" } -- Motion
+  use {
+  'phaazon/hop.nvim',
+  branch = 'v2', -- optional but strongly recommended
+  config = function()
+    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  end
+}
 
   use "famiu/bufdelete.nvim" -- Delete buffer like ctrl+w in vscode
 
@@ -103,19 +102,6 @@ return require('packer').startup(function(use)
   }
 
   -- Themes
-  use {
-    'folke/tokyonight.nvim',
-    config = function ()
-      require 'user.plugins.configs.themes.tokyonight'
-    end
-  }
-  use {
-    'projekt0n/github-nvim-theme',
-    config = function ()
-      require 'user.plugins.configs.themes.github'
-    end
-  }
-  use 'sainnhe/gruvbox-material'
   use {
     'sam4llis/nvim-tundra',
     config = function ()
