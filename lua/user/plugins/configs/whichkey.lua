@@ -100,28 +100,11 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
-
-  L = {
-    name = "LSP",
-    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-    q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
-    },
-  },
   S = {
     name = "+Search",
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    s = { "<cmd>Telescope tmux sessions<cr>", "Find tmux sessions"},
-    w = { "<cmd>Telescope tmux windows<cr>", "Find tmux windows"}
   },
 
   T = {
@@ -134,15 +117,17 @@ local mappings = {
   },
 
   G = {
-    name = "+G",
+    name = "+Git",
     b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
-    s = {"<cmd>Telescope git_status<cr>", "Show status"},
-    l = {"<cmd>Telescope git_commits<cr>", "Show commits"}
+    s = {"<cmd>Telescope git_status<cr>", "Show files changed"},
+    l = {"<cmd>Telescope git_commits<cr>", "Show commits"},
+    t = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
   },
 
   D = {
     name = "+Diffview",
     o = { "<cmd>DiffviewOpen<cr>", "Open diffview" },
+    h = { "<cmd>DiffviewFileHistory<cr>", "Open commits history"},
     c = { "<cmd>DiffviewClose<cr>", "Close diffview" },
   },
 
