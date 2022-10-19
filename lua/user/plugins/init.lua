@@ -108,6 +108,13 @@ return require('packer').startup(function(use)
       require 'user.plugins.configs.themes.tundra'
     end
   }
+  use {
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+      require("catppuccin").setup()
+    end
+  }
 
   -- Status button line
   use {

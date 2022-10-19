@@ -1,7 +1,5 @@
-vim.opt.background = 'dark'
-vim.cmd[[
-  colorscheme tundra
-]]
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+vim.api.nvim_command "colorscheme catppuccin"
 
 vim.cmd [[
   hi DiffAddNoBg guibg=NONE ctermbg=4 guifg=#56d364

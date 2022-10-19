@@ -10,7 +10,6 @@ opt.mouse = "a"
 
 opt.title = true
 opt.clipboard = "unnamedplus"
-opt.cursorline = true
 
 -- Indent
 opt.expandtab = true

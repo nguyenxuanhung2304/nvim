@@ -2,8 +2,12 @@ local utils = require("user.core.utils")
 local keymap = utils.keymap
 local opts = { silent = true, noremap = true}
 
+-- Ctrl+s is save file
 keymap('n', "<C-s>", "<cmd>w<cr>", opts)
 keymap('i', "<C-s>", "<cmd>w<cr>", opts)
+
+-- Git fugitive
+keymap('n', 'gs', "<cmd>G status<cr>", opts)
 
 -- Telescope
 keymap('n', '<leader>p', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", opts)
