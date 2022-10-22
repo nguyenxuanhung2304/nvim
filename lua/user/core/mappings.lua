@@ -64,3 +64,8 @@ vim.keymap.set('', 'F', function()
 end, {remap=true})
 
 keymap("n", "s", "<cmd>HopWord<cr>")
+
+-- Lsp rename
+vim.keymap.set("n", "<leader>h", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true })
