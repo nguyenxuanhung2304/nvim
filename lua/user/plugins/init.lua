@@ -111,6 +111,13 @@ return require('packer').startup(function(use)
     end
   }
 
+  use {
+    'RRethy/vim-illuminate',
+    config = function ()
+      require "user.plugins.configs.vim-illuminate"
+    end
+  }
+
   -- Themes
   use {
     'sam4llis/nvim-tundra',
