@@ -199,12 +199,6 @@ return packer.startup(function(use)
     'neovim/nvim-lspconfig'
   }
   use "jose-elias-alvarez/null-ls.nvim"
-  use {
-    "smjonas/inc-rename.nvim",
-    config = function()
-      require("inc_rename").setup()
-    end,
-  }
 
   -- Cmp
   use "hrsh7th/cmp-nvim-lsp"
