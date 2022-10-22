@@ -69,3 +69,7 @@ keymap("n", "s", "<cmd>HopWord<cr>")
 vim.keymap.set("n", "<leader>h", function()
   return ":IncRename " .. vim.fn.expand("<cword>")
 end, { expr = true })
+
+-- Formatter
+keymap('n', '<C-f>', '<cmd>Format<cr>')
+keymap('i', '<C-f>', '<cmd>Format<cr>')
