@@ -1,6 +1,42 @@
-vim.cmd [[packadd packer.nvim]]
+local fn = vim.fn
 
-return require('packer').startup(function(use)
+-- Automatically install packer
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+	PACKER_BOOTSTRAP = fn.system({
+		"git",
+		"clone",
+		"--depth",
+		"1",
+		"https://github.com/wbthomason/packer.nvim",
+		install_path,
+	})
+	print("Installing packer close and reopen Neovim...")
+	vim.cmd([[packadd packer.nvim]])
+end
+
+-- Autocommand that reloads neovim whenever save the plugins/init.lua file
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost ~/.config/nvim/lua/user/plugins/init.lua source <afile>
+  augroup end
+]])
+
+local present, packer = pcall(require, 'packer')
+if not present then return end
+
+-- Open packer in float rounded
+packer.init {
+  display = {
+    open_fn = function ()
+      return require("packer.util").float({ border = "rounded" })
+    end
+  }
+}
+
+-- Plugins
+return packer.startup(function(use)
   -- Packer can manage itself
   use { 'wbthomason/packer.nvim' }
 
@@ -148,16 +184,12 @@ return require('packer').startup(function(use)
       require "user.plugins.configs.mason"
     end
   }
-
   use {
     "williamboman/mason-lspconfig.nvim"
   }
-
-  -- Lsp config
   use {
     'neovim/nvim-lspconfig'
   }
-
   use "jose-elias-alvarez/null-ls.nvim"
 
   -- Cmp
@@ -243,4 +275,9 @@ return require('packer').startup(function(use)
   }
 
   use 'mattn/emmet-vim'
+
+  -- Automatically set up configuration after cloning packer.nvim
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
 end)
