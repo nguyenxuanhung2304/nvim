@@ -1,6 +1,42 @@
-vim.cmd [[packadd packer.nvim]]
+local fn = vim.fn
 
-return require('packer').startup(function(use)
+-- Automatically install packer
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+  PACKER_BOOTSTRAP = fn.system({
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  })
+  print("Installing packer close and reopen Neovim...")
+  vim.cmd([[packadd packer.nvim]])
+end
+
+-- Autocommand that reloads neovim whenever save the plugins/init.lua file
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost ~/.config/nvim/lua/user/plugins/init.lua source <afile>
+  augroup end
+]])
+
+local present, packer = pcall(require, 'packer')
+if not present then return end
+
+-- Open packer in float rounded
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float({ border = "rounded" })
+    end
+  }
+}
+
+-- Plugins
+return packer.startup(function(use)
   -- Packer can manage itself
   use { 'wbthomason/packer.nvim' }
 
@@ -31,7 +67,7 @@ return require('packer').startup(function(use)
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   }
 
-  -- Explorer file and folder
+  -- File explorer
   use {
     'kyazdani42/nvim-tree.lua',
     config = function()
@@ -42,7 +78,7 @@ return require('packer').startup(function(use)
   -- Dashboard
   use {
     'goolord/alpha-nvim',
-    config = function ()
+    config = function()
       require "user.plugins.configs.alpha"
     end
   }
@@ -63,21 +99,31 @@ return require('packer').startup(function(use)
   use {
     'numToStr/Comment.nvim',
     config = function()
-        require "user.plugins.configs.comment"
+      require "user.plugins.configs.comment"
     end
   }
 
   use {
-  'phaazon/hop.nvim',
-  branch = 'v2', -- optional but strongly recommended
-  config = function()
-    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-  end
-}
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
 
   use "famiu/bufdelete.nvim" -- Delete buffer like ctrl+w in vscode
 
-  use "tpope/vim-surround"
+  -- use "tpope/vim-surround"
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
+
 
   use {
     'mg979/vim-visual-multi',
@@ -88,7 +134,7 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      require "user.plugins.configs.treesitter"
+      require "user.plugins.configs.nvim-treesitter"
     end
   }
 
@@ -101,10 +147,25 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Highlight word under cursor
+  use {
+    'RRethy/vim-illuminate',
+    config = function()
+      require "user.plugins.configs.vim-illuminate"
+    end
+  }
+
+  use {
+    'mhartington/formatter.nvim',
+    config = function()
+      require "user.plugins.configs.formatter"
+    end
+  }
+
   -- Themes
   use {
     'sam4llis/nvim-tundra',
-    config = function ()
+    config = function()
       require 'user.plugins.configs.themes.tundra'
     end
   }
@@ -131,17 +192,19 @@ return require('packer').startup(function(use)
       require "user.plugins.configs.mason"
     end
   }
-
   use {
     "williamboman/mason-lspconfig.nvim"
   }
-
-  -- Lsp config
   use {
     'neovim/nvim-lspconfig'
   }
-
   use "jose-elias-alvarez/null-ls.nvim"
+  use {
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
+    end,
+  }
 
   -- Cmp
   use "hrsh7th/cmp-nvim-lsp"
@@ -177,14 +240,14 @@ return require('packer').startup(function(use)
   use "tpope/vim-fugitive"
   use {
     "f-person/git-blame.nvim",
-    config = function ()
+    config = function()
       require "user.plugins.configs.git-blame"
     end
   }
   use {
     "akinsho/git-conflict.nvim",
     tag = "*",
-    config = function ()
+    config = function()
       require "user.plugins.configs.git-conflict"
     end
   }
@@ -194,7 +257,7 @@ return require('packer').startup(function(use)
   use "tpope/vim-rails"
   use {
     "vim-test/vim-test",
-    config = function ()
+    config = function()
       require "user.plugins.configs.vim-test"
     end
   }
@@ -209,7 +272,7 @@ return require('packer').startup(function(use)
 
   use {
     "sindrets/diffview.nvim",
-    config = function ()
+    config = function()
       require "user.plugins.configs.diffview"
     end
   }
@@ -221,9 +284,14 @@ return require('packer').startup(function(use)
   use {
     "akinsho/toggleterm.nvim",
     tag = '*', config = function()
-      require("toggleterm").setup()
+      require "user.plugins.configs.toggleterm"
     end
   }
 
   use 'mattn/emmet-vim'
+
+  -- Automatically set up configuration after cloning packer.nvim
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
 end)

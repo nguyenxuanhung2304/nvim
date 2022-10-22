@@ -1,0 +1,17 @@
+{
+  "name": "namiez-snippets",
+   "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript",
+          "vue"
+        ],
+        "path": "./javascript.json"
+      }
+    ]
+  }
+}
