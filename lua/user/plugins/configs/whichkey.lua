@@ -119,9 +119,9 @@ local mappings = {
   G = {
     name = "+Git",
     b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
-    s = {"<cmd>Telescope git_status<cr>", "Show files changed"},
-    l = {"<cmd>Telescope git_commits<cr>", "Show commits"},
-    t = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
+    f = {"<cmd>Telescope git_status<cr>", "Show files changed"},
+    c = {"<cmd>Telescope git_commits<cr>", "Show commits"},
+    s = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
   },
 
   D = {

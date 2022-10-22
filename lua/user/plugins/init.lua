@@ -31,7 +31,7 @@ return require('packer').startup(function(use)
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   }
 
-  -- Explorer file and folder
+  -- File explorer
   use {
     'kyazdani42/nvim-tree.lua',
     config = function()
@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
   -- Dashboard
   use {
     'goolord/alpha-nvim',
-    config = function ()
+    config = function()
       require "user.plugins.configs.alpha"
     end
   }
@@ -63,21 +63,31 @@ return require('packer').startup(function(use)
   use {
     'numToStr/Comment.nvim',
     config = function()
-        require "user.plugins.configs.comment"
+      require "user.plugins.configs.comment"
     end
   }
 
   use {
-  'phaazon/hop.nvim',
-  branch = 'v2', -- optional but strongly recommended
-  config = function()
-    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-  end
-}
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
 
   use "famiu/bufdelete.nvim" -- Delete buffer like ctrl+w in vscode
 
-  use "tpope/vim-surround"
+  -- use "tpope/vim-surround"
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
+
 
   use {
     'mg979/vim-visual-multi',
@@ -88,7 +98,7 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      require "user.plugins.configs.treesitter"
+      require "user.plugins.configs.nvim-treesitter"
     end
   }
 
@@ -104,7 +114,7 @@ return require('packer').startup(function(use)
   -- Themes
   use {
     'sam4llis/nvim-tundra',
-    config = function ()
+    config = function()
       require 'user.plugins.configs.themes.tundra'
     end
   }
@@ -177,14 +187,14 @@ return require('packer').startup(function(use)
   use "tpope/vim-fugitive"
   use {
     "f-person/git-blame.nvim",
-    config = function ()
+    config = function()
       require "user.plugins.configs.git-blame"
     end
   }
   use {
     "akinsho/git-conflict.nvim",
     tag = "*",
-    config = function ()
+    config = function()
       require "user.plugins.configs.git-conflict"
     end
   }
@@ -194,7 +204,7 @@ return require('packer').startup(function(use)
   use "tpope/vim-rails"
   use {
     "vim-test/vim-test",
-    config = function ()
+    config = function()
       require "user.plugins.configs.vim-test"
     end
   }
@@ -209,7 +219,7 @@ return require('packer').startup(function(use)
 
   use {
     "sindrets/diffview.nvim",
-    config = function ()
+    config = function()
       require "user.plugins.configs.diffview"
     end
   }
@@ -221,7 +231,7 @@ return require('packer').startup(function(use)
   use {
     "akinsho/toggleterm.nvim",
     tag = '*', config = function()
-      require("toggleterm").setup()
+      require "user.plugins.configs.toggleterm"
     end
   }
 
