@@ -37,3 +37,5 @@ opt.undofile = true
 opt.shortmess:append "sI"
 
 g.mapleader = " "
+
+opt.cmdheight = 0

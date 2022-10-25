@@ -79,16 +79,15 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
+  ['w'] = {"<cmd>Telescope tmux windows<cr>", "Find tmux windows"},
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["t"] = { "<cmd>TroubleToggle<cr>", "Toggle Trouble"},
   ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab"},
-  ["l"] = { string.format("<cmd>luafile %s<cr>", vim.env.MYVIMRC), "Reload neovim config"},
 
   P = {
     name = "Packer",
@@ -102,9 +101,10 @@ local mappings = {
 
   S = {
     name = "+Search",
-    c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-    h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    c = { "<cmd>Telescope colorscheme<cr>", "Find colorschemes" },
+    h = { "<cmd>Telescope help_tags<cr>", "Find helps" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Find recent files" },
+    s = { "<cmd>Telescope tmux sessions<cr>", "Find sessions" },
   },
 
   T = {

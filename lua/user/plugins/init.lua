@@ -54,18 +54,17 @@ return packer.startup(function(use)
       require "user.plugins.configs.telescope"
     end
   }
-
   use {
     "nvim-telescope/telescope-project.nvim",
     config = function()
       require "user.plugins.configs.telescope.project"
     end
   }
-
   use {
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   }
+  use 'camgraff/telescope-tmux.nvim'
 
   -- File explorer
   use {
