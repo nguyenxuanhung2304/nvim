@@ -1,21 +1,10 @@
-vim.cmd("colorscheme gruvbox")
+vim.cmd[[
+  let g:gruvbox_material_background = 'medium' " soft | medium | hard
+  let g:gruvbox_material_foreground = 'material' " mix | original | material
+  let g:gruvbox_material_transparent_background = 0
 
--- vim.cmd[[
---   hi BufferLineBgNone guibg=NONE
---   hi BufferLineBuffer guibg=NONE
---   hi BufferLineBufferVisible guibg=NONE
---   hi BufferLineFill guibg=NONE
---   hi BufferLineGroupSeparator guibg=NONE
---   hi BufferLineErrorDiagnosticVisible guibg=NONE
---   hi BufferLineNumbers guibg=NONE
---   hi BufferLineError guibg=NONE
---   hi link BufferLineOffsetSeparator BufferLineBgNone
---   hi BufferLineSeparator guibg=NONE
---   hi BufferLineTabSeparator guibg=NONE
---   hi BufferLineIndicatorVisible guibg=NONE
---   hi BufferLineBufferSelected guibg=NONE
---   hi link BufferLineIndicatorVisible BufferLineBgNone
---
---   highlight CursorLine guibg=NONE guifg=NONE
---   highlight CursorLineNR guifg=#9ece6a
--- ]]
+  " For better performance
+  let g:gruvbox_material_better_performance = 1
+]]
+
+vim.cmd("colorscheme gruvbox-material")

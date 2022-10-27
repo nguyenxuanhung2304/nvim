@@ -192,6 +192,9 @@ return packer.startup(function(use)
   use {
     'ellisonleao/gruvbox.nvim'
   }
+  use {
+    'sainnhe/gruvbox-material'
+  }
 
   -- Status button line
   use {
