@@ -168,6 +168,13 @@ return packer.startup(function(use)
     end
   }
 
+  use {
+    'karb94/neoscroll.nvim',
+    config = function ()
+      require 'user.plugins.configs.neoscroll'
+    end
+  }
+
   -- Themes
   use {
     'sam4llis/nvim-tundra',

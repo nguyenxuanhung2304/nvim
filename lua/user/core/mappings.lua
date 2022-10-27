@@ -6,8 +6,6 @@ local opts = { silent = true, noremap = true}
 keymap('n', "<C-s>", "<cmd>w<cr>", opts)
 keymap('i', "<C-s>", "<cmd>w<cr>", opts)
 
-keymap('', "<C-d>", "<C-d>zz", opts)
-keymap('', "<C-u>", "<C-u>zz", opts)
 -- Navigator between window
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

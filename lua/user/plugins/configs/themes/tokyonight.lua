@@ -48,6 +48,6 @@ vim.cmd[[
   hi BufferLineBufferSelected guibg=NONE
   hi link BufferLineIndicatorVisible BufferLineBgNone
 
-  highlight CursorLine guibg=NONE
+  highlight CursorLine guibg=NONE guifg=NONE
   highlight CursorLineNR guifg=#9ece6a
 ]]
