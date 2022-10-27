@@ -1,13 +1,21 @@
 local M = {}
 
-local lualine_color = {}
 local github_theme_color = {
-  fg = '#ffffff',
-  bg = '#24292E'
+  bg = '#ffffff',
+  fg = '#24292E'
 }
+local latte_palette = require("catppuccin.palettes").get_palette "latte"
+local lualine_color = {}
 
 if (vim.g.colors_name == 'github_theme') then
   lualine_color = github_theme_color
+end
+
+if (vim.g.colors_name == 'catppuccin') then
+  lualine_color = {
+    fg = '24292e',
+    bg = latte_palette.mantle
+  }
 end
 
 local git_blame = require('gitblame')

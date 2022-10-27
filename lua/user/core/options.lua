@@ -1,6 +1,8 @@
 local opt = vim.opt
 local g = vim.g
 
+opt.cursorline = true
+
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
@@ -20,7 +22,7 @@ opt.softtabstop = 2
 
 -- Numbers
 opt.number = true
-opt.numberwidth = 2
+opt.numberwidth = 5
 opt.ruler = false
 opt.relativenumber = true
 
@@ -38,4 +40,5 @@ opt.shortmess:append "sI"
 
 g.mapleader = " "
 
+-- Hide command status
 opt.cmdheight = 0

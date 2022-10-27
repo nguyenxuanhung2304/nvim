@@ -2,11 +2,12 @@ local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then return end
 
 local components = require "user.plugins.configs.lualine.components"
+local transparent = require "user.plugins.configs.lualine.transparent"
 
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = transparent.theme(),
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },

@@ -6,6 +6,7 @@ end
 
 bufferline.setup {
   options = {
+    numbers = "none",
     mode = "buffers", -- set to "tabs" to only show tabpages instead
     close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
     right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -64,19 +65,24 @@ bufferline.setup {
     offsets = {
       {
         filetype = "NvimTree",
-        text = function ()
+        text = function()
           return "File Explorer"
         end,
         text_align = "center",
         separator = true,
         highlight = "Directory"
+      },
+      {
+        filetype = "DiffviewFiles",
+        text = "Diff View",
+        padding = 1
       }
     },
     color_icons = true, -- whether or not to add the filetype icon highlights
     show_buffer_icons = true, -- disable filetype icons for buffers
     show_buffer_close_icons = true,
     show_buffer_default_icon = true, -- whether or not an unrecognised filetype should show a default icon
-    show_close_icon = true ,
+    show_close_icon = true,
     show_tab_indicators = true,
     show_duplicate_prefix = true, -- whether to show duplicate buffer prefix
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist

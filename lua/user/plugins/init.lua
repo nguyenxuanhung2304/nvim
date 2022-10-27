@@ -66,6 +66,12 @@ return packer.startup(function(use)
   }
   use 'camgraff/telescope-tmux.nvim'
 
+  -- Tmux
+  use({
+    "aserowy/tmux.nvim",
+    config = function() require("tmux").setup() end
+  })
+
   -- File explorer
   use {
     'kyazdani42/nvim-tree.lua',
@@ -140,6 +146,7 @@ return packer.startup(function(use)
   -- Buffer
   use {
     'akinsho/bufferline.nvim',
+    after = "catppuccin",
     tag = "v2.*",
     config = function()
       require "user.plugins.configs.bufferline"
@@ -172,7 +179,13 @@ return packer.startup(function(use)
     "catppuccin/nvim",
     as = "catppuccin",
     config = function()
-      require("catppuccin").setup()
+      require 'user.plugins.configs.themes.catppuccin'
+    end
+  }
+  use {
+    'folke/tokyonight.nvim',
+    config = function()
+      require 'user.plugins.configs.themes.tokyonight'
     end
   }
 
