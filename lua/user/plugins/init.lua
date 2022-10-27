@@ -190,10 +190,7 @@ return packer.startup(function(use)
     end
   }
   use {
-    'folke/tokyonight.nvim',
-    config = function()
-      require 'user.plugins.configs.themes.tokyonight'
-    end
+    'ellisonleao/gruvbox.nvim'
   }
 
   -- Status button line

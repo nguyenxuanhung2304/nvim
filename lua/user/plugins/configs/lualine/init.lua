@@ -3,11 +3,18 @@ if not status_ok then return end
 
 local components = require "user.plugins.configs.lualine.components"
 local transparent = require "user.plugins.configs.lualine.transparent"
+local lualine_theme
+
+if (vim.g.colors_name == 'gruvbox') then
+  lualine_theme = 'gruvbox'
+else
+  lualine_theme = transparent.theme()
+end
 
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = transparent.theme(),
+		theme = lualine_theme,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },

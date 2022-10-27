@@ -31,23 +31,3 @@ require("tokyonight").setup({
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
 })
-
-vim.cmd[[
-  hi BufferLineBgNone guibg=NONE
-  hi BufferLineBuffer guibg=NONE
-  hi BufferLineBufferVisible guibg=NONE
-  hi BufferLineFill guibg=NONE
-  hi BufferLineGroupSeparator guibg=NONE
-  hi BufferLineErrorDiagnosticVisible guibg=NONE
-  hi BufferLineNumbers guibg=NONE
-  hi BufferLineError guibg=NONE
-  hi link BufferLineOffsetSeparator BufferLineBgNone
-  hi BufferLineSeparator guibg=NONE
-  hi BufferLineTabSeparator guibg=NONE
-  hi BufferLineIndicatorVisible guibg=NONE
-  hi BufferLineBufferSelected guibg=NONE
-  hi link BufferLineIndicatorVisible BufferLineBgNone
-
-  highlight CursorLine guibg=NONE guifg=NONE
-  highlight CursorLineNR guifg=#9ece6a
-]]
