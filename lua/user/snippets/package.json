@@ -18,7 +18,11 @@
       },
       {
         "language": "ruby",
-        "path": "./ruby.json"
+        "path": "./ruby/ruby.json"
+      },
+      {
+        "language": "erb",
+        "path": "./ruby/erb.json"
       }
     ]
   }
