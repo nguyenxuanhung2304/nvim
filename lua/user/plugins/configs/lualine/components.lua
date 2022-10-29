@@ -1,4 +1,5 @@
 local M = {}
+local fn = vim.fn
 
 local github_theme_color = {
   bg = '#ffffff',
@@ -21,26 +22,26 @@ end
 local git_blame = require('gitblame')
 
 M.diagnostics = {
-	"diagnostics",
-	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn" },
-	symbols = { error = " ", warn = " " },
-	colored = false,
-	update_in_insert = false,
-	always_visible = true,
+  "diagnostics",
+  sources = { "nvim_diagnostic" },
+  sections = { "error", "warn" },
+  symbols = { error = " ", warn = " " },
+  colored = false,
+  update_in_insert = false,
+  always_visible = true,
   color = lualine_color
 }
 
 M.branch = {
-	"branch",
-	icons_enabled = true,
-	icon = "",
+  "branch",
+  icons_enabled = true,
+  icon = "",
   color = lualine_color
 }
 
 M.location = {
-	"location",
-	padding = 0,
+  "location",
+  padding = 0,
   color = lualine_color
 }
 
@@ -69,5 +70,15 @@ M.gitBlame = {
   cond = git_blame.is_blame_text_available,
   color = lualine_color
 }
+
+M.lsp = function()
+  if rawget(vim, "lsp") then
+    for _, client in ipairs(vim.lsp.get_active_clients()) do
+      if client.attached_buffers[vim.api.nvim_get_current_buf()] then
+        return string.format(" %s", client.name)
+      end
+    end
+  end
+end
 
 return M

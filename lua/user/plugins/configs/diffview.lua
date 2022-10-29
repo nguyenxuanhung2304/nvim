@@ -1,16 +1,5 @@
 local actions = require("diffview.actions")
 
-vim.cmd [[
-  hi DiffAddNoBg guibg=NONE ctermbg=4 guifg=#56d364
-  hi DiffviewStatusDeletedNoBg guibg=NONE
-  hi DiffChangedNoBg guibg=NONE ctermbg=5 guifg=#e3b341
-
-  hi link DiffviewStatusAdded DiffAddNoBg 
-  hi link DiffviewStatusDeleted DiffviewStatusDeletedNoBg
-  hi link DiffviewStatusChanged DiffChangedNoBg
-  hi link DiffviewStatusModified DiffChangedNoBg
-]]
-
 require('diffview').setup({
   diff_binaries = false,
   enhanced_diff_hl = true,
