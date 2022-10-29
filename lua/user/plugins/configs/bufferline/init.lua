@@ -25,7 +25,8 @@ bufferline.setup {
     --- Please note some names can/will break the
     --- bufferline so use this at your discretion knowing that it has
     --- some limitations that will *NOT* be fixed.
-    name_formatter = function(_) -- buf contains:
+    name_formatter = function(buf) -- buf contains:
+      return buf.name
       -- name                | str        | the basename of the active file
       -- path                | str        | the full path of the active file
       -- bufnr (buffer only) | int        | the number of the active buffer

@@ -8,3 +8,6 @@ require "user.core.options"
 require "user.colorscheme"
 require "user.plugins.configs.lsp"
 require "user.plugins.configs.cmp"
+vim.cmd[[
+  autocmd BufNewFile,BufRead *.html.erb set filetype=ruby
+]]

@@ -21,6 +21,14 @@ formatter.setup {
       languages.ruby.rubocop
     },
 
+    html = {
+      languages.html.prettier
+    },
+
+    javascript = {
+      languages.javascript.prettier
+    },
+
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
     ["*"] = {

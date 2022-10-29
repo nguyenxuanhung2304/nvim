@@ -6,7 +6,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "sumneko_lua", "solargraph", "tsserver", "eslint" }
+local servers = { "sumneko_lua", "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls" }
 
 mason_config.setup({
 	ensure_installed = servers,
@@ -23,5 +23,3 @@ for _, server in pairs(servers) do
 	end
 	lspconfig[server].setup(opts)
 end
-
-lspconfig['eslint'].setup({})

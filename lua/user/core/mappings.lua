@@ -12,6 +12,10 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Resize pane
+keymap("n", "<M-Right>", "<C-w>>")
+keymap("n", "<M-Left>", "<C-w><")
+
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
@@ -64,11 +68,6 @@ vim.keymap.set('', 'F', function()
 end, {remap=true})
 
 keymap("n", "s", "<cmd>HopWord<cr>")
-
--- Lsp rename
-vim.keymap.set("n", "<leader>h", function()
-  return ":IncRename " .. vim.fn.expand("<cword>")
-end, { expr = true })
 
 -- Formatter
 keymap('n', '<C-f>', '<cmd>Format<cr>')

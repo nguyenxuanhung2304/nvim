@@ -1,0 +1,81 @@
+{
+  "<% %>": {
+    "prefix": "%~",
+    "body": "<% $1 %>$0"
+  },
+  "<%= %>": {
+    "prefix": "%=",
+    "body": "<%= $1 %>$0"
+  },
+  "javascript_tag": {
+    "prefix": "jtag",
+    "body": [
+      "<%= javascript_tag %>",
+      "\t$0",
+      "<% end %>"
+    ]
+  },
+
+  "validates": {
+    "prefix": "validates",
+    "body": "validates $0"
+  },
+  "validates presence for column": {
+    "prefix": "v-presence",
+    "body": "validates :$1, presence: true$0"
+  },
+  "validates inclusion for column": {
+    "prefix": "v-inclusion",
+    "body": "validates :$1, inclusion: { in: [true, false] }$0"
+  },
+
+  "test": {
+    "prefix": "test",
+    "body": [
+       "def test '$1'",
+       "\t$0",
+       "end"
+    ]
+  },
+  "context validations": {
+    "prefix": "c-validations",
+    "body": [
+      "context :validations do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "context associations": {
+    "prefix": "c-associations",
+    "body": [
+      "context :associations do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "should presence": {
+    "prefix": "t-presence",
+    "body": "should validate_presence_of(:$1)$0",
+    "description": "Shoulda: presence"
+  },
+  "should length: is_at_least": {
+    "prefix": "t-length-least",
+    "body": "should validate_length_of(:$2).is_at_least($1)$0",
+    "description": "Shoulda: length is at least"
+  },
+  "should length: is_at_most": {
+    "prefix": "t-length-most",
+    "body": "should validate_length_of(:$2).is_at_most($1)$0",
+    "description": "Shoulda: length is at most"
+  },
+  "should uniqueness": {
+    "prefix": "t-uniqueness",
+    "body": "should validate_uniqueness_of(:$1)$0",
+    "description": "Shoulda: uniqueness"
+  },
+  "should inclusion": {
+    "prefix": "t-inclusion",
+    "body": "should_not allow_value(nil).for(:$1)$0",
+    "description": "Shoulda: inclusion"
+  }
+}

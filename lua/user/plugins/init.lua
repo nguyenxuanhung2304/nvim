@@ -66,12 +66,6 @@ return packer.startup(function(use)
   }
   use 'camgraff/telescope-tmux.nvim'
 
-  -- Tmux
-  use({
-    "aserowy/tmux.nvim",
-    config = function() require("tmux").setup() end
-  })
-
   -- File explorer
   use {
     'kyazdani42/nvim-tree.lua',
@@ -165,13 +159,6 @@ return packer.startup(function(use)
     'mhartington/formatter.nvim',
     config = function()
       require "user.plugins.configs.formatter"
-    end
-  }
-
-  use {
-    'karb94/neoscroll.nvim',
-    config = function ()
-      require 'user.plugins.configs.neoscroll'
     end
   }
 
@@ -301,7 +288,12 @@ return packer.startup(function(use)
     end
   }
 
-  use 'mattn/emmet-vim'
+  use {
+    'mattn/emmet-vim',
+    config = function ()
+      require "user.plugins.configs.emmet"
+    end
+  }
 
   -- Automatically set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
