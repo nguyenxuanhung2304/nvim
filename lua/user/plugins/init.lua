@@ -261,6 +261,7 @@ return packer.startup(function(use)
       require "user.plugins.configs.vim-test"
     end
   }
+  use "tree-sitter/tree-sitter-embedded-template"
 
   -- Notify
   use {

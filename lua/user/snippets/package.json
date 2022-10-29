@@ -21,8 +21,8 @@
         "path": "./ruby/ruby.json"
       },
       {
-        "language": "erb",
-        "path": "./ruby/erb.json"
+        "language": ["eruby", "erb"],
+        "path": "./ruby/eruby.json"
       }
     ]
   }

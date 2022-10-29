@@ -1,0 +1,21 @@
+{
+  "<%= %>": {
+    "prefix": "%=",
+    "body": "<%= $1 %>$0",
+    "description": "Add ruby block"
+  },
+  "javascript_tag": {
+    "prefix": "jtag",
+    "body": [
+      "<%= javascript_tag %>",
+      "\t$0",
+      "<% end %>"
+    ],
+    "description": "Add javascript_tag"
+  },
+  "Render partial": {
+    "prefix": "render",
+    "body": "<%= render '$0' %>",
+    "description": "Render a partial"
+  }
+}
