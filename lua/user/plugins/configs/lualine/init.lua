@@ -23,7 +23,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { components.branch },
 		lualine_b = { components.diagnostics },
-    lualine_c = { components.filename },
+    lualine_c = { 'filetype' },
 		lualine_x = { components.spaces },
 		lualine_y = { components.location },
 		lualine_z = { components.progress },
