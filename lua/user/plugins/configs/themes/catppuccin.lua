@@ -34,7 +34,6 @@ require("catppuccin").setup({
     nvimtree = true,
     telescope = true,
     treesitter = true,
-    hop = true,
     bufferline = true,
     which_key = true,
     notify = true,

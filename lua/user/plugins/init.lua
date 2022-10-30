@@ -103,10 +103,9 @@ return packer.startup(function(use)
   }
 
   use {
-    'phaazon/hop.nvim',
-    branch = 'v2', -- optional but strongly recommended
-    config = function()
-      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    'ggandor/leap.nvim',
+    config = function ()
+      require('leap').add_default_mappings()
     end
   }
 

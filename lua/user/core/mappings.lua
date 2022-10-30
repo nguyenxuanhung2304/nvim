@@ -44,9 +44,6 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", opts)
 keymap("t", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
 
--- Git fugitive
-keymap('n', 'gs', "<cmd>G status<cr>", opts)
-
 -- Telescope
 keymap('n', '<leader>p', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", opts)
 keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
@@ -56,18 +53,6 @@ keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Toggle term
 keymap("n", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
-
--- Hop
-local hop = require('hop')
-local directions = require('hop.hint').HintDirection
-vim.keymap.set('', 'f', function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
-end, {remap=true})
-vim.keymap.set('', 'F', function()
-  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
-end, {remap=true})
-
-keymap("n", "s", "<cmd>HopWord<cr>")
 
 -- Formatter
 keymap('n', '<C-f>', '<cmd>Format<cr>')
