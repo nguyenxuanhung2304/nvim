@@ -219,6 +219,7 @@ return packer.startup(function(use)
       require "user.plugins.configs.lspsaga"
     end
   }
+  use "onsails/lspkind.nvim"
 
   -- Snippets
   use "L3MON4D3/LuaSnip"
