@@ -7,17 +7,36 @@
     "prefix": "v-presence",
     "body": "validates :$1, presence: true$0"
   },
+  "validates presence and max length for column": {
+    "prefix": "v-presence-length",
+    "body": "validates :$1, presence: true, length: { maximum: $0 }"
+  },
+  "validates maximum length for column": {
+    "prefix": "v-max-length",
+    "body": "validates :$1, length: { maximum: $0 }"
+  },
+  "validates minimum length for column": {
+    "prefix": "v-min-length",
+    "body": "validates :$1, length: { minimum: $0 }"
+  },
   "validates inclusion for column": {
     "prefix": "v-inclusion",
     "body": "validates :$1, inclusion: { in: [true, false] }$0"
   },
-
+  "validates numbericality for only_integer": {
+    "prefix": "v-numericality-only-integer",
+    "body": "validates :$1, numericality: { only_integer: true }"
+  },
+  "validates numbericality": {
+    "prefix": "v-numericality",
+    "body": "validates :$1, numericality: { $0 }"
+  },
   "test": {
     "prefix": "test",
     "body": [
-       "def test '$1'",
-       "\t$0",
-       "end"
+      "def test '$1'",
+      "\t$0",
+      "end"
     ]
   },
   "context validations": {
@@ -36,29 +55,72 @@
       "end"
     ]
   },
-  "should presence": {
-    "prefix": "t-presence",
-    "body": "should validate_presence_of(:$1)$0",
-    "description": "Shoulda: presence"
+  "Should presence": {
+    "prefix": "t-should-presence",
+    "body": [
+      "should validate_presence_of(:${1:property})"
+    ]
   },
-  "should length: is_at_least": {
-    "prefix": "t-length-least",
-    "body": "should validate_length_of(:$2).is_at_least($1)$0",
-    "description": "Shoulda: length is at least"
+  "Should length(most)": {
+    "prefix": "t-should-length-most",
+    "body": [
+      "should validate_length_of(:${1:property}).is_at_most(${0:length})"
+    ]
   },
-  "should length: is_at_most": {
-    "prefix": "t-length-most",
-    "body": "should validate_length_of(:$2).is_at_most($1)$0",
-    "description": "Shoulda: length is at most"
+  "Should length(least)": {
+    "prefix": "t-should-length-least",
+    "body": [
+      "should validate_length_of(:${1:property}).is_at_least(${0:length})"
+    ]
   },
-  "should uniqueness": {
-    "prefix": "t-uniqueness",
-    "body": "should validate_uniqueness_of(:$1)$0",
-    "description": "Shoulda: uniqueness"
+  "Should numericality": {
+    "prefix": "t-should-num",
+    "body": [
+      "should validate_numericality_of(:${1:property})"
+    ]
   },
-  "should inclusion": {
-    "prefix": "t-inclusion",
-    "body": "should_not allow_value(nil).for(:$1)$0",
-    "description": "Shoulda: inclusion"
+  "Should numericality(only_integer)": {
+    "prefix": "t-should-num-only_integer",
+    "body": [
+      "should validate_numericality_of(:${1:property}).only_integer(true)"
+    ]
+  },
+  "Should allow_value null": {
+    "prefix": "t-should-allow-null",
+    "body": [
+      "should allow_value('', nil).for(:$1)"
+    ]
+  },
+  "Migrate: add string column": {
+    "prefix": "t.string",
+    "body": "t.string :${1:column_name}"
+  },
+  "Migrate: add string column with null(false)": {
+    "prefix": "t.string-not-null",
+    "body": "t.string :${1:column_name}, null: false"
+  },
+  "Migrate: add number column with integer type": {
+    "prefix": "t.int",
+    "body": "t.int :${1:column_name}"
+  },
+  "Migrate: add number column with integer type, null(false)": {
+    "prefix": "t.int-not-null",
+    "body": "t.int :${1:column_name}, null: false"
+  },
+  "Migrate: add boolean column": {
+    "prefix": "t.boolean",
+    "body": "t.boolean :${1:column_name}"
+  },
+  "Migrate: add boolean column with not null": {
+    "prefix": "t.boolean-not-null",
+    "body": "t.boolean :${1:column_name}, null: false"
+  },
+  "Migrate: add text column": {
+    "prefix": "t.text",
+    "body": "t.text :${1:column_name}"
+  },
+  "Migrate: add text column with not null": {
+    "prefix": "t.text-not-null",
+    "body": "t.text :${1:column_name}, null: false"
   }
 }
