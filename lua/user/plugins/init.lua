@@ -212,6 +212,13 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- filesystem paths
   use "hrsh7th/cmp-nvim-lua"
   use "saadparwaiz1/cmp_luasnip"
+  use {
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function ()
+      require "user.plugins.configs.lspsaga"
+    end
+  }
 
   -- Snippets
   use "L3MON4D3/LuaSnip"
