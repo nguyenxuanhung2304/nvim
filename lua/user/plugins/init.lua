@@ -122,6 +122,13 @@ return packer.startup(function(use)
     end
   })
 
+  use {
+    'RRethy/vim-hexokinase',
+    run = 'make hexokinase',
+    config = function ()
+      require "user.plugins.configs.vim-hexokinase"
+    end
+  }
 
   use {
     'mg979/vim-visual-multi',
