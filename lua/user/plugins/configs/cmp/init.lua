@@ -4,6 +4,7 @@ if not cmp_status_ok then
 end
 
 local lspkind_ok, lspkind = pcall(require, "lspkind")
+if not lspkind_ok then return end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
@@ -17,35 +18,6 @@ local check_backspace = function()
   local col = vim.fn.col "." - 1
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
-
---   פּ ﯟ   some other good icons
--- local kind_icons = {
---   Text = "",
---   Method = "m",
---   Function = "",
---   Constructor = "",
---   Field = "",
---   Variable = "",
---   Class = "",
---   Interface = "",
---   Module = "",
---   Property = "",
---   Unit = "",
---   Value = "",
---   Enum = "",
---   Keyword = "",
---   Snippet = "",
---   Color = "",
---   File = "",
---   Reference = "",
---   Folder = "",
---   EnumMember = "",
---   Constant = "",
---   Struct = "",
---   Event = "",
---   Operator = "",
---   TypeParameter = "",
--- }
 
 cmp.setup {
   snippet = {
@@ -103,19 +75,6 @@ cmp.setup {
       maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
       ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
     })
-
-    -- format = function(entry, vim_item)
-    --   -- Kind icons
-    --   vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
-    --   -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-    --   vim_item.menu = ({
-    --     nvim_lsp = "[LSP]",
-    --     luasnip = "[Snippet]",
-    --     buffer = "[Buffer]",
-    --     path = "[Path]",
-    --   })[entry.source.name]
-    --   return vim_item
-    -- end,
   },
   sources = {
     { name = "nvim_lsp" },

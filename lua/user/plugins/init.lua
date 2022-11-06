@@ -104,7 +104,7 @@ return packer.startup(function(use)
 
   use {
     'ggandor/leap.nvim',
-    config = function ()
+    config = function()
       require('leap').add_default_mappings()
     end
   }
@@ -158,6 +158,13 @@ return packer.startup(function(use)
     'mhartington/formatter.nvim',
     config = function()
       require "user.plugins.configs.formatter"
+    end
+  }
+
+  use {
+    'gelguy/wilder.nvim',
+    config = function ()
+      require "user.plugins.configs.wilder"
     end
   }
 
@@ -215,7 +222,7 @@ return packer.startup(function(use)
   use {
     "glepnir/lspsaga.nvim",
     branch = "main",
-    config = function ()
+    config = function()
       require "user.plugins.configs.lspsaga"
     end
   }
@@ -298,7 +305,7 @@ return packer.startup(function(use)
 
   use {
     'mattn/emmet-vim',
-    config = function ()
+    config = function()
       require "user.plugins.configs.emmet"
     end
   }
