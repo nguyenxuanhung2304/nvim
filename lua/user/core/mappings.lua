@@ -45,8 +45,13 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", opts)
 keymap("t", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
 
 -- Telescope
-keymap('n', '<leader>p', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", opts)
-keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
+keymap('n', '<leader>ff', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>lua require'telescope.builtin'.live_grep({ default_text = vim.fn.expand('<cword>') })<cr>", opts)
+keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>")
+keymap("n", "<leader>fb", "<cmd>Telescope git_branches<cr>")
+keymap("n", "<leader>fs", "<cmd>Telescope git_stash<cr>")
+keymap("n", "<leader>fhs", "<cmd>Telescope search_history<cr>")
+keymap("n", "<leader>fhc", "<cmd>Telescope command_history<cr>")
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)

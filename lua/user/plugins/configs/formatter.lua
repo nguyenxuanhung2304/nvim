@@ -21,6 +21,10 @@ formatter.setup {
       languages.ruby.rubocop
     },
 
+    eruby = {
+      languages.html.prettier
+    },
+
     html = {
       languages.html.prettier
     },

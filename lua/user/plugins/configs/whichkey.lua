@@ -83,7 +83,7 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
-  ['w'] = {"<cmd>Telescope tmux windows<cr>", "Find tmux windows"},
+  ['s'] = {"<cmd>Telescope tmux sessions<cr>", "Find tmux session"},
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["t"] = { "<cmd>TroubleToggle<cr>", "Toggle Trouble"},
@@ -101,10 +101,12 @@ local mappings = {
 
   S = {
     name = "+Search",
-    c = { "<cmd>Telescope colorscheme<cr>", "Find colorschemes" },
-    h = { "<cmd>Telescope help_tags<cr>", "Find helps" },
+    C = { "<cmd>Telescope colorscheme<cr>", "Find colorschemes" },
     r = { "<cmd>Telescope oldfiles<cr>", "Find recent files" },
-    s = { "<cmd>Telescope tmux sessions<cr>", "Find sessions" },
+    b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
+    f = {"<cmd>Telescope git_status<cr>", "Show files changed"},
+    c = {"<cmd>Telescope git_commits<cr>", "Show commits"},
+    s = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
   },
 
   T = {
@@ -114,14 +116,6 @@ local mappings = {
     s = {"<cmd>TestSuite<cr>", "Run all test files"},
     l = {"<cmd>TestLast<cr>", "Run last test file"},
     v = {"<cmd>TestVisit<cr>", "Open last test file"}
-  },
-
-  G = {
-    name = "+Git",
-    b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
-    f = {"<cmd>Telescope git_status<cr>", "Show files changed"},
-    c = {"<cmd>Telescope git_commits<cr>", "Show commits"},
-    s = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
   },
 
   D = {
