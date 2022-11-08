@@ -46,7 +46,7 @@ keymap("t", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
 
 -- Telescope
 keymap('n', '<leader>ff', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", opts)
-keymap("n", "<leader>fg", "<cmd>Telescope grep_string<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>")
 keymap("n", "<leader>fb", "<cmd>Telescope git_branches<cr>")
 keymap("n", "<leader>fs", "<cmd>Telescope git_stash<cr>")

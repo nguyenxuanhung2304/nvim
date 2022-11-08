@@ -19,8 +19,6 @@ if (vim.g.colors_name == 'catppuccin') then
   }
 end
 
-local git_blame = require('gitblame')
-
 M.diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
@@ -62,12 +60,6 @@ M.filename = {
 
 M.progress = {
   "progress",
-  color = lualine_color
-}
-
-M.gitBlame = {
-  git_blame.get_current_blame_text,
-  cond = git_blame.is_blame_text_available,
   color = lualine_color
 }
 

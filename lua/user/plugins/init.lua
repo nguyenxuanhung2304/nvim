@@ -58,20 +58,24 @@ return packer.startup(function(use)
     "nvim-telescope/telescope-project.nvim",
     config = function()
       require "user.plugins.configs.telescope.project"
-    end
+    end,
   }
   use {
     'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
   }
-  use 'camgraff/telescope-tmux.nvim'
+  use {
+    'camgraff/telescope-tmux.nvim'
+  }
 
   -- File explorer
   use {
     'kyazdani42/nvim-tree.lua',
+    cmd = "NvimTreeToggle",
     config = function()
       require "user.plugins.configs.nvim-tree"
-    end
+    end,
+    event = "BufRead"
   }
 
   -- Dashboard
@@ -87,16 +91,19 @@ return packer.startup(function(use)
     "lukas-reineke/indent-blankline.nvim",
     config = function()
       require "user.plugins.configs.indent-blankline"
-    end
+    end,
+    event = "BufRead"
   }
 
   use {
     "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+    config = function() require("nvim-autopairs").setup {} end,
+    event = "BufRead"
   }
 
   use {
     'numToStr/Comment.nvim',
+    event = "BufRead",
     config = function()
       require "user.plugins.configs.comment"
     end
@@ -106,7 +113,8 @@ return packer.startup(function(use)
     'ggandor/leap.nvim',
     config = function()
       require('leap').add_default_mappings()
-    end
+    end,
+    event = "BufRead"
   }
 
   use "famiu/bufdelete.nvim" -- Delete buffer like ctrl+w in vscode
@@ -119,7 +127,8 @@ return packer.startup(function(use)
       require("nvim-surround").setup({
         -- Configuration here, or leave empty to use defaults
       })
-    end
+    end,
+    event = "BufRead"
   })
 
   use {
@@ -127,12 +136,13 @@ return packer.startup(function(use)
     run = 'make hexokinase',
     config = function ()
       require "user.plugins.configs.vim-hexokinase"
-    end
+    end,
   }
 
   use {
     'mg979/vim-visual-multi',
-    branch = 'master'
+    branch = 'master',
+    event = "BufRead"
   }
 
   -- Syntax highlight
@@ -140,13 +150,14 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     config = function()
       require "user.plugins.configs.nvim-treesitter"
-    end
+    end,
+    event = "BufRead"
   }
 
   -- Buffer
   use {
     'akinsho/bufferline.nvim',
-    after = "catppuccin",
+    event = "BufWinEnter",
     tag = "v2.*",
     config = function()
       require "user.plugins.configs.bufferline"
@@ -165,14 +176,8 @@ return packer.startup(function(use)
     'mhartington/formatter.nvim',
     config = function()
       require "user.plugins.configs.formatter"
-    end
-  }
-
-  use {
-    'gelguy/wilder.nvim',
-    config = function ()
-      require "user.plugins.configs.wilder"
-    end
+    end,
+    event = "BufRead"
   }
 
   -- Themes
@@ -220,27 +225,54 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim"
 
   -- Cmp
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-buffer" -- buffer words
-  use "hrsh7th/cmp-path" -- filesystem paths
-  use "hrsh7th/cmp-nvim-lua"
-  use "saadparwaiz1/cmp_luasnip"
+  use {
+    "hrsh7th/cmp-nvim-lsp",
+  }
+  use {
+    "hrsh7th/nvim-cmp",
+  }
+  use { -- buffer words
+    "hrsh7th/cmp-buffer",
+    event = "BufRead"
+  }
+  use { -- filesystem paths
+    "hrsh7th/cmp-path",
+    event = "BufRead"
+  }
+  use {
+    "hrsh7th/cmp-nvim-lua",
+    event = "BufRead"
+  }
+  use {
+    "saadparwaiz1/cmp_luasnip",
+    event = "BufRead"
+  }
   use {
     "glepnir/lspsaga.nvim",
     branch = "main",
     config = function()
       require "user.plugins.configs.lspsaga"
-    end
+    end,
+    event = "BufRead"
   }
-  use "onsails/lspkind.nvim"
+  use {
+    "onsails/lspkind.nvim",
+    event = "BufRead"
+  }
 
   -- Snippets
-  use "L3MON4D3/LuaSnip"
-  use "rafamadriz/friendly-snippets"
+  use {
+    "L3MON4D3/LuaSnip",
+    event = "BufRead"
+  }
+  use {
+    "rafamadriz/friendly-snippets",
+    event = "BufRead"
+  }
 
   use {
-    "folke/trouble.nvim"
+    "folke/trouble.nvim",
+    event = "BufRead"
   }
 
   -- Which key
@@ -248,7 +280,8 @@ return packer.startup(function(use)
     "folke/which-key.nvim",
     config = function()
       require "user.plugins.configs.whichkey"
-    end
+    end,
+    event = "BufWinEnter"
   }
 
   -- Git
@@ -256,33 +289,36 @@ return packer.startup(function(use)
     'lewis6991/gitsigns.nvim',
     config = function()
       require "user.plugins.configs.gitsigns"
-    end
+    end,
+    event = "BufRead",
   }
   use "tpope/vim-fugitive"
   use {
     "f-person/git-blame.nvim",
     config = function()
       require "user.plugins.configs.git-blame"
-    end
+    end,
+    event = "BufRead"
   }
   use {
     "akinsho/git-conflict.nvim",
     tag = "*",
     config = function()
       require "user.plugins.configs.git-conflict"
-    end
+    end,
+    event = "BufRead"
   }
 
   -- Rails
-  use "tpope/vim-endwise"
+  use {
+    "tpope/vim-endwise",
+    event = "BufRead"
+  }
   use "tpope/vim-rails"
   use {
-    "vim-test/vim-test",
-    config = function()
-      require "user.plugins.configs.vim-test"
-    end
+    "tree-sitter/tree-sitter-embedded-template",
+    event = "BufRead"
   }
-  use "tree-sitter/tree-sitter-embedded-template"
 
   -- Notify
   use {
@@ -296,15 +332,20 @@ return packer.startup(function(use)
     "sindrets/diffview.nvim",
     config = function()
       require "user.plugins.configs.diffview"
-    end
+    end,
+    event = "BufWinEnter"
   }
 
   -- Markdown preview
-  use "iamcco/markdown-preview.nvim"
+  use {
+    "iamcco/markdown-preview.nvim",
+    event = "BufRead"
+  }
 
   -- Terminal
   use {
     "akinsho/toggleterm.nvim",
+    event = "BufWinEnter",
     tag = '*', config = function()
       require "user.plugins.configs.toggleterm"
     end
@@ -314,7 +355,8 @@ return packer.startup(function(use)
     'mattn/emmet-vim',
     config = function()
       require "user.plugins.configs.emmet"
-    end
+    end,
+    event = "BufRead"
   }
 
   -- Automatically set up configuration after cloning packer.nvim
