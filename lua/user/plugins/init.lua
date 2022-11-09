@@ -40,9 +40,7 @@ return packer.startup(function(use)
   -- Packer can manage itself
   use { 'wbthomason/packer.nvim' }
 
-  -- Dependences
-  use "nvim-lua/plenary.nvim"
-  use 'kyazdani42/nvim-web-devicons' -- optional, for file icons
+  require("user.theme.plugins").init(use)
 
   -- Improve startup time for neovim
   use "lewis6991/impatient.nvim"
