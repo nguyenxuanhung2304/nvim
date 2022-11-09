@@ -117,7 +117,10 @@ return packer.startup(function(use)
     event = "BufRead"
   }
 
-  use "famiu/bufdelete.nvim" -- Delete buffer like ctrl+w in vscode
+  use {
+    "famiu/bufdelete.nvim",
+    event = "BufRead"
+  }
 
   -- use "tpope/vim-surround"
   use({
@@ -157,7 +160,7 @@ return packer.startup(function(use)
   -- Buffer
   use {
     'akinsho/bufferline.nvim',
-    event = "BufWinEnter",
+    event = "BufRead",
     tag = "v2.*",
     config = function()
       require "user.plugins.configs.bufferline"
@@ -182,20 +185,8 @@ return packer.startup(function(use)
 
   -- Themes
   use {
-    'sam4llis/nvim-tundra',
-    config = function()
-      require 'user.plugins.configs.themes.tundra'
-    end
-  }
-  use {
-    "catppuccin/nvim",
-    as = "catppuccin",
-    config = function()
-      require 'user.plugins.configs.themes.catppuccin'
-    end
-  }
-  use {
-    'ellisonleao/gruvbox.nvim'
+    'luisiacc/gruvbox-baby',
+    branch = "main"
   }
   use {
     'sainnhe/gruvbox-material'
@@ -263,13 +254,10 @@ return packer.startup(function(use)
   -- Snippets
   use {
     "L3MON4D3/LuaSnip",
-    event = "BufRead"
   }
   use {
     "rafamadriz/friendly-snippets",
-    event = "BufRead"
   }
-
   use {
     "folke/trouble.nvim",
     event = "BufRead"

@@ -21,7 +21,6 @@ require('illuminate').configure({
         "packer",
         "neogitstatus",
         "NvimTree",
-        "Trouble",
         "alpha",
         "Telescope"
     },

@@ -86,7 +86,6 @@ local mappings = {
   ['s'] = {"<cmd>Telescope tmux sessions<cr>", "Find tmux session"},
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["t"] = { "<cmd>TroubleToggle<cr>", "Toggle Trouble"},
   ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab"},
 
   P = {
