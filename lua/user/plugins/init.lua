@@ -1,4 +1,5 @@
 local fn = vim.fn
+local config = require("user.core.config")
 
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -37,20 +38,23 @@ packer.init {
 
 -- Plugins
 return packer.startup(function(use)
-  -- Packer can manage itself
   use { 'wbthomason/packer.nvim' }
+  use "nvim-lua/plenary.nvim"
+  use "lewis6991/impatient.nvim"
 
   require("user.theme.plugins").init(use)
 
-  -- Improve startup time for neovim
-  use "lewis6991/impatient.nvim"
+  use {
+    'kyazdani42/nvim-web-devicons',
+    after = config.theme
+  }
 
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     config = function()
       require "user.plugins.configs.telescope"
-    end
+    end,
   }
   use {
     "nvim-telescope/telescope-project.nvim",
@@ -69,11 +73,10 @@ return packer.startup(function(use)
   -- File explorer
   use {
     'kyazdani42/nvim-tree.lua',
-    cmd = "NvimTreeToggle",
+    cmd = 'NvimTreeToggle',
     config = function()
       require "user.plugins.configs.nvim-tree"
     end,
-    event = "BufRead"
   }
 
   -- Dashboard
@@ -90,12 +93,6 @@ return packer.startup(function(use)
     config = function()
       require "user.plugins.configs.indent-blankline"
     end,
-    event = "BufRead"
-  }
-
-  use {
-    "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end,
     event = "BufRead"
   }
 
@@ -135,7 +132,7 @@ return packer.startup(function(use)
   use {
     'RRethy/vim-hexokinase',
     run = 'make hexokinase',
-    config = function ()
+    config = function()
       require "user.plugins.configs.vim-hexokinase"
     end,
   }
@@ -165,6 +162,13 @@ return packer.startup(function(use)
     end
   }
 
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function ()
+      require "user.plugins.configs.lualine"
+    end
+  }
+
   -- Highlight word under cursor
   use {
     'RRethy/vim-illuminate',
@@ -181,50 +185,20 @@ return packer.startup(function(use)
     event = "BufRead"
   }
 
-  -- Themes
   use {
-    'luisiacc/gruvbox-baby',
-    branch = "main"
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end,
+    event = "BufRead"
   }
-  use {
-    'sainnhe/gruvbox-material'
-  }
-
-  -- Status button line
-  use {
-    'nvim-lualine/lualine.nvim',
-    config = function()
-      require "user.plugins.configs.lualine"
-    end
-  }
-
-  -- Mason: like lsp-installer
-  use {
-    "williamboman/mason.nvim",
-    config = function()
-      require "user.plugins.configs.mason"
-    end
-  }
-  use {
-    "williamboman/mason-lspconfig.nvim"
-  }
-  use {
-    'neovim/nvim-lspconfig'
-  }
-  use "jose-elias-alvarez/null-ls.nvim"
 
   -- Cmp
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/nvim-cmp"
   use {
-    "hrsh7th/cmp-nvim-lsp",
-  }
-  use {
-    "hrsh7th/nvim-cmp",
-  }
-  use { -- buffer words
     "hrsh7th/cmp-buffer",
     event = "BufRead"
   }
-  use { -- filesystem paths
+  use {
     "hrsh7th/cmp-path",
     event = "BufRead"
   }
@@ -236,29 +210,38 @@ return packer.startup(function(use)
     "saadparwaiz1/cmp_luasnip",
     event = "BufRead"
   }
+
+  -- Lsp
+  use {
+    'neovim/nvim-lspconfig',
+  }
+  use {
+    "williamboman/mason.nvim",
+    config = function()
+      require "user.plugins.configs.mason"
+    end
+  }
+  use { "williamboman/mason-lspconfig.nvim" }
   use {
     "glepnir/lspsaga.nvim",
     branch = "main",
     config = function()
       require "user.plugins.configs.lspsaga"
     end,
-    event = "BufRead"
+    event = "InsertEnter"
   }
   use {
     "onsails/lspkind.nvim",
-    event = "BufRead"
+    event = "InsertEnter"
   }
-
   -- Snippets
   use {
     "L3MON4D3/LuaSnip",
+    event = "InsertEnter"
   }
   use {
     "rafamadriz/friendly-snippets",
-  }
-  use {
-    "folke/trouble.nvim",
-    event = "BufRead"
+    event = "InsertEnter"
   }
 
   -- Which key
@@ -276,9 +259,16 @@ return packer.startup(function(use)
     config = function()
       require "user.plugins.configs.gitsigns"
     end,
-    event = "BufRead",
+    event = 'BufRead',
   }
-  use "tpope/vim-fugitive"
+  use {
+    "tpope/vim-fugitive",
+    cmd = {
+      "G",
+      "Git",
+      "Gtabedit"
+    }
+  }
   use {
     "f-person/git-blame.nvim",
     config = function()
@@ -311,7 +301,8 @@ return packer.startup(function(use)
     "rcarriga/nvim-notify",
     config = function()
       require "user.plugins.configs.notify"
-    end
+    end,
+    after = config.theme
   }
 
   use {
@@ -331,7 +322,7 @@ return packer.startup(function(use)
   -- Terminal
   use {
     "akinsho/toggleterm.nvim",
-    event = "BufWinEnter",
+    cmd = "ToggleTerm",
     tag = '*', config = function()
       require "user.plugins.configs.toggleterm"
     end

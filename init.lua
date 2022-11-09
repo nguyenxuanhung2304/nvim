@@ -5,6 +5,5 @@ end, 0)
 require "user.plugins"
 require "user.core.mappings"
 require "user.core.options"
-require "user.colorscheme"
 require "user.lsp"
 require "user.plugins.configs.cmp"
