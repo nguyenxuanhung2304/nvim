@@ -1,5 +1,5 @@
 local M = {
-  theme = 'tokyonight'
+  theme = 'gruvbox-baby'
 }
 
 return M

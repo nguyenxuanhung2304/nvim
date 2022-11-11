@@ -4,7 +4,8 @@ if not present then
 	return
 end
 
-local lspconfig = require("lspconfig")
+local present_lspconfig, lspconfig = pcall(require, "lspconfig")
+if not present_lspconfig then return end
 
 local servers = { "sumneko_lua", "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls" }
 
