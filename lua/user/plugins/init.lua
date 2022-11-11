@@ -196,19 +196,17 @@ return packer.startup(function(use)
   use "hrsh7th/nvim-cmp"
   use {
     "hrsh7th/cmp-buffer",
-    event = "BufRead"
+    event = "InsertEnter"
   }
   use {
     "hrsh7th/cmp-path",
-    event = "BufRead"
+    event = "InsertEnter"
   }
   use {
     "hrsh7th/cmp-nvim-lua",
-    event = "BufRead"
   }
   use {
     "saadparwaiz1/cmp_luasnip",
-    event = "BufRead"
   }
 
   -- Lsp
@@ -228,20 +226,17 @@ return packer.startup(function(use)
     config = function()
       require "user.plugins.configs.lspsaga"
     end,
-    event = "InsertEnter"
   }
   use {
     "onsails/lspkind.nvim",
-    event = "InsertEnter"
   }
   -- Snippets
   use {
     "L3MON4D3/LuaSnip",
-    event = "InsertEnter"
   }
+
   use {
     "rafamadriz/friendly-snippets",
-    event = "InsertEnter"
   }
 
   -- Which key
@@ -266,7 +261,8 @@ return packer.startup(function(use)
     cmd = {
       "G",
       "Git",
-      "Gtabedit"
+      "Gtabedit",
+      "Gdiff"
     }
   }
   use {
@@ -288,7 +284,7 @@ return packer.startup(function(use)
   -- Rails
   use {
     "tpope/vim-endwise",
-    event = "BufRead"
+    event = "BufWinEnter"
   }
   use "tpope/vim-rails"
   use {
@@ -316,7 +312,6 @@ return packer.startup(function(use)
   -- Markdown preview
   use {
     "iamcco/markdown-preview.nvim",
-    event = "BufRead"
   }
 
   -- Terminal
