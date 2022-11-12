@@ -62,3 +62,11 @@ keymap("n", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
 -- Formatter
 keymap('n', '<C-f>', '<cmd>Format<cr>')
 keymap('i', '<C-f>', '<cmd>Format<cr>')
+
+-- Nvim Hlslens
+keymap('n', 'n', "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>")
+keymap('n', 'N', "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>")
+keymap('n', '*', "*<Cmd>lua require('hlslens').start()<CR>")
+keymap('n', '#', "#<Cmd>lua require('hlslens').start()<CR>")
+keymap('n', 'g*', "g*<Cmd>lua require('hlslens').start()<CR>")
+keymap('n', 'g#', "g#<Cmd>lua require('hlslens').start()<CR>")
