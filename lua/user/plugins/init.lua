@@ -191,6 +191,13 @@ return packer.startup(function(use)
     event = "BufRead"
   }
 
+  use {
+    'kevinhwang91/nvim-hlslens',
+    config = function ()
+      require "user.plugins.configs.nvim-hlslens"
+    end
+  }
+
   -- Cmp
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/nvim-cmp"
