@@ -88,12 +88,19 @@ return packer.startup(function(use)
   }
 
   -- Utils
+  use({
+    "Pocco81/auto-save.nvim",
+    config = function()
+      require("auto-save").setup {}
+    end,
+    event = "InsertEnter"
+  })
+
   use {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
       require "user.plugins.configs.indent-blankline"
     end,
-    event = "BufRead"
   }
 
   use {
@@ -164,7 +171,7 @@ return packer.startup(function(use)
 
   use {
     'nvim-lualine/lualine.nvim',
-    config = function ()
+    config = function()
       require "user.plugins.configs.lualine"
     end
   }
@@ -193,7 +200,7 @@ return packer.startup(function(use)
 
   use {
     'kevinhwang91/nvim-hlslens',
-    config = function ()
+    config = function()
       require "user.plugins.configs.nvim-hlslens"
     end
   }
