@@ -108,15 +108,6 @@ local mappings = {
     s = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
   },
 
-  T = {
-    name = "+Test",
-    c = {"<cmd>TestNearest<cr>", "Run test bellow cursor"},
-    f = {"<cmd>TestFile<cr>", "Run current test file"},
-    s = {"<cmd>TestSuite<cr>", "Run all test files"},
-    l = {"<cmd>TestLast<cr>", "Run last test file"},
-    v = {"<cmd>TestVisit<cr>", "Open last test file"}
-  },
-
   D = {
     name = "+Diffview",
     o = { "<cmd>DiffviewOpen<cr>", "Open diffview" },
