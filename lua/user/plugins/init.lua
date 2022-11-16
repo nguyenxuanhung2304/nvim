@@ -90,6 +90,11 @@ return packer.startup(function(use)
   }
 
   -- Utils
+  use {
+    'p00f/nvim-ts-rainbow',
+    event = "BufWinEnter"
+  }
+
   use({
     "Pocco81/auto-save.nvim",
     config = function()
@@ -158,7 +163,6 @@ return packer.startup(function(use)
     config = function()
       require "user.plugins.configs.nvim-treesitter"
     end,
-    event = "BufRead"
   }
 
   -- Buffer
