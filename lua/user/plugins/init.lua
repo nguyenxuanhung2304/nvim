@@ -1,5 +1,4 @@
 local fn = vim.fn
-local config = require("user.core.config")
 
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -42,11 +41,14 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "lewis6991/impatient.nvim"
 
-  require("user.theme.plugins").init(use)
-
   use {
     'kyazdani42/nvim-web-devicons',
-    after = config.theme
+  }
+
+  -- Themes
+  use {
+    'luisiacc/gruvbox-baby',
+    branch = 'main'
   }
 
   -- Telescope
@@ -312,7 +314,6 @@ return packer.startup(function(use)
     config = function()
       require "user.plugins.configs.notify"
     end,
-    after = config.theme
   }
 
   use {
