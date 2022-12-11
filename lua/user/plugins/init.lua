@@ -344,6 +344,14 @@ return packer.startup(function(use)
     event = "BufRead"
   }
 
+  -- Flutter
+  use {
+    'akinsho/flutter-tools.nvim',
+    config = function()
+      require "user.plugins.configs.flutter-tools"
+    end
+  }
+
   -- Automatically set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()

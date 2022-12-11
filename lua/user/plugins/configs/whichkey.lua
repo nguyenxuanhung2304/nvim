@@ -83,10 +83,11 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
-  ['s'] = {"<cmd>Telescope tmux sessions<cr>", "Find tmux session"},
+  ['s'] = {"<cmd>Telescope tmux sessions<cr>", "Find tmux session" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab"},
+  ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab" },
+  ["f"] = { "<cmd>Telescope flutter commands<cr>", "Open flutter commands" },
 
   P = {
     name = "Packer",
@@ -124,7 +125,7 @@ local mappings = {
     n = {"<cmd>GitConflictNextConflict<cr>", "Move to the next conflict"},
     p = {"<cmd>GitConflictPrevConflict<cr>", "Move to the previous conflict"},
     l = {"<cmd>GitConflictListQf<cr>", "Get all conflict to quickfix"}
-  }
+  },
 }
 
 which_key.setup(setup)
