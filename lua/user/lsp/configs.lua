@@ -7,7 +7,7 @@ end
 local present_lspconfig, lspconfig = pcall(require, "lspconfig")
 if not present_lspconfig then return end
 
-local servers = { "sumneko_lua", "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls" }
+local servers = { "sumneko_lua", "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls", "vuels" }
 
 mason_config.setup({
 	ensure_installed = servers,

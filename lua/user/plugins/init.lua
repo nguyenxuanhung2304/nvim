@@ -50,6 +50,7 @@ return packer.startup(function(use)
     'luisiacc/gruvbox-baby',
     branch = 'main'
   }
+  use 'sainnhe/everforest'
 
   -- Telescope
   use {
