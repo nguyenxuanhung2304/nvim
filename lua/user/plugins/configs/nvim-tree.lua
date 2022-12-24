@@ -19,7 +19,8 @@ nvim_tree.setup {
   filters = {
     custom = {
       "^.git$"
-    }
+    },
+    dotfiles = false
   },
   renderer = {
     icons = {
@@ -46,5 +47,8 @@ nvim_tree.setup {
         },
       }
     }
+  },
+  git = {
+    ignore = false
   }
 }

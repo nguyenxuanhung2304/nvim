@@ -87,7 +87,7 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab" },
-  ["f"] = { "<cmd>Telescope flutter commands<cr>", "Open flutter commands" },
+  ["f"] = { ":NvimTreeFindFile<cr>", "Find file in NvimTree"},
 
   P = {
     name = "Packer",

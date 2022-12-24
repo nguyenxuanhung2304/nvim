@@ -51,6 +51,7 @@ return packer.startup(function(use)
     branch = 'main'
   }
   use 'sainnhe/everforest'
+  use 'dracula/vim'
 
   -- Telescope
   use {
@@ -70,7 +71,6 @@ return packer.startup(function(use)
   -- File explorer
   use {
     'kyazdani42/nvim-tree.lua',
-    cmd = 'NvimTreeToggle',
     config = function()
       require "user.plugins.configs.nvim-tree"
     end,
