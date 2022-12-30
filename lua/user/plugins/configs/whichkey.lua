@@ -102,6 +102,7 @@ local mappings = {
   S = {
     name = "+Search",
     C = { "<cmd>Telescope colorscheme<cr>", "Find colorschemes" },
+    g = { "<cmd>Telescope live_grep<cr>", "Find text in files" },
     r = { "<cmd>Telescope oldfiles<cr>", "Find recent files" },
     b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
     f = {"<cmd>Telescope git_status<cr>", "Show files changed"},
@@ -126,6 +127,13 @@ local mappings = {
     p = {"<cmd>GitConflictPrevConflict<cr>", "Move to the previous conflict"},
     l = {"<cmd>GitConflictListQf<cr>", "Get all conflict to quickfix"}
   },
+
+  G = {
+    name = "+Gitsigns",
+    p = { "<cmd>Gitsigns preview_hunk<cr>", "Preview current hunk" },
+    s = { "<cmd>Gitsigns stage_hunk<cr>", "Stage current hunk"},
+    u = { "<cmd>Gitsigns undo_stage_hunk<cr>", "Undo stage hunk" }
+  }
 }
 
 which_key.setup(setup)
