@@ -1,5 +1,5 @@
 ## Preview
-<center><img src="https://raw.githubusercontent.com/nguyenxuanhung2304/nvim-config/master/demo.png"></center
+<center><img src="./demo.png"></center
 
 * [Requirements](#requirements)
 * [After Installation, You Need To](#after-installation-you-need-to)
