@@ -1,4 +1,4 @@
-require("lspsaga").init_lsp_saga({})
+require("lspsaga").setup({})
 
 local function get_file_name(include_path)
   local file_name = require('lspsaga.symbolwinbar').get_file_name()
@@ -28,7 +28,6 @@ local function config_winbar_or_statusline()
   else
     local ok, lspsaga = pcall(require, 'lspsaga.symbolwinbar')
     local sym
-    if ok then sym = lspsaga.get_symbol_node() end
     local win_val = ''
     win_val = get_file_name(true) -- set to true to include path
     if sym ~= nil then win_val = win_val .. sym end

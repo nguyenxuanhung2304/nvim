@@ -58,13 +58,6 @@ return packer.startup(function(use)
       require "user.plugins.configs.telescope"
     end,
   }
-  use {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
-  }
-  use {
-    'camgraff/telescope-tmux.nvim'
-  }
 
   -- File explorer
   use {
@@ -124,7 +117,6 @@ return packer.startup(function(use)
     event = "BufRead"
   }
 
-  -- use "tpope/vim-surround"
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -233,13 +225,13 @@ return packer.startup(function(use)
     end
   }
   use { "williamboman/mason-lspconfig.nvim" }
-  use {
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-      require "user.plugins.configs.lspsaga"
-    end,
-  }
+  --use {
+    --"glepnir/lspsaga.nvim",
+    --branch = "main",
+    --config = function()
+      --require "user.plugins.configs.lspsaga"
+    --end,
+  --}
   use {
     "onsails/lspkind.nvim",
   }
@@ -313,19 +305,6 @@ return packer.startup(function(use)
     end,
   }
 
-  use {
-    "sindrets/diffview.nvim",
-    config = function()
-      require "user.plugins.configs.diffview"
-    end,
-    event = "BufWinEnter"
-  }
-
-  -- Markdown preview
-  use {
-    "iamcco/markdown-preview.nvim",
-  }
-
   -- Terminal
   use {
     "akinsho/toggleterm.nvim",
@@ -341,14 +320,6 @@ return packer.startup(function(use)
       require "user.plugins.configs.emmet"
     end,
     event = "BufRead"
-  }
-
-  -- Flutter
-  use {
-    'akinsho/flutter-tools.nvim',
-    config = function()
-      require "user.plugins.configs.flutter-tools"
-    end
   }
 
   -- Automatically set up configuration after cloning packer.nvim

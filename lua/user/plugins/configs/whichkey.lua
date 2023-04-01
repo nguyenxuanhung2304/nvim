@@ -83,7 +83,6 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
-  ['s'] = {"<cmd>Telescope tmux sessions<cr>", "Find tmux session" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab" },
@@ -108,13 +107,6 @@ local mappings = {
     f = {"<cmd>Telescope git_status<cr>", "Show files changed"},
     c = {"<cmd>Telescope git_commits<cr>", "Show commits"},
     s = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
-  },
-
-  D = {
-    name = "+Diffview",
-    o = { "<cmd>DiffviewOpen<cr>", "Open diffview" },
-    h = { "<cmd>DiffviewFileHistory<cr>", "Open commits history"},
-    c = { "<cmd>DiffviewClose<cr>", "Close diffview" },
   },
 
   C = {
