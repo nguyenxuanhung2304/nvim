@@ -224,16 +224,16 @@ return packer.startup(function(use)
     end
   }
   use { "williamboman/mason-lspconfig.nvim" }
-  -- use {
-  --   "glepnir/lspsaga.nvim",
-  --   branch = "main",
-  --   opt = true,
-  --   event = "LspAttach",
-  --   config = function()
-  --     -- require "user.plugins.configs.lspsaga"
-  --     require("lspsaga").setup({})
-  --   end,
-  -- }
+  use {
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    opt = true,
+    event = "LspAttach",
+    config = function()
+      -- require "user.plugins.configs.lspsaga"
+      require("lspsaga").setup({})
+    end,
+  }
   use {
     "onsails/lspkind.nvim",
   }

@@ -1,4 +1,3 @@
-Now using node v12.22.12 (npm v)
 local actions = require "fzf-lua.actions"
 require'fzf-lua'.setup {
   -- fzf_bin         = 'sk',            -- use skim instead of fzf?
