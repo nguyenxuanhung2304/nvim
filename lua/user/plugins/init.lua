@@ -224,16 +224,15 @@ return packer.startup(function(use)
     end
   }
   use { "williamboman/mason-lspconfig.nvim" }
-  -- use {
-  --   "glepnir/lspsaga.nvim",
-  --   branch = "main",
-  --   opt = true,
-  --   event = "LspAttach",
-  --   config = function()
-  --     -- require "user.plugins.configs.lspsaga"
-  --     require("lspsaga").setup({})
-  --   end,
-  -- }
+  use {
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    opt = true,
+    event = "LspAttach",
+    config = function()
+      require("lspsaga").setup({})
+    end,
+  }
   use {
     "onsails/lspkind.nvim",
   }
@@ -297,14 +296,6 @@ return packer.startup(function(use)
   use {
     "tree-sitter/tree-sitter-embedded-template",
     event = "BufRead"
-  }
-
-  -- Notify
-  use {
-    "rcarriga/nvim-notify",
-    config = function()
-      require "user.plugins.configs.notify"
-    end,
   }
 
   -- Terminal
