@@ -46,6 +46,7 @@ return packer.startup(function(use)
   }
 
   -- Themes
+  use { "catppuccin/nvim", as = "catppuccin" }
   use {
     'luisiacc/gruvbox-baby',
     branch = 'main'
