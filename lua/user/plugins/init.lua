@@ -51,12 +51,11 @@ return packer.startup(function(use)
     branch = 'main'
   }
 
-  -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  use { 
+    'ibhagwan/fzf-lua',
     config = function()
-      require "user.plugins.configs.telescope"
-    end,
+      require "user.plugins.configs.fzf"
+    end
   }
 
   -- File explorer
@@ -225,13 +224,16 @@ return packer.startup(function(use)
     end
   }
   use { "williamboman/mason-lspconfig.nvim" }
-  --use {
-    --"glepnir/lspsaga.nvim",
-    --branch = "main",
-    --config = function()
-      --require "user.plugins.configs.lspsaga"
-    --end,
-  --}
+  -- use {
+  --   "glepnir/lspsaga.nvim",
+  --   branch = "main",
+  --   opt = true,
+  --   event = "LspAttach",
+  --   config = function()
+  --     -- require "user.plugins.configs.lspsaga"
+  --     require("lspsaga").setup({})
+  --   end,
+  -- }
   use {
     "onsails/lspkind.nvim",
   }

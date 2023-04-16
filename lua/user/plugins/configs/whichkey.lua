@@ -80,7 +80,7 @@ local opts = {
 
 local mappings = {
   ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "<cmd>FzfLua buffers<cr>",
     "Buffers",
   },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -100,13 +100,12 @@ local mappings = {
 
   S = {
     name = "+Search",
-    C = { "<cmd>Telescope colorscheme<cr>", "Find colorschemes" },
-    g = { "<cmd>Telescope live_grep<cr>", "Find text in files" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Find recent files" },
-    b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
-    f = {"<cmd>Telescope git_status<cr>", "Show files changed"},
-    c = {"<cmd>Telescope git_commits<cr>", "Show commits"},
-    s = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
+    C = { "<cmd>FzfLua colorschemes<cr>", "Find colorschemes" },
+    r = { "<cmd>FzfLua oldfiles<cr>", "Find recent files" },
+    b = {"<cmd>FzfLua git_branches<cr>", "Show branches"},
+    f = {"<cmd>FzfLua git_status<cr>", "Show files changed"},
+    c = {"<cmd>FzfLua git_commits<cr>", "Show commits"},
+    s = {"<cmd>FzfLua git_stash<cr>", "Show list stash"}
   },
 
   C = {

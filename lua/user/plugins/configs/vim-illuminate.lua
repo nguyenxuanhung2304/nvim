@@ -21,8 +21,7 @@ require('illuminate').configure({
         "packer",
         "neogitstatus",
         "NvimTree",
-        "alpha",
-        "Telescope"
+        "alpha"
     },
     -- filetypes_allowlist: filetypes to illuminate, this is overriden by filetypes_denylist
     filetypes_allowlist = {},
