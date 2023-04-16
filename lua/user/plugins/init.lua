@@ -230,7 +230,6 @@ return packer.startup(function(use)
     opt = true,
     event = "LspAttach",
     config = function()
-      -- require "user.plugins.configs.lspsaga"
       require("lspsaga").setup({})
     end,
   }
@@ -297,14 +296,6 @@ return packer.startup(function(use)
   use {
     "tree-sitter/tree-sitter-embedded-template",
     event = "BufRead"
-  }
-
-  -- Notify
-  use {
-    "rcarriga/nvim-notify",
-    config = function()
-      require "user.plugins.configs.notify"
-    end,
   }
 
   -- Terminal
