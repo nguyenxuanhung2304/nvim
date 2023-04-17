@@ -6,7 +6,7 @@ return {
     "catppuccin/nvim",
     as = "catppuccin",
     lazy = false,
-    config = function ()
+    config = function()
       require "user.theme.init"
     end
   },
@@ -126,7 +126,7 @@ return {
   {
     'echasnovski/mini.cursorword',
     version = false,
-    config = function ()
+    config = function()
       require('mini.cursorword').setup()
     end
   },
@@ -176,15 +176,6 @@ return {
     end
   },
   { "williamboman/mason-lspconfig.nvim" },
-  {
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    opt = true,
-    event = "LspAttach",
-    config = function()
-      require("lspsaga").setup({})
-    end,
-  },
   {
     "onsails/lspkind.nvim",
     event = "InsertEnter"
