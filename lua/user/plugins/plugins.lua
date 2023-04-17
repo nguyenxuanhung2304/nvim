@@ -6,7 +6,7 @@ return {
     "catppuccin/nvim",
     as = "catppuccin",
     lazy = false,
-    config = function ()
+    config = function()
       require "user.theme.init"
     end
   },
@@ -84,14 +84,6 @@ return {
   },
 
   {
-    'RRethy/vim-hexokinase',
-    run = 'make hexokinase',
-    config = function()
-      require "user.plugins.configs.vim-hexokinase"
-    end,
-  },
-
-  {
     'mg979/vim-visual-multi',
     branch = 'master',
     event = "BufRead"
@@ -126,7 +118,7 @@ return {
   {
     'echasnovski/mini.cursorword',
     version = false,
-    config = function ()
+    config = function()
       require('mini.cursorword').setup()
     end
   },
@@ -177,17 +169,15 @@ return {
   },
   { "williamboman/mason-lspconfig.nvim" },
   {
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    opt = true,
-    event = "LspAttach",
-    config = function()
-      require("lspsaga").setup({})
-    end,
-  },
-  {
     "onsails/lspkind.nvim",
     event = "InsertEnter"
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "InsertEnter",
+    config = function ()
+      require("lsp_signature").setup{}
+    end
   },
   -- Snippets
   {
