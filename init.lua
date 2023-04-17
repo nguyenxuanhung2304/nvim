@@ -3,7 +3,6 @@ vim.defer_fn(function()
 end, 0)
 
 require "user.plugins"
-require "user.theme"
 require "user.core.mappings"
 require "user.core.options"
 require "user.lsp"
