@@ -124,9 +124,10 @@ return {
 
   -- Highlight word under cursor
   {
-    'RRethy/vim-illuminate',
-    config = function()
-      require "user.plugins.configs.vim-illuminate"
+    'echasnovski/mini.cursorword',
+    version = false,
+    config = function ()
+      require('mini.cursorword').setup()
     end
   },
 
