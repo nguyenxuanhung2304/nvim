@@ -98,28 +98,10 @@ return {
   },
   { "RRethy/nvim-treesitter-textsubjects" },
 
-  -- Buffer
-  {
-    'akinsho/bufferline.nvim',
-    event = "BufRead",
-    config = function()
-      require "user.plugins.configs.bufferline"
-    end
-  },
-
   {
     'nvim-lualine/lualine.nvim',
     config = function()
       require "user.plugins.configs.lualine"
-    end
-  },
-
-  -- Highlight word under cursor
-  {
-    'echasnovski/mini.cursorword',
-    version = false,
-    config = function()
-      require('mini.cursorword').setup()
     end
   },
 
@@ -241,4 +223,9 @@ return {
     end,
     event = "BufRead"
   },
+  {
+    'romgrk/barbar.nvim',
+    init = function() vim.g.barbar_auto_setup = false end,
+    version = '^1.0.0'
+  }
 }
