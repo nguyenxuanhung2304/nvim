@@ -23,7 +23,7 @@ require'fzf-lua'.setup {
     -- requires neovim > v0.9.0, passed as is to `nvim_open_win`
     -- can be sent individually to any provider to set the win title
     title         = "Fzf",
-    -- title_pos     = "center",    -- 'left', 'center' or 'right'
+    title_pos     = "center",    -- 'left', 'center' or 'right'
     fullscreen       = false,           -- start fullscreen?
     -- highlights should optimally be set by the colorscheme using
     -- FzfLuaXXX highlights. If your colorscheme doesn't set these
@@ -234,6 +234,7 @@ require'fzf-lua'.setup {
         ["png"]       = { "chafa" },
         ["svg"]       = { "chafa" },
         ["jpg"]       = { "chafa" },
+        ["jpeg"]       = { "chafa" },
       },
     },
   },
