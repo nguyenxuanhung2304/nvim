@@ -80,13 +80,13 @@ local opts = {
 
 local mappings = {
   ["b"] = {
-    "<cmd>FzfLua buffers<cr>",
+    "<cmd>Telescope buffers<cr>",
     "Buffers",
   },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["g"] = { "<cmd>Gtabedit:<cr>", "Open fugitive in new tab" },
-  ["f"] = { ":NvimTreeFindFile<cr>", "Find file in NvimTree"},
+  ["f"] = { "<cmd>Spectre<cr>", "Search or replace in project"},
 
   P = {
     name = "Packer",
@@ -100,12 +100,12 @@ local mappings = {
 
   S = {
     name = "+Search",
-    C = { "<cmd>FzfLua colorschemes<cr>", "Find colorschemes" },
-    r = { "<cmd>FzfLua oldfiles<cr>", "Find recent files" },
-    b = {"<cmd>FzfLua git_branches<cr>", "Show branches"},
-    f = {"<cmd>FzfLua git_status<cr>", "Show files changed"},
-    c = {"<cmd>FzfLua git_commits<cr>", "Show commits"},
-    s = {"<cmd>FzfLua git_stash<cr>", "Show list stash"}
+    C = { "<cmd>Telescope colorschemes<cr>", "Find colorschemes" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Find recent files" },
+    b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
+    f = {"<cmd>Telescope git_status<cr>", "Show files changed"},
+    c = {"<cmd>Telescope git_commits<cr>", "Show commits"},
+    s = {"<cmd>Telescope git_stash<cr>", "Show list stash"}
   },
 
   C = {
