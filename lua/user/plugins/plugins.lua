@@ -94,10 +94,6 @@ return {
       require "user.plugins.configs.nvim-treesitter"
     end,
   },
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    after = "nvim-treesitter"
-  },
 
   {
     'nvim-lualine/lualine.nvim',
