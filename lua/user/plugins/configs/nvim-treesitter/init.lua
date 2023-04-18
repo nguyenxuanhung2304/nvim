@@ -1,7 +1,7 @@
 local present, nvim_treesitter = pcall(require, "nvim-treesitter.configs")
 if not present then return end
 
-local textobjects = require("textobjects")
+local textobjects = require("user.plugins.configs.nvim-treesitter.textobjects")
 
 nvim_treesitter.setup {
   rainbow = {
