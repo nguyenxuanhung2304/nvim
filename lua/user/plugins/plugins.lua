@@ -94,7 +94,10 @@ return {
       require "user.plugins.configs.nvim-treesitter"
     end,
   },
-  { "RRethy/nvim-treesitter-textsubjects" },
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter"
+  },
 
   {
     'nvim-lualine/lualine.nvim',
