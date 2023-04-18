@@ -36,14 +36,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal mode -- 
-keymap("t", "<C-o>", "<C-\\><C-n>", opts)
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", opts)
-keymap("t", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
-
 -- Telescope
 keymap('n', '<leader>ff', "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
@@ -54,9 +46,6 @@ keymap("n", "<leader>fs", "<cmd>Telescope git_stash<cr>")
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
-
--- Toggle term
-keymap("n", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
 
 -- Formatter
 keymap('n', '<C-f>', '<cmd>Format<cr>')
