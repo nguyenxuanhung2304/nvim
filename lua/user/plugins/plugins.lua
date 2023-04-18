@@ -3,11 +3,11 @@ return {
   { "lewis6991/impatient.nvim" },
   { 'kyazdani42/nvim-web-devicons', lazy = true },
   {
-    "catppuccin/nvim",
-    as = "catppuccin",
-    lazy = false,
+    'projekt0n/github-nvim-theme', tag = 'v0.0.7',
     config = function()
-      require "user.theme.init"
+      require('github-theme').setup({})
+
+      vim.cmd('colorscheme github_dark')
     end
   },
   {
@@ -16,10 +16,8 @@ return {
     lazy = true
   },
   {
-    'ibhagwan/fzf-lua',
-    config = function()
-      require "user.plugins.configs.fzf"
-    end
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
   },
   {
     'kyazdani42/nvim-tree.lua',
@@ -227,5 +225,8 @@ return {
     'romgrk/barbar.nvim',
     init = function() vim.g.barbar_auto_setup = false end,
     version = '^1.0.0'
+  },
+  {
+    "nvim-pack/nvim-spectre"
   }
 }
