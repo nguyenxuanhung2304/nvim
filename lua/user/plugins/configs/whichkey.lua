@@ -123,7 +123,7 @@ local mappings = {
     name = "+Gitsigns",
     p = { "<cmd>Gitsigns preview_hunk<cr>", "Preview current hunk" },
     s = { "<cmd>Gitsigns stage_hunk<cr>", "Stage current hunk"},
-    u = { "<cmd>Gitsigns undo_stage_hunk<cr>", "Undo stage hunk" }
+    u = { "<cmd>Gitsigns reset_hunk<cr>", "Reset current hunk" }
   }
 }
 

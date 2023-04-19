@@ -18,6 +18,12 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.1',
+    dependencies = {
+      "nvim-telescope/telescope-project.nvim"
+    },
+    config = function ()
+      require "user.plugins.configs.telescope"
+    end
   },
   {
     'kyazdani42/nvim-tree.lua',
