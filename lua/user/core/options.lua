@@ -41,5 +41,3 @@ opt.cmdheight = 0 -- Hide command status
 
 opt.fillchars:append { eob = " " } -- Remove ~ symbol at end of buffer 
 opt.fillchars = opt.fillchars + 'diff:╱' -- Add / when show DifffView
-
-opt.winbar = "%t"

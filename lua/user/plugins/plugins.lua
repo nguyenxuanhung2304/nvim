@@ -236,11 +236,5 @@ return {
   },
   {
     "nvim-pack/nvim-spectre"
-  },
-  {
-    "karb94/neoscroll.nvim",
-    config = function ()
-      require('neoscroll').setup()
-    end
   }
 }

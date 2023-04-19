@@ -81,7 +81,11 @@ local opts = {
 local mappings = {
   ["b"] = {
     "<cmd>Telescope buffers<cr>",
-    "Buffers",
+    "Find buffers",
+  },
+  ["p"] = {
+    "<cmd>Telescope project<cr>",
+    "Find projects",
   },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
