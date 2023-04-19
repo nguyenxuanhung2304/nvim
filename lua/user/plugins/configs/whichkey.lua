@@ -100,7 +100,7 @@ local mappings = {
 
   S = {
     name = "+Search",
-    C = { "<cmd>Telescope colorschemes<cr>", "Find colorschemes" },
+    C = { "<cmd>Telescope colorscheme<cr>", "Find colorschemes" },
     r = { "<cmd>Telescope oldfiles<cr>", "Find recent files" },
     b = {"<cmd>Telescope git_branches<cr>", "Show branches"},
     f = {"<cmd>Telescope git_status<cr>", "Show files changed"},
