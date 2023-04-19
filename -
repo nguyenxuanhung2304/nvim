@@ -1,1 +1,0 @@
-pcall	/Users/rights-vn-hung/.config/nvim/lua/user/plugins/configs/whichkey.lua	/^local status_ok, which_key = pcall(require, "which/
