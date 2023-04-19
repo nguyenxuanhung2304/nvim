@@ -220,10 +220,13 @@ return {
     end,
     event = "BufRead"
   },
+    -- Buffer
   {
-    'romgrk/barbar.nvim',
-    init = function() vim.g.barbar_auto_setup = false end,
-    version = '^1.0.0'
+    'akinsho/bufferline.nvim',
+    event = "BufRead",
+    config = function()
+      require "user.plugins.configs.bufferline"
+    end
   },
   {
     "nvim-pack/nvim-spectre"
