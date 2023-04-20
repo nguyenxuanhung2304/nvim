@@ -39,5 +39,8 @@ g.mapleader = " "
 
 opt.cmdheight = 0 -- Hide command status
 
-opt.fillchars:append { eob = " " } -- Remove ~ symbol at end of buffer 
-opt.fillchars = opt.fillchars + 'diff:╱' -- Add / when show DifffView
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]

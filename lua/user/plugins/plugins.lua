@@ -8,6 +8,7 @@ return {
       require('github-theme').setup({})
 
       vim.cmd('colorscheme github_dimmed')
+      vim.api.nvim_set_hl(0, 'Folded', { bg = "#22272e" })
     end
   },
   {
@@ -139,12 +140,15 @@ return {
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lua",
       "saadparwaiz1/cmp_luasnip",
-    }
+    },
+    config = function ()
+      require "user.plugins.configs.cmp"
+    end
   },
 
   -- Lsp
   {
-    'neovim/nvim-lspconfig',
+    'neovim/nvim-lspconfig'
   },
   {
     "williamboman/mason.nvim",
@@ -191,12 +195,7 @@ return {
   },
   {
     "tpope/vim-fugitive",
-    cmd = {
-      "G",
-      "Git",
-      "Gtabedit",
-      "Gdiff"
-    }
+    event = "BufWinEnter"
   },
   {
     "f-person/git-blame.nvim",
@@ -236,5 +235,13 @@ return {
   },
   {
     "nvim-pack/nvim-spectre"
-  }
+  },
+  {
+    "kevinhwang91/nvim-ufo",
+    event = { "BufEnter" },
+    dependencies = { "kevinhwang91/promise-async" },
+    config = function ()
+      require("ufo").setup()
+    end
+  },
 }
