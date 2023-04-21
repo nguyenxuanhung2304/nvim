@@ -9,17 +9,21 @@ function M.keymap(mode, lhs, rhs, opts)
 end
 
 function M.eval()
-    local file_path = vim.api.nvim_eval_statusline('%f', {}).str
-    local modified = vim.api.nvim_eval_statusline('%M', {}).str == '+' and '⊚' or ''
+  local file_path = vim.api.nvim_eval_statusline('%f', {}).str
+  local modified = vim.api.nvim_eval_statusline('%M', {}).str == '+' and '⊚' or ''
 
-    file_path = file_path:gsub('/', ' > ')
+  file_path = file_path:gsub('/', ' > ')
 
-    return '%#WinBarPath#'
-     .. file_path
-     .. '%*'
-     .. '%#WinBarModified#'
-     .. modified
-     .. '%*'
+  return '%#WinBarPath#'
+   .. file_path
+   .. '%*'
+   .. '%#WinBarModified#'
+   .. modified
+   .. '%*'
+end
+
+function M.branch_name()
+  return vim.fn.system "git branch --show-current | tr -d '\n'"
 end
 
 return M
