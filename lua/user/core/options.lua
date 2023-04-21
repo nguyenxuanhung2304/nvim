@@ -35,8 +35,6 @@ opt.undofile = true
 
 opt.shortmess:append "sI" -- disable nvim intro
 
-g.mapleader = " "
-
 opt.cmdheight = 0 -- Hide command status
 
 vim.o.foldcolumn = '1' -- '0' is not bad
@@ -44,3 +42,5 @@ vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decr
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
+vim.o.winbar = "%{%v:lua.require'user.core.utils'.eval()%}"

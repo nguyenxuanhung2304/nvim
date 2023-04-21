@@ -7,3 +7,4 @@ require "user.core.mappings"
 require "user.core.options"
 require "user.lsp"
 require "user.core.autocmds"
+vim.cmd('colorscheme gruvbox-baby')

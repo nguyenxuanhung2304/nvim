@@ -3,18 +3,8 @@ return {
   { "lewis6991/impatient.nvim" },
   { 'kyazdani42/nvim-web-devicons', lazy = true },
   {
-    'projekt0n/github-nvim-theme', tag = 'v0.0.7',
-    config = function()
-      require('github-theme').setup({})
-
-      vim.cmd('colorscheme github_dimmed')
-      vim.api.nvim_set_hl(0, 'Folded', { bg = "#22272e" })
-    end
-  },
-  {
     'luisiacc/gruvbox-baby',
-    branch = 'main',
-    lazy = true
+    branch = 'main'
   },
   {
     'nvim-telescope/telescope.nvim',
@@ -81,9 +71,7 @@ return {
   {
     "kylechui/nvim-surround",
     config = function()
-      require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
-      })
+      require("nvim-surround").setup({})
     end,
     event = "BufRead"
   },
@@ -176,12 +164,19 @@ return {
     "rafamadriz/friendly-snippets",
   },
 
-  -- Which key
   {
-    "folke/which-key.nvim",
-    event = "BufWinEnter",
-    config = function()
-      require "user.plugins.configs.whichkey"
+    'mrjones2014/legendary.nvim',
+    requires = {
+      'kkharji/sqlite.lua',
+    },
+    config = function ()
+      require "user.plugins.configs.legendary"
+    end
+  },
+  {
+    'stevearc/dressing.nvim',
+    config = function ()
+      require('dressing').setup()
     end
   },
 

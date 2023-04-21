@@ -1,0 +1,30 @@
+require("legendary").setup {
+  keymaps = {
+    { '<leader>ff', ':Telescope find_files', description = 'Find files' },
+    { "<cmd>Telescope buffers<cr>", description = "Find buffers" },
+    { "<cmd>Telescope project<cr>", description = "Find projects" },
+    { "<leader>c", "<cmd>Bdelete!<CR>", description =  "Close Buffer" },
+    { "<cmd>nohlsearch<CR>", description = "No Highlight" },
+    { "<cmd>Gtabedit:<cr>", description = "Open fugitive in new tab" },
+    { "<cmd>Spectre<cr>", description = "Search or replace in project"},
+    { "<cmd>Telescope colorscheme<cr>", description = "Find colorschemes" },
+    { "<cmd>Telescope oldfiles<cr>", description = "Find recent files" },
+    {"<cmd>Telescope git_branches<cr>", description = "Show branches"},
+    {"<cmd>Telescope git_status<cr>", description = "Show files changed"},
+    {"<cmd>Telescope git_commits<cr>", description = "Show commits"},
+    {"<cmd>Telescope git_stash<cr>", description = "Show list stash"},
+    {"<cmd>GitConflictChooseOurs<cr>", description = "Select the current changes"},
+    {"<cmd>GitConflictChooseTheirs<cr>", description = "Select the incoming changes"},
+    {"<cmd>GitConflictChooseBoth<cr>", description = "Select both changes"},
+    {"<cmd>GitConflictChooseNone<cr>", description = "Select none of the changes"},
+    {"<cmd>GitConflictNextConflict<cr>", description = "Move to the next conflict"},
+    {"<cmd>GitConflictPrevConflict<cr>", description = "Move to the previous conflict"},
+    {"<cmd>GitConflictListQf<cr>", description = "Get all conflict to quickfix"},
+    { "<cmd>Gitsigns preview_hunk<cr>", description = "Preview current hunk" },
+    { "<cmd>Gitsigns stage_hunk<cr>", description = "Stage current hunk"},
+    { "<cmd>Gitsigns reset_hunk<cr>", description = "Reset current hunk" },
+    { "<cmd>Gtabedit:<cr>", description = "Open fugitive in new tab" },
+    { "<cmd>Lazy<cr>", description = "Open plugin manager" },
+  }
+}
+
