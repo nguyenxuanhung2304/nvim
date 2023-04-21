@@ -250,5 +250,11 @@ return {
     config = function ()
       require "user.plugins.configs.toggleterm"
     end
+  },
+  {
+    "tpope/vim-rails",
+    event = {
+      "InsertEnter"
+    }
   }
 }
