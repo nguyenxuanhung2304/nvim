@@ -244,4 +244,11 @@ return {
       require("ufo").setup()
     end
   },
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    config = function ()
+      require "user.plugins.configs.toggleterm"
+    end
+  }
 }

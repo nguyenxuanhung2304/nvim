@@ -59,8 +59,18 @@ keymap('n', '#', "#<Cmd>lua require('hlslens').start()<CR>")
 keymap('n', 'g*', "g*<Cmd>lua require('hlslens').start()<CR>")
 keymap('n', 'g#', "g#<Cmd>lua require('hlslens').start()<CR>")
 
+-- Fold
 keymap("n", "zR", "<cmd>lua require('ufo').openAllFolds()<CR>")
 keymap("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<CR>")
 keymap("n", "zr", "<cmd>lua require('ufo').openFoldsExceptKinds()<CR>")
 keymap("n", "zm", "<cmd>lua require('ufo').closeFoldsWith()<CR>")
 keymap("n", "zp","<cmd>lua require('ufo').peekFoldedLinesUnderCursor()<CR>")
+
+-- Toggleterm
+keymap("t", "<C-o>", "<C-\\><C-n>", opts)
+keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", opts)
+keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", opts)
+keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", opts)
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", opts)
+keymap("t", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
+keymap("n", "<C-\\>", "<cmd>ToggleTerm<cr>", opts)
