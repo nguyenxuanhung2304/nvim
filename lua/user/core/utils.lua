@@ -9,6 +9,12 @@ function M.keymap(mode, lhs, rhs, opts)
 end
 
 function M.eval()
+  local except_filetype = {"toggleterm", "fugitive"}
+  local filetype = vim.bo.filetype
+  for _, value in ipairs(except_filetype) do
+    if value == filetype then return '' end
+  end
+
   local file_path = vim.api.nvim_eval_statusline('%f', {}).str
   local modified = vim.api.nvim_eval_statusline('%M', {}).str == '+' and '⊚' or ''
 

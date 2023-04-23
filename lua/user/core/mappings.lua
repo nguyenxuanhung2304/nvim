@@ -74,6 +74,6 @@ keymap("t", "<C-\\>", "<cmd>ToggleTerm<cr>")
 keymap("n", "<C-\\>", "<cmd>ToggleTerm<cr>")
 
 keymap("n", "<Space>h", "<cmd>nohlsearch<CR>")
-keymap("n", "<Space>g", "<cmd>Gtabedit:<cr>")
+keymap("n", "<Space>g", "<cmd>Gvsplit:<cr>")
 keymap("n", "<Space>p", "<cmd>Legendary<cr>")
 keymap("n", "<Space>c", "<cmd>Bdelete!<cr>")

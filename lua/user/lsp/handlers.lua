@@ -57,12 +57,12 @@ local function lsp_highlight_document(client)
 end
 
 local function lsp_keymaps(_)
-  keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+  keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
+  keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
   keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-  keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-  keymap("n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-  keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
-  keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+  keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
+  keymap("n", "ga", "<cmd>Lspsaga code_action<CR>")
+  keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
 end
 
 M.on_attach = function(client, bufnr)

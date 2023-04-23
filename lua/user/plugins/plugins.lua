@@ -7,9 +7,6 @@ return {
     branch = 'main'
   },
   {
-    'shaunsingh/nord.nvim'
-  },
-  {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.1',
     dependencies = {
@@ -157,6 +154,13 @@ return {
     event = "InsertEnter",
     config = function ()
       require("lsp_signature").setup{}
+    end
+  },
+  {
+    "glepnir/lspsaga.nvim",
+    event = "LspAttach",
+    config = function()
+      require "user.plugins.configs.lspsaga"
     end
   },
   -- Snippets
