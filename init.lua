@@ -3,8 +3,8 @@ vim.defer_fn(function()
 end, 0)
 
 require "user.plugins"
+require "user.core.theme"
 require "user.core.mappings"
 require "user.core.options"
 require "user.lsp"
 require "user.core.autocmds"
-vim.cmd('colorscheme gruvbox-baby')
