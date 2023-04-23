@@ -1,5 +1,3 @@
-local utils = require("user.core.utils")
-
 require("legendary").setup {
   keymaps = {
     -- Telescope
@@ -37,9 +35,9 @@ require("legendary").setup {
     { "<cmd>Gitsigns stage_hunk<cr>", description = "GitSigns: Stage"},
     { "<cmd>Gitsigns reset_hunk<cr>", description = "GitSigns: Unstage" },
 
-    -- Git
-    { string.format("<cmd>G push origin %s<cr>", utils.branch_name()), description = "Git: Push" },
-    { string.format("<cmd>G push origin %s -f<cr>", utils.branch_name()), description = "Git: Push(Force)" },
+    -- Search and repalce
+    { "<cmd>SearchReplaceSingleBufferCWord<cr>", description = "Replace: In file" },
+    { "<cmd>SearchReplaceMultiBufferCWord<cr>", description = "Replace: In project" },
   }
 }
 

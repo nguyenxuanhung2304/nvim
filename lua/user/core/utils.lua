@@ -22,8 +22,4 @@ function M.eval()
    .. '%*'
 end
 
-function M.branch_name()
-  return vim.fn.system "git branch --show-current | tr -d '\n'"
-end
-
 return M

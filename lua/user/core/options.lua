@@ -43,4 +43,4 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
-vim.o.winbar = "%{%v:lua.require'user.core.utils'.eval()%}"
+vim.o.winbar = "%{%v:lua.require'user.core.utils'.eval()%}" -- Add relative file path to winbar
