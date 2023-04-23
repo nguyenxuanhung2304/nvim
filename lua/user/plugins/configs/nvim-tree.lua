@@ -46,6 +46,9 @@ nvim_tree.setup {
           symlink = "",
         },
       }
+    },
+    indent_markers = {
+      enable = true
     }
   },
   git = {
