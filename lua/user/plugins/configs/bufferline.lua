@@ -14,7 +14,7 @@ bufferline.setup({
 		middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
 		indicator = {
 			icon = "▎", -- this should be omitted if indicator style is not 'icon'
-			style = "underline",
+			style = "icon",
 		},
 		buffer_close_icon = "",
 		modified_icon = "●",
@@ -108,4 +108,3 @@ vim.api.nvim_set_hl(0, 'BufferLineDevIconLuaSelected', { fg = colors.blue_gray, 
 
 vim.api.nvim_set_hl(0, 'BufferLineDevIconLuaInactive', { fg = colors.blue_gray, bg=colors.none, italic = true, sp="#242424" })
 vim.api.nvim_set_hl(0, 'BufferLineBufferVisible', { fg = colors.comment, bg=colors.none, italic = true, sp="#242424" })
--- BufferLineDevIconLuaInactive xxx cterm= gui= guifg=#51a0cf guibg=#242424
