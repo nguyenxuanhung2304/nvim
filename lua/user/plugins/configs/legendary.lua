@@ -3,7 +3,6 @@ require("legendary").setup({
 		-- Telescope
 		{ "<leader>ff", ":Telescope find_files", description = "Files" },
 		{ "<cmd>Telescope buffers<cr>", description = "Buffers" },
-		{ "<cmd>Telescope project<cr>", description = "Projects" },
 		{ "<cmd>Telescope colorscheme<cr>", description = "Colorschemes" },
 		{ "<cmd>Telescope oldfiles<cr>", description = "Recent files" },
 		{ "<cmd>Telescope git_branches<cr>", description = "Git: branches" },

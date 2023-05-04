@@ -11,5 +11,3 @@ telescope.setup {
     }
   }
 }
-telescope.load_extension('project')
-telescope.load_extension('tmux')

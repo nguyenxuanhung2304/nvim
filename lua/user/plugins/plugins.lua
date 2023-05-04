@@ -9,9 +9,6 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
-		dependencies = {
-			"nvim-telescope/telescope-project.nvim",
-		},
 		config = function()
 			require("user.plugins.configs.telescope")
 		end,
@@ -268,11 +265,4 @@ return {
 			})
 		end,
 	},
-  {
-    "aserowy/tmux.nvim",
-    config = function() return require("tmux").setup() end
-  },
-  {
-    "camgraff/telescope-tmux.nvim"
-  },
 }
