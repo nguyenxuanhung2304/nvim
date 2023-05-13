@@ -19,8 +19,6 @@ require("legendary").setup({
 
 		{ "<cmd>Gtabedit:<cr>", description = "Open fugitive in new tab" },
 
-		{ "<cmd>Spectre<cr>", description = "Search or replace" },
-
 		{ "<cmd>Lazy<cr>", description = "Open plugin manager" },
 
 		{ "<cmd>Format<cr>", description = "Format" },
