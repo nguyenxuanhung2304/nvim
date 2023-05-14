@@ -1,6 +1,9 @@
 local present, gitsigns = pcall(require, "gitsigns")
 
-if not present then return end;
+if not present then
+  print("gitsigns not yet installed!")
+  return
+end
 
 gitsigns.setup {
   signs = {

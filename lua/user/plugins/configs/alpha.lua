@@ -1,5 +1,6 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
+local present, alpha = pcall(require, "alpha")
+if not present then
+  print("alpha not yet installed!")
 	return
 end
 

@@ -1,6 +1,9 @@
 local present, comment = pcall(require, "Comment")
 
-if not present then return end
+if not present then
+  print("Comment not yet installed!")
+  return
+end
 
 comment.setup {
   ---Add a space b/w comment and the line

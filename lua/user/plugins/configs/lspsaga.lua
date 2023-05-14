@@ -1,6 +1,6 @@
 local present, lspsaga = pcall(require, "lspsaga")
 if not present then
-  print("Lspsaga not found!")
+  print("Lspsaga not yet installed!")
   return
 end
 

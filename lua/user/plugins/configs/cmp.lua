@@ -1,13 +1,18 @@
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
+local present_cmp, cmp = pcall(require, "cmp")
+if not present_cmp then
+  print("cmp not yet installed!")
   return
 end
 
-local lspkind_ok, lspkind = pcall(require, "lspkind")
-if not lspkind_ok then return end
+local present_lspkind, lspkind = pcall(require, "lspkind")
+if not present_lspkind then
+    print("lspkind not yet installed!")
+  return
+end
 
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
+local present_luasnip, luasnip = pcall(require, "luasnip")
+if not present_luasnip then
+    print("luasnip not yet installed!")
   return
 end
 

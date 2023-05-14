@@ -1,5 +1,8 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then return end
+local present, lualine = pcall(require, "lualine")
+if not present then
+  print("lualine not yet installed!")
+  return
+end
 
 local components = require "user.plugins.configs.lualine.components"
 

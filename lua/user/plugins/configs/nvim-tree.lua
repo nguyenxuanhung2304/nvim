@@ -47,9 +47,6 @@ nvim_tree.setup {
         },
       }
     },
-    indent_markers = {
-      enable = true
-    }
   },
   git = {
     ignore = false

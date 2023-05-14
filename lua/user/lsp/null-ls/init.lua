@@ -1,5 +1,6 @@
-local null_ls_status_ok, null_ls = pcall(require, "null-ls")
-if not null_ls_status_ok then
+local present, null_ls = pcall(require, "null-ls")
+if not present then
+  print("null-ls not yet installed!")
 	return
 end
 

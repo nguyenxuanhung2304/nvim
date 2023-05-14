@@ -1,4 +1,10 @@
-require("legendary").setup({
+local present, legendary = pcall(require, "legendary")
+if not present then
+  print("legendary not yet installed!")
+  return
+end
+
+legendary.setup({
 	keymaps = {
 		-- Telescope
 		{ "<leader>ff", ":Telescope find_files", description = "Files" },

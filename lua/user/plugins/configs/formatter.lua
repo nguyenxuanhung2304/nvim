@@ -1,6 +1,7 @@
 local present, formatter = pcall(require, "formatter")
 
 if not present then
+  print("formatter not yet installed!")
 	return
 end
 

@@ -1,5 +1,8 @@
 local present, nvim_treesitter = pcall(require, "nvim-treesitter.configs")
-if not present then return end
+if not present then
+  print("nvim-treesitter not yet installed!")
+  return
+end
 
 nvim_treesitter.setup {
   rainbow = {

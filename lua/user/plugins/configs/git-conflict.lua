@@ -1,6 +1,9 @@
 local present, git_conflict = pcall(require, "git-conflict")
 
-if not present then return end
+if not present then
+  print("git-conflict not yet installed!")
+  return
+end
 
 vim.cmd [[ 
   hi GitconflictCurrent guibg=#307365 ctermbg=4 guifg=#ffffff

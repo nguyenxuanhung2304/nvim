@@ -49,8 +49,9 @@ end
 
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
-  local status_ok, illuminate = pcall(require, "illuminate")
-  if not status_ok then
+  local present, illuminate = pcall(require, "illuminate")
+  if not present then
+    print("illuminate not yet installed")
     return
   end
   illuminate.on_attach(client)
@@ -75,8 +76,9 @@ end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
+local present, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not present then
+  print("cmp_nvim_lsp not yet installed!")
   return
 end
 
