@@ -143,6 +143,7 @@ return {
 			require("user.plugins.configs.mason")
 		end,
 	},
+  {"jose-elias-alvarez/null-ls.nvim"},
 	{ "williamboman/mason-lspconfig.nvim" },
 	{
 		"onsails/lspkind.nvim",
