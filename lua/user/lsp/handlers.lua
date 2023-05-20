@@ -47,16 +47,6 @@ M.setup = function()
   })
 end
 
-local function lsp_highlight_document(client)
-  -- Set autocommands conditional on server_capabilities
-  local present, illuminate = pcall(require, "illuminate")
-  if not present then
-    print("illuminate not yet installed")
-    return
-  end
-  illuminate.on_attach(client)
-end
-
 local function lsp_keymaps(_)
   keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
   keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
@@ -71,7 +61,6 @@ M.on_attach = function(client, bufnr)
     client.server_capabilities.document_formatting = false
   end
   lsp_keymaps(bufnr)
-  lsp_highlight_document(client)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
