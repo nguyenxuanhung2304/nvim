@@ -10,4 +10,13 @@ function M.keymap(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+function M.signs()
+  return {
+		{ name = "DiagnosticSignError", text = "" },
+		{ name = "DiagnosticSignWarn", text = "" },
+		{ name = "DiagnosticSignHint", text = "" },
+		{ name = "DiagnosticSignInfo", text = "" },
+  }
+end
+
 return M
