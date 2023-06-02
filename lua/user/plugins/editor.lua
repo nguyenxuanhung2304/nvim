@@ -288,4 +288,8 @@ return {
 			},
 		},
 	},
+	{
+    "akinsho/flutter-tools.nvim",
+    opts = {}
+  },
 }

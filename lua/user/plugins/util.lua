@@ -36,4 +36,10 @@ return {
 		"kevinhwang91/nvim-hlslens",
 		opts = {},
 	},
+	{
+		"barrett-ruth/live-server.nvim",
+		build = "yarn global add live-server",
+		config = true,
+    opts = {}
+	},
 }
