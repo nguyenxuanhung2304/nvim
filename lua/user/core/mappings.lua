@@ -1,8 +1,8 @@
 local utils = require("user.core.utils")
 local keymap = utils.keymap
 -- Ctrl+s is save file
-keymap('n', "<C-s>", "<cmd>w<cr>")
-keymap('i', "<C-s>", "<cmd>w<cr>")
+keymap("n", "<C-s>", "<cmd>w<cr>")
+keymap("i", "<C-s>", "<cmd>w<cr>")
 
 -- Navigator between window
 keymap("n", "<C-h>", "<C-w>h")
@@ -34,35 +34,38 @@ keymap("x", "K", ":move '<-2<CR>gv-gv")
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv")
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
+-- Nvim Hlslens
+keymap("n", "n", "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>")
+keymap("n", "N", "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>")
+keymap("n", "*", "*<Cmd>lua require('hlslens').start()<CR>")
+keymap("n", "#", "#<Cmd>lua require('hlslens').start()<CR>")
+keymap("n", "g*", "g*<Cmd>lua require('hlslens').start()<CR>")
+keymap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>")
+
 -- Telescope
-keymap('n', '<leader>ff', "<cmd>Telescope find_files<cr>")
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
-keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
-keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>")
-keymap("n", "<leader>fb", "<cmd>Telescope git_branches<cr>")
-keymap("n", "<leader>fs", "<cmd>Telescope git_stash<cr>")
+keymap("n", "<leader>sf", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
+keymap("n", "<leader>sg", "<cmd>Telescope live_grep<cr>", { desc = "Find text" })
+keymap("n", "<leader>sc", "<cmd>Telescope grep_string<cr>", { desc = "Find text current cursor" })
+keymap("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>", { desc = "Find oldfiles" })
+keymap("n", "<leader>sb", "<cmd>Telescope git_branches<cr>", { desc = "Find branches" })
+keymap("n", "<leader>ss", "<cmd>Telescope git_stash<cr>", { desc = "Find stashes" })
+keymap("n", "<leader>sw", "<cmd>SearchReplaceSingleBufferCWord<cr>", { desc = "Replace in file" })
+keymap("n", "<leader>sp", "<cmd>SearchReplaceMultiBufferCWord<cr>", { desc = "Replace in project" })
 
 -- NvimTree
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
-
--- Formatter
-keymap('n', '<C-f>', '<cmd>Format<cr>')
-keymap('i', '<C-f>', '<cmd>Format<cr>')
-
--- Nvim Hlslens
-keymap('n', 'n', "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>")
-keymap('n', 'N', "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>")
-keymap('n', '*', "*<Cmd>lua require('hlslens').start()<CR>")
-keymap('n', '#', "#<Cmd>lua require('hlslens').start()<CR>")
-keymap('n', 'g*', "g*<Cmd>lua require('hlslens').start()<CR>")
-keymap('n', 'g#', "g#<Cmd>lua require('hlslens').start()<CR>")
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file explorer" })
 
 -- Fold
-keymap("n", "zR", "<cmd>lua require('ufo').openAllFolds()<CR>")
-keymap("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<CR>")
-keymap("n", "zr", "<cmd>lua require('ufo').openFoldsExceptKinds()<CR>")
-keymap("n", "zm", "<cmd>lua require('ufo').closeFoldsWith()<CR>")
-keymap("n", "zp","<cmd>lua require('ufo').peekFoldedLinesUnderCursor()<CR>")
+keymap("n", "<Leader>zR", "<cmd>lua require('ufo').openAllFolds()<CR>", { desc = "Open all folds" })
+keymap("n", "<Leader>zM", "<cmd>lua require('ufo').closeAllFolds()<CR>", { desc = "Close all folds" })
+keymap("n", "<Leader>zr", "<cmd>lua require('ufo').openFoldsExceptKinds()<CR>")
+keymap("n", "<Leader>zm", "<cmd>lua require('ufo').closeFoldsWith()<CR>")
+keymap("n", "<Leader>zp", "<cmd>lua require('ufo').peekFoldedLinesUnderCursor()<CR>", { desc = "Preview fold " })
+
+-- Diffview
+keymap("n", "<Leader>Do", "<cmd>DiffviewOpen<cr>", { desc = "Open files change" })
+keymap("n", "<Leader>Dc", "<cmd>DiffviewClose<cr>", { desc = "Close diffview" })
+keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open git log" })
 
 -- Toggleterm
 keymap("t", "<C-o>", "<C-\\><C-n>")
@@ -73,8 +76,22 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l")
 keymap("t", "<C-\\>", "<cmd>ToggleTerm<cr>")
 keymap("n", "<C-\\>", "<cmd>ToggleTerm<cr>")
 
-keymap("n", "<Esc>", "<cmd>nohlsearch<CR>")
-keymap("n", "<Space>g", "<cmd>Gtabedit:<cr>")
-keymap("n", "<Space>p", "<cmd>Legendary<cr>")
-keymap("n", "<Space>c", "<cmd>Bdelete!<cr>")
-keymap("n", "<Space>d", "<cmd>lua require('dropbar.api').pick()<cr>")
+-- Common
+keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
+keymap("n", "<Leader>/", "<cmd>gcc<cr>", { desc = "Comment" })
+keymap("n", "<Leader>f", "<cmd>Format<cr>", { desc = "Format" })
+keymap("n", "<Leader>g", "<cmd>Gtabedit:<cr>", { desc = "Open fugitive" })
+keymap("n", "<Leader>c", "<cmd>Bdelete<cr>", { desc = "Close buffer" })
+keymap("n", "<Leader>d", "<cmd>lua require('dropbar.api').pick()<cr>", { desc = "Dropbar" })
+
+-- Git conflit
+keymap("n", "<Leader>Cc", "<cmd>GitConflictChooseOurs<cr>", { desc = "Select current" })
+keymap("n", "<Leader>Ci", "<cmd>GitConflictChooseTheirs<cr>", { desc = "Select incomming" })
+keymap("n", "<Leader>Cb", "<cmd>GitConflictChooseBoth<cr>", { desc = "Select both" })
+keymap("n", "<Leader>Cn", "<cmd>GitConflictNextConflict<cr>", { desc = "Next" })
+keymap("n", "<Leader>Cp", "<cmd>GitConflictPrevConflict<cr>", { desc = "Previous" })
+
+-- GitSign
+keymap("n", "<Leader>;p", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview hunk" })
+keymap("n", "<Leader>;s", "<cmd>Gitsigns stage_hunk<cr>", { desc = "Stage hunk" })
+keymap("n", "<Leader>;u", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Unstage hunk" })
