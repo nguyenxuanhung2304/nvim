@@ -60,6 +60,7 @@ return {
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
+    event = { "BufReadPre" },
 		opts = function()
 			vim.g.indent_blankline_filetype_exclude = {
 				"help",
@@ -83,6 +84,7 @@ return {
 	},
 	{
 		"nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
 		opts = {
 			options = {
 				icons_enabled = true,
@@ -250,7 +252,7 @@ return {
 	},
 	{
 		"kevinhwang91/nvim-ufo",
-		event = { "BufEnter" },
+		event = { "BufReadPre" },
 		dependencies = { "kevinhwang91/promise-async" },
 		opts = {},
 	},

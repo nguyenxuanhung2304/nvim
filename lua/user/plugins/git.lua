@@ -61,7 +61,7 @@ return {
 	},
 	{
 		"tpope/vim-fugitive",
-		event = "BufWinEnter",
+    cmd = { "G", "Gtabedit" }
 	},
 	{
 		"f-person/git-blame.nvim",
@@ -93,5 +93,9 @@ return {
 	},
   {
     "sindrets/diffview.nvim",
+    cmd = {
+      "DiffviewOpen",
+      "DiffviewFileHistory"
+    }
   }
 }
