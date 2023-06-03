@@ -1,5 +1,9 @@
 local utils = require("user.core.utils")
 local keymap = utils.keymap
+
+-- Yank and hold current cursor
+keymap("v", "y", "ygv<Esc>")
+
 -- Ctrl+s is save file
 keymap("n", "<C-s>", "<cmd>w<cr>")
 keymap("i", "<C-s>", "<cmd>w<cr>")
