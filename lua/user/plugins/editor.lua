@@ -223,13 +223,6 @@ return {
 		},
 	},
 	{
-		"roobert/search-replace.nvim",
-		opts = {
-			default_replace_single_buffer_options = "gcI",
-			default_replace_multi_buffer_options = "egcI",
-		},
-	},
-	{
 		"akinsho/flutter-tools.nvim",
 		opts = {},
 	},
@@ -258,5 +251,8 @@ return {
 			wk.register(opts.defaults)
 		end,
 	},
-  {"gennaro-tedesco/nvim-peekup"}
+  {
+    "gennaro-tedesco/nvim-peekup",
+    event = "BufReadPre"
+  }
 }
