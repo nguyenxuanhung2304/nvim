@@ -67,15 +67,12 @@ keymap("n", "<Leader>Do", "<cmd>DiffviewOpen<cr>", { desc = "Open files change" 
 keymap("n", "<Leader>Dc", "<cmd>DiffviewClose<cr>", { desc = "Close diffview" })
 keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open git log" })
 
--- Toggleterm
+-- Move in term mode
 keymap("t", "<C-o>", "<C-\\><C-n>")
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h")
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j")
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k")
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l")
-keymap("t", "<C-\\>", "<cmd>ToggleTerm<cr>")
-keymap("n", "<C-\\>", "<cmd>ToggleTerm<cr>")
-
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
 keymap("n", "<Leader>/", "<cmd>gcc<cr>", { desc = "Comment" })

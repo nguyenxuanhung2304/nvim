@@ -223,14 +223,6 @@ return {
 		},
 	},
 	{
-		"akinsho/toggleterm.nvim",
-		version = "*",
-		opts = {
-			shade_terminals = false,
-			direction = "float",
-		},
-	},
-	{
 		"roobert/search-replace.nvim",
 		opts = {
 			default_replace_single_buffer_options = "gcI",
@@ -267,4 +259,5 @@ return {
 			wk.register(opts.defaults)
 		end,
 	},
+  {"gennaro-tedesco/nvim-peekup"}
 }
