@@ -62,11 +62,6 @@ keymap("n", "<Leader>zr", "<cmd>lua require('ufo').openFoldsExceptKinds()<CR>")
 keymap("n", "<Leader>zm", "<cmd>lua require('ufo').closeFoldsWith()<CR>")
 keymap("n", "<Leader>zp", "<cmd>lua require('ufo').peekFoldedLinesUnderCursor()<CR>", { desc = "Preview fold " })
 
--- Diffview
-keymap("n", "<Leader>Do", "<cmd>DiffviewOpen<cr>", { desc = "Open files change" })
-keymap("n", "<Leader>Dc", "<cmd>DiffviewClose<cr>", { desc = "Close diffview" })
-keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open git log" })
-
 -- Move in term mode
 keymap("t", "<C-o>", "<C-\\><C-n>")
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h")

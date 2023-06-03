@@ -223,12 +223,6 @@ return {
 						text = "Fugitive",
 						padding = 1,
 					},
-          {
-            filetype = "DiffviewFiles",
-            text = "Files change",
-            padding = 1,
-            separator = true
-          }
 				},
 				color_icons = true, -- whether or not to add the filetype icon highlights
 				show_buffer_icons = true, -- disable filetype icons for buffers

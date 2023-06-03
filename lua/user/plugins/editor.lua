@@ -245,7 +245,6 @@ return {
 				mode = { "n", "v" },
 				["<leader>s"] = { name = "+Search" },
 				["<leader>z"] = { name = "+Fold" },
-				["<leader>D"] = { name = "+Diffview" },
 				["<leader>C"] = { name = "+Conflict" },
 				["<leader>;"] = { name = "+Git" },
 			},
