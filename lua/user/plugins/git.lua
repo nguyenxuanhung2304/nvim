@@ -91,4 +91,7 @@ return {
 			}
 		end,
 	},
+  {
+    "kdheepak/lazygit.nvim"
+  }
 }
