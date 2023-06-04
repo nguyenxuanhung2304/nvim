@@ -72,6 +72,7 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h")
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j")
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k")
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l")
+
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
 keymap("n", "<Leader>/", "<cmd>gcc<cr>", { desc = "Comment" })
@@ -88,6 +89,9 @@ keymap("n", "<Leader>Cn", "<cmd>GitConflictNextConflict<cr>", { desc = "Next" })
 keymap("n", "<Leader>Cp", "<cmd>GitConflictPrevConflict<cr>", { desc = "Previous" })
 
 -- GitSign
-keymap("n", "<Leader>;p", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview hunk" })
+keymap("n", "<Leader>;P", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview hunk" })
 keymap("n", "<Leader>;s", "<cmd>Gitsigns stage_hunk<cr>", { desc = "Stage hunk" })
-keymap("n", "<Leader>;u", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Unstage hunk" })
+keymap("n", "<Leader>;r", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Discard hunk" })
+keymap("n", "<Leader>;u", "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = "Unstage hunk" })
+keymap("n", "<leader>;n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" })
+keymap("n", "<leader>;p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" })
