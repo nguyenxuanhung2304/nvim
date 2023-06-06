@@ -61,7 +61,7 @@ return {
 	},
 	{
 		"tpope/vim-fugitive",
-    cmd = { "G", "Gtabedit" }
+    -- cmd = { "G", "Gtabedit" }
 	},
 	{
 		"f-person/git-blame.nvim",

@@ -60,7 +60,7 @@ return {
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
-    event = { "BufReadPre" },
+		event = { "BufReadPre" },
 		opts = function()
 			vim.g.indent_blankline_filetype_exclude = {
 				"help",
@@ -84,7 +84,7 @@ return {
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
+		event = "VeryLazy",
 		opts = {
 			options = {
 				icons_enabled = true,
@@ -252,23 +252,23 @@ return {
 	},
 	{
 		"stevearc/dressing.nvim",
-    opts = {}
+		opts = {},
 	},
-  {
-    'Bekaboo/dropbar.nvim',
-    opts = {
-      icons = {
-        ui = {
-          bar = {
-            separator = '  '
-          }
-        }
-      },
-      menu = {
-        win_configs = {
-          border = "single"
-        }
-      }
-    }
-  }
+	{
+		"Bekaboo/dropbar.nvim",
+		opts = {
+			icons = {
+				ui = {
+					bar = {
+						separator = "  ",
+					},
+				},
+			},
+			menu = {
+				win_configs = {
+					border = "single",
+				},
+			},
+		},
+	},
 }

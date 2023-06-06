@@ -7,7 +7,7 @@ return {
 		init = function()
 			vim.cmd([[
         " let g:user_emmet_expandabbr_key = '<Tab>'
-        " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")    
+        " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
       ]])
 		end,
 	},
@@ -34,18 +34,18 @@ return {
 	},
 	{
 		"kevinhwang91/nvim-hlslens",
-    event = "InsertEnter",
+		event = "InsertEnter",
 		opts = {},
 	},
 	{
 		"barrett-ruth/live-server.nvim",
-    cmd = { "LiveServerStart" },
+		cmd = { "LiveServerStart" },
 		build = "yarn global add live-server",
 		config = true,
-    opts = {}
+		opts = {},
 	},
-  {
-    'karb94/neoscroll.nvim',
-    opts = {}
-  }
+	{
+		"karb94/neoscroll.nvim",
+		opts = {},
+	},
 }

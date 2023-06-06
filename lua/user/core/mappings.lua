@@ -57,7 +57,8 @@ keymap("n", "<leader>sw", "<cmd>SearchReplaceSingleBufferCWord<cr>", { desc = "R
 keymap("n", "<leader>sp", "<cmd>SearchReplaceMultiBufferCWord<cr>", { desc = "Replace in project" })
 
 -- NvimTree
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file explorer" })
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
+keymap("n", "<leader>F", "<cmd>NvimTreeFindFile<cr>", { desc = "Find file in NvimTree" })
 
 -- Fold
 keymap("n", "<Leader>zR", "<cmd>lua require('ufo').openAllFolds()<CR>", { desc = "Open all folds" })
