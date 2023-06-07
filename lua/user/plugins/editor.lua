@@ -255,4 +255,10 @@ return {
 		"gennaro-tedesco/nvim-peekup",
 		event = "BufReadPre",
 	},
+   {
+    "iamcco/markdown-preview.nvim",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
 }
