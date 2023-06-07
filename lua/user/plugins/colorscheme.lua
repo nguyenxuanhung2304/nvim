@@ -4,8 +4,10 @@ return {
 		branch = "main",
 		lazy = true,
 		init = function()
-      local currentColorscheme = vim.g.colors_name
-      if currentColorscheme ~= 'gruvbox-baby' then return end
+			local currentColorscheme = vim.g.colors_name
+			if currentColorscheme ~= "gruvbox-baby" then
+				return
+			end
 
 			local colors = require("gruvbox-baby.colors").config()
 
@@ -40,5 +42,12 @@ return {
 	{
 		"projekt0n/github-nvim-theme",
 		lazy = true,
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		lazy = true,
+    opts = {
+      transparent_mode = true,
+    }
 	},
 }
