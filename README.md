@@ -15,12 +15,10 @@
 
 My Neovim setup powered by 💤 lazy.nvim to make it easy to customize and extend your config. Rather than having to choose between starting from scratch or using a pre-made distro
 
-<center>
-    <img src="./assets/alpha.png">
-    <img src="./assets/telescope.png">
-    <img src="./assets/main.png">
-    <img src="./assets/which-key.png">
-</center
+<img src="./assets/alpha.png">
+<img src="./assets/telescope.png">
+<img src="./assets/main.png">
+<img src="./assets/which-key.png">
 
 ## ✨ Features
 
