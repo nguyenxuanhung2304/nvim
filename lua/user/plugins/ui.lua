@@ -251,10 +251,6 @@ return {
 		opts = {},
 	},
 	{
-		"stevearc/dressing.nvim",
-		opts = {},
-	},
-	{
 		"Bekaboo/dropbar.nvim",
 		opts = {
 			icons = {
