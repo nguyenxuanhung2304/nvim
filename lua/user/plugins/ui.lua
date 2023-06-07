@@ -81,6 +81,15 @@ return {
 	{
 		"p00f/nvim-ts-rainbow",
 		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				rainbow = {
+					enable = true,
+					extended_mode = true,
+					max_file_lines = 700,
+				},
+			})
+		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
