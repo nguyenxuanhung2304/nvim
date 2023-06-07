@@ -1,22 +1,61 @@
-## Preview
-<center><img src="./demo.png"></center
+<center>
+    <a href="https://github.com/nguyenxuanhung2304/nvim/pulse">
+      <img alt="Last commit" src="https://img.shields.io/github/last-commit/nguyenxuanhung2304/nvim?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <a href="https://github.com/nguyenxuanhung2304/nvim/blob/main/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/nguyenxuanhung2304/nvim?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41" />
+    </a>
+    <a href="https://github.com/nguyenxuanhung2304/nvim/stargazers">
+      <img alt="Stars" src="https://img.shields.io/github/stars/nguyenxuanhung2304/nvim?style=for-the-badge&logo=starship&color=c69ff5&logoColor=D9E0EE&labelColor=302D41" />
+    </a>
+    <a href="https://github.com/nguyenxuanhung2304/nvim/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/nguyenxuanhung2304/nvim?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=302D41" />
+    </a>
+</center>
 
-* [Requirements](#requirements)
-* [After Installation, You Need To](#after-installation-you-need-to)
-* [Plugins](#plugins)
+My Neovim setup powered by 💤 lazy.nvim to make it easy to customize and extend your config. Rather than having to choose between starting from scratch or using a pre-made distro
 
-## Requirements
-- This nvim configuration **REQUIRES** NeoVim 0.6.0+
-## After Installation, You Need To
-- Install `pip3`, and do `pip3 install --user pynvim`
-- Install `node`, and do `npm install -g neovim`
-- Install nerd-fonts (actually it's optional but it looks real good)
-## Plugins
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-- [Alpha](https://github.com/goolord/alpha-nvim)
-- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [Auto Pairs](https://github.com/windwp/nvim-autopairs)
-- [Commnet](https://github.com/numToStr/Comment.nvim)
-- [Neoscroll](https://github.com/karb94/neoscroll.nvim)
+<center>
+    <img src="./assets/alpha.png">
+    <img src="./assets/telescope.png">
+    <img src="./assets/main.png">
+    <img src="./assets/which-key.png">
+</center
 
+## ✨ Features
+
+- 🔥 Transform your Neovim into a full-fledged IDE
+- 💤 Easily customize and extend your config with [lazy.nvim](https://github.com/folke/lazy.nvim)
+- 🚀 Blazingly fast
+- 🧹 Sane default settings for options, autocmds, and keymaps
+- 📦 Comes with a wealth of plugins pre-configured and ready to use
+
+## ⚡️ Requirements
+
+- Neovim >= **0.10** (needs to be built with **LuaJIT**)
+- Git >= **2.19.0** (for partial clones support)
+- a [Nerd Font](https://www.nerdfonts.com/) **_(optional)_**
+
+## 📂 File Structure
+
+The files under config will be automatically loaded at the appropriate time,
+so you don't need to require those files manually.
+**LazyVim** comes with a set of default config files that will be loaded
+
+You can add your custom plugin specs under `lua/plugins/`. All files there
+will be automatically loaded by [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+<pre>
+~/.config/nvim
+├── lua
+│   ├── config
+│   │   ├── autocmds.lua
+│   │   ├── mappings.lua
+│   │   ├── init.lua
+│   │   └── options.lua
+│   └── plugins
+│       ├── spec1.lua
+│       ├── **
+│       └── spec2.lua
+└── init.lua
+</pre>
