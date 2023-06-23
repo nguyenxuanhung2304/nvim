@@ -2,7 +2,7 @@ return {
 	{
 		"luisiacc/gruvbox-baby",
 		branch = "main",
-		lazy = true,
+		-- lazy = true,
 		init = function()
 			local currentColorscheme = vim.g.colors_name
 			if currentColorscheme ~= "gruvbox-baby" then
@@ -41,13 +41,13 @@ return {
 	},
 	{
 		"projekt0n/github-nvim-theme",
-		lazy = true,
+		-- lazy = true,
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
 		lazy = true,
-    opts = {
-      transparent_mode = true,
-    }
+    -- opts = {
+    --   transparent_mode = true,
+    -- }
 	},
 }

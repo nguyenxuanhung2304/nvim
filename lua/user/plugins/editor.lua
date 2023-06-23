@@ -224,7 +224,11 @@ return {
 	},
 	{
 		"akinsho/flutter-tools.nvim",
-		opts = {},
+		opts = {
+			lsp = {
+				analysisExcludedFolders = { "vim.fn.expand('$HOME/flutter/.pub-cache')" },
+			},
+		},
 	},
 	{
 		"folke/which-key.nvim",
@@ -249,16 +253,16 @@ return {
 			local wk = require("which-key")
 			wk.setup(opts)
 			wk.register(opts.defaults)
-		end
+		end,
 	},
 	{
 		"gennaro-tedesco/nvim-peekup",
 		event = "BufReadPre",
 	},
-   {
-    "iamcco/markdown-preview.nvim",
-    config = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-  },
+	{
+		"iamcco/markdown-preview.nvim",
+		config = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
 }
