@@ -53,12 +53,11 @@ keymap("n", "<leader>sc", "<cmd>Telescope grep_string<cr>", { desc = "Find text 
 keymap("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>", { desc = "Find oldfiles" })
 keymap("n", "<leader>sb", "<cmd>Telescope git_branches<cr>", { desc = "Find branches" })
 keymap("n", "<leader>ss", "<cmd>Telescope git_stash<cr>", { desc = "Find stashes" })
-keymap("n", "<leader>sw", "<cmd>SearchReplaceSingleBufferCWord<cr>", { desc = "Replace in file" })
-keymap("n", "<leader>sp", "<cmd>SearchReplaceMultiBufferCWord<cr>", { desc = "Replace in project" })
+keymap("n", "<leader>si", "<cmd>Telescope media_files<cr>", { desc = "Find media files" })
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
-keymap("n", "<leader>F", "<cmd>NvimTreeFindFile<cr>", { desc = "Find file in NvimTree" })
+keymap("n", "<leader>.", "<cmd>NvimTreeFindFile<cr>", { desc = "Find file in NvimTree" })
 
 -- Fold
 keymap("n", "<Leader>zR", "<cmd>lua require('ufo').openAllFolds()<CR>", { desc = "Open all folds" })
@@ -81,6 +80,8 @@ keymap("n", "<Leader>f", "<cmd>Format<cr>", { desc = "Format" })
 keymap("n", "<Leader>g", "<cmd>Gtabedit:<cr>", { desc = "Open fugitive" })
 keymap("n", "<Leader>c", "<cmd>Bdelete<cr>", { desc = "Close buffer" })
 keymap("n", "<Leader>d", "<cmd>lua require('dropbar.api').pick()<cr>", { desc = "Dropbar" })
+keymap("n", "<Leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
+keymap("n", "<Leader>F", "<cmd>FlutterRun<cr>", { desc = "Flutter run" })
 
 -- Git conflit
 keymap("n", "<Leader>Cc", "<cmd>GitConflictChooseOurs<cr>", { desc = "Select current" })

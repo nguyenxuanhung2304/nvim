@@ -29,6 +29,7 @@ opt.relativenumber = true
 opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.splitright = true
+opt.splitkeep = "screen"
 opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
