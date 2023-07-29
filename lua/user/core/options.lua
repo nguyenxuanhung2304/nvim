@@ -17,6 +17,7 @@ opt.clipboard = "unnamedplus" -- Use clipboard in nvim
 opt.expandtab = true
 opt.shiftwidth = 2
 opt.smartindent = true
+opt.autoindent = true
 opt.tabstop = 2 -- 1 tab is equal 2 space
 opt.softtabstop = 2
 

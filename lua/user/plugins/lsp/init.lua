@@ -46,7 +46,7 @@ return {
 			})
 
 			-- attach servers
-			local servers = { "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls", "vuels", "lua_ls", "eslint", "dartls"}
+			local servers = { "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls", "vuels", "lua_ls", "eslint", "dartls", "pyright"}
 			local lspconfig = require("lspconfig")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")

@@ -244,7 +244,9 @@ return {
 		"akinsho/flutter-tools.nvim",
 		opts = {
 			lsp = {
-				analysisExcludedFolders = { "vim.fn.expand('$HOME/flutter/.pub-cache')" },
+				settings = {
+				  analysisExcludedFolders = { "vim.fn.expand('$HOME/flutter/.pub-cache')" },
+				},
 			},
 		},
 	},
