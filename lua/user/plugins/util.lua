@@ -48,8 +48,17 @@ return {
 		"karb94/neoscroll.nvim",
 		opts = {},
 	},
+  -- {
+  --   'themaxmarchuk/tailwindcss-colors.nvim',
+  --   opts = {}
+  -- },
   {
-    'themaxmarchuk/tailwindcss-colors.nvim',
-    opts = {}
+    'NvChad/nvim-colorizer.lua',
+    opts = {
+      user_default_options = {
+        mode = "background",
+        tailwind = true
+      }
+    }
   }
 }
