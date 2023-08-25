@@ -45,4 +45,7 @@ return {
     branch = "v2",
 		lazy = true,
 	},
+  {
+    'marko-cerovac/material.nvim'
+  }
 }

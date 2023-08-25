@@ -54,6 +54,7 @@ return {
 					end, {
 						"i",
 						"s",
+            c = cmp.config.disable
 					}),
 					["<S-Tab>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then

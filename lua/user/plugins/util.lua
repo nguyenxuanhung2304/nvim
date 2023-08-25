@@ -48,4 +48,8 @@ return {
 		"karb94/neoscroll.nvim",
 		opts = {},
 	},
+  {
+    'themaxmarchuk/tailwindcss-colors.nvim',
+    opts = {}
+  }
 }

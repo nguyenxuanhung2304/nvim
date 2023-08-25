@@ -6,5 +6,5 @@ if isEvening then
   vim.g.gruvbox_baby_telescope_theme = 1 -- Enable telescope theme
   vim.cmd('colorscheme gruvbox-baby')
 else
-  vim.cmd('colorscheme arctic')
+  vim.cmd('colorscheme material')
 end

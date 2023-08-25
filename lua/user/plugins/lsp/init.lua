@@ -46,7 +46,7 @@ return {
 			})
 
 			-- attach servers
-			local servers = { "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls", "vuels", "lua_ls", "eslint", "dartls", "pyright"}
+			local servers = { "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls", "vuels", "lua_ls", "eslint", "dartls", "pyright", "tailwindcss"}
 			local lspconfig = require("lspconfig")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -54,7 +54,9 @@ return {
 
 			for _, server in pairs(servers) do
 				local opts = {
-					on_attach = function()
+					on_attach = function(_, bufnr)
+            require("tailwindcss-colors").buf_attach(bufnr)
+
 						keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 						keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
