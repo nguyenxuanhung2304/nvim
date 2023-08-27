@@ -48,10 +48,6 @@ return {
 		"karb94/neoscroll.nvim",
 		opts = {},
 	},
-  -- {
-  --   'themaxmarchuk/tailwindcss-colors.nvim',
-  --   opts = {}
-  -- },
   {
     'NvChad/nvim-colorizer.lua',
     opts = {
@@ -60,5 +56,9 @@ return {
         tailwind = true
       }
     }
+  },
+  {
+    'sunjon/shade.nvim',
+    opts = {}
   }
 }

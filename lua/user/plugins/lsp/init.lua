@@ -54,9 +54,7 @@ return {
 
 			for _, server in pairs(servers) do
 				local opts = {
-					on_attach = function(_, bufnr)
-            require("tailwindcss-colors").buf_attach(bufnr)
-
+					on_attach = function()
 						keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 						keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")

@@ -52,6 +52,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "2a125024a137677930efcfdf720f205504c97268" },
   "plenary.nvim": { "branch": "master", "commit": "499e0743cf5e8075cd32af68baa3946a1c76adf1" },
   "promise-async": { "branch": "main", "commit": "e94f35161b8c5d4a4ca3b6ff93dd073eb9214c0e" },
+  "shade.nvim": { "branch": "master", "commit": "4286b5abc47d62d0c9ffb22a4f388b7bf2ac2461" },
   "telescope-media-files.nvim": { "branch": "master", "commit": "0826c7a730bc4d36068f7c85cf4c5b3fd9fb570a" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
   "tree-sitter-embedded-template": { "branch": "master", "commit": "203f7bd3c1bbfbd98fc19add4b8fcb213c059205" },
