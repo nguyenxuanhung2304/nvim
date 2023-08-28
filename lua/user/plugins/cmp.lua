@@ -16,8 +16,8 @@ return {
 			require("luasnip/loaders/from_vscode").lazy_load()
 			require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/lua/user/snippets" })
 
-        local col = vim.fn.col "." - 1
-        local check_backspace = col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+      local col = vim.fn.col "." - 1
+      local check_backspace = col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 
 			return {
 				snippet = {

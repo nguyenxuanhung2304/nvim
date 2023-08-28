@@ -99,3 +99,5 @@ keymap("n", "<leader>;n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" })
 keymap("n", "<leader>;p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" })
 
 keymap("n", "<C-\\>", "<cmd>LazyGit<cr>", { desc = "LazyGit in float term" })
+
+keymap("n", "<Leader>r", ":lua require('ror.commands').list_commands()<CR>", { desc = "RoR" })

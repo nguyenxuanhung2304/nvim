@@ -257,4 +257,21 @@ return {
 			},
 		},
 	},
+	{
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		event = "LspAttach",
+		opts = {},
+	},
+	{
+		"stevearc/dressing.nvim",
+		opts = {
+			input = {
+				min_width = { 60, 0.9 },
+			},
+			select = {
+				telescope = require("telescope.themes").get_dropdown({ layout_config = { height = 15, width = 90 } }),
+			},
+		},
+	},
 }
