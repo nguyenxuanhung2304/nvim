@@ -64,5 +64,9 @@ return {
   {
     'chentoast/marks.nvim',
     opts = {}
+  },
+  {
+    'nmac427/guess-indent.nvim',
+    opts = {}
   }
 }
