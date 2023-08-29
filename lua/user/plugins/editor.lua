@@ -290,6 +290,9 @@ return {
 	},
   {
     'weizheheng/ror.nvim',
-    opts = {}
+    opts = {},
+    event = {
+      "InsertEnter"
+    }
   }
 }

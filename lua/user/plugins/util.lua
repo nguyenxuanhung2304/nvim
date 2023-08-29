@@ -61,4 +61,8 @@ return {
 		"sunjon/shade.nvim",
 		opts = {},
 	},
+  {
+    'chentoast/marks.nvim',
+    opts = {}
+  }
 }
