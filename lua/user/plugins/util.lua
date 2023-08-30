@@ -58,8 +58,7 @@ return {
 		},
 	},
 	{
-		"sunjon/shade.nvim",
-		opts = {},
+		"blueyed/vim-diminactive",
 	},
   {
     'chentoast/marks.nvim',
