@@ -46,7 +46,19 @@ return {
 			})
 
 			-- attach servers
-			local servers = { "solargraph", "tsserver", "eslint", "jsonls", "emmet_ls", "vuels", "lua_ls", "eslint", "dartls", "pyright", "tailwindcss"}
+			local servers = {
+				"solargraph",
+				"tsserver",
+				"eslint",
+				"jsonls",
+				"emmet_ls",
+				"vuels",
+				"lua_ls",
+				"eslint",
+				"dartls",
+				"pyright",
+				"tailwindcss",
+			}
 			local lspconfig = require("lspconfig")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -55,12 +67,11 @@ return {
 			for _, server in pairs(servers) do
 				local opts = {
 					on_attach = function()
-						keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
-						keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
+						keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>")
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-						keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
-						keymap("n", "ga", "<cmd>Lspsaga code_action<CR>")
-						keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
+						keymap("n", "gr", "<cmd>lua vim.lsp.buf.rename()<CR>")
+						keymap("n", "gR", "<cmd>Telescope lsp_references<CR>")
+						keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 					end,
 					capabilities = cmp_nvim_lsp.default_capabilities(capabilities),
 				}
@@ -78,12 +89,12 @@ return {
 			ui = {
 				border = "rounded",
 			},
-      PATH = "prepend"
+			PATH = "prepend",
 		},
 	},
 	{
 		"jose-elias-alvarez/null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
 			local null_ls = require("null-ls")
 			local formatting = null_ls.builtins.formatting
@@ -108,47 +119,7 @@ return {
 		opts = {},
 	},
 	{
-		"glepnir/lspsaga.nvim",
-		event = "LspAttach",
-		opts = {
-			symbol_in_winbar = {
-				enable = true,
-				separator = " ",
-				ignore_patterns = {},
-				hide_keyword = true,
-				show_file = true,
-				folder_level = 2,
-				respect_root = false,
-				color_mode = true,
-			},
-			ui = {
-				kind = {
-					["String"] = { " ", "String" },
-					["Array"] = { "[]", "Array" },
-				},
-			},
-			finder = {
-				max_height = 0.5,
-				min_width = 30,
-				force_max_height = false,
-				keys = {
-					jump_to = "p",
-					expand_or_jump = "o",
-					vsplit = "<C-c>v",
-					split = "<C-c>x",
-					tabe = "<C-c>r",
-					tabnew = "<C-c>t",
-					quit = { "q", "<ESC>" },
-					close_in_preview = "<ESC>",
-				},
-			},
-			definition = {
-				edit = "<C-c>o",
-				vsplit = "<C-c>v",
-				split = "<C-c>i",
-				tabe = "<C-c>t",
-				quit = "q",
-			},
-		},
+		"VidocqH/lsp-lens.nvim",
+		opts = {},
 	},
 }

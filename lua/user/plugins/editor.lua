@@ -179,6 +179,14 @@ return {
 						languages.dart.dartformat,
 					},
 
+					vue = {
+						languages.vue.prettier
+					},
+
+					css = {
+						languages.css.prettier
+					},
+
 					-- Use the special "*" filetype for defining formatter configurations on
 					-- any filetype
 					["*"] = {
@@ -245,7 +253,7 @@ return {
 		opts = {
 			lsp = {
 				settings = {
-				  analysisExcludedFolders = { "vim.fn.expand('$HOME/flutter/.pub-cache')" },
+					analysisExcludedFolders = { "vim.fn.expand('$HOME/flutter/.pub-cache')" },
 				},
 			},
 		},
@@ -288,11 +296,11 @@ return {
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
-  {
-    'weizheheng/ror.nvim',
-    opts = {},
-    event = {
-      "InsertEnter"
-    }
-  }
+	{
+		"weizheheng/ror.nvim",
+		opts = {},
+		event = {
+			"InsertEnter",
+		},
+	},
 }
