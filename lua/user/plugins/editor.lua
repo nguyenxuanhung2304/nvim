@@ -1,97 +1,53 @@
 return {
 	{
 		"kyazdani42/nvim-tree.lua",
-		opts = function()
-			vim.g.loaded = 1
+		setup = function()
+			vim.g.loaded_netrw = 1
 			vim.g.loaded_netrwPlugin = 1
-
-			return {
-				sync_root_with_cwd = true,
-				respect_buf_cwd = true,
-				update_focused_file = {
-					enable = true,
-					update_root = true,
-				},
-				filters = {
-					custom = {
-						"^.git$",
-					},
-					dotfiles = false,
-				},
-				renderer = {
-					icons = {
-						glyphs = {
-							default = "",
-							symlink = "",
-							git = {
-								unstaged = "",
-								staged = "S",
-								unmerged = "",
-								renamed = "➜",
-								deleted = "",
-								untracked = "U",
-								ignored = "◌",
-							},
-							folder = {
-								-- arrow_open = " ",
-								-- arrow_closed = "",
-								default = "",
-								open = "",
-								empty = "",
-								empty_open = "",
-								symlink = "",
-							},
-						},
-					},
-				},
-				git = {
-					ignore = false,
-				},
-				{
-					sync_root_with_cwd = true,
-					respect_buf_cwd = true,
-					update_focused_file = {
-						enable = true,
-						update_root = true,
-					},
-					filters = {
-						custom = {
-							"^.git$",
-						},
-						dotfiles = false,
-					},
-					renderer = {
-						icons = {
-							glyphs = {
-								default = "",
-								symlink = "",
-								git = {
-									unstaged = "",
-									staged = "S",
-									unmerged = "",
-									renamed = "➜",
-									deleted = "",
-									untracked = "U",
-									ignored = "◌",
-								},
-								folder = {
-									-- arrow_open = " ",
-									-- arrow_closed = "",
-									default = "",
-									open = "",
-									empty = "",
-									empty_open = "",
-									symlink = "",
-								},
-							},
-						},
-					},
-					git = {
-						ignore = false,
-					},
-				},
-			}
 		end,
+		opts = {
+			sync_root_with_cwd = true,
+			respect_buf_cwd = true,
+			update_focused_file = {
+				enable = true,
+				update_root = true,
+			},
+			filters = {
+				custom = {
+					"^.git$",
+				},
+				dotfiles = false,
+			},
+			renderer = {
+				icons = {
+					glyphs = {
+						default = "",
+						symlink = "",
+						git = {
+							unstaged = "",
+							staged = "S",
+							unmerged = "",
+							renamed = "➜",
+							deleted = "",
+							untracked = "U",
+							ignored = "◌",
+						},
+						folder = {
+							-- arrow_open = " ",
+							-- arrow_closed = "",
+							default = "",
+							open = "",
+							empty = "",
+							empty_open = "",
+							symlink = "",
+						},
+					},
+				},
+			},
+			git = {
+				ignore = false,
+			},
+		},
 	},
 	{
 		"nvim-telescope/telescope.nvim",
@@ -180,11 +136,11 @@ return {
 					},
 
 					vue = {
-						languages.vue.prettier
+						languages.vue.prettier,
 					},
 
 					css = {
-						languages.css.prettier
+						languages.css.prettier,
 					},
 
 					-- Use the special "*" filetype for defining formatter configurations on
@@ -272,6 +228,7 @@ return {
 				["<leader>z"] = { name = "+Fold" },
 				["<leader>C"] = { name = "+Conflict" },
 				["<leader>;"] = { name = "+Git" },
+				["<leader>H"] = { name = "+Harpoon" },
 			},
 			window = {
 				border = "single",
@@ -302,5 +259,8 @@ return {
 		event = {
 			"InsertEnter",
 		},
+	},
+	{
+		"ThePrimeagen/harpoon",
 	},
 }
