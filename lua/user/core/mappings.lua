@@ -100,4 +100,19 @@ keymap("n", "<leader>;p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk
 
 keymap("n", "<C-\\>", "<cmd>LazyGit<cr>", { desc = "LazyGit in float term" })
 
+-- Show ror commands
 keymap("n", "<Leader>r", ":lua require('ror.commands').list_commands()<CR>", { desc = "RoR" })
+
+-- Quit
+keymap('n', '<C-q>', function()
+  -- close current win if there are more than 1 win
+  -- else close current tab if there are more than 1 tab
+  -- else close current vim
+  if #vim.api.nvim_tabpage_list_wins(0) > 1 then
+    vim.cmd([[close]])
+  elseif #vim.api.nvim_list_tabpages() > 1 then
+    vim.cmd([[tabclose]])
+  else
+    vim.cmd([[qa]])
+  end
+end, { desc = 'Super <C-q>' })
