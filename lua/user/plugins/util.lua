@@ -58,7 +58,12 @@ return {
 		},
 	},
 	{
-		"blueyed/vim-diminactive",
+		"chentoast/marks.nvim",
+		opts = {},
+	},
+	{
+		"nmac427/guess-indent.nvim",
+		opts = {},
 	},
 	{
 		"windwp/nvim-ts-autotag",
@@ -70,12 +75,4 @@ return {
 			})
 		end,
 	},
-  {
-    'chentoast/marks.nvim',
-    opts = {}
-  },
-  {
-    'nmac427/guess-indent.nvim',
-    opts = {}
-  }
 }
