@@ -42,10 +42,16 @@ return {
 	{
 		"rockyzhang24/arctic.nvim",
 		dependencies = { "rktjmp/lush.nvim" },
-    branch = "v2",
+		branch = "v2",
 		lazy = true,
 	},
-  {
-    'marko-cerovac/material.nvim'
-  }
+	{
+		"marko-cerovac/material.nvim",
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 }
