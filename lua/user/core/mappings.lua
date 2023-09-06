@@ -75,13 +75,10 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l")
 
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
-keymap("n", "<Leader>/", "<cmd>gcc<cr>", { desc = "Comment" })
 keymap("n", "<Leader>f", "<cmd>Format<cr>", { desc = "Format" })
 keymap("n", "<Leader>g", "<cmd>Gtabedit:<cr>", { desc = "Open fugitive" })
 keymap("n", "<Leader>c", "<cmd>Bdelete<cr>", { desc = "Close buffer" })
 keymap("n", "<Leader>d", "<cmd>lua require('dropbar.api').pick()<cr>", { desc = "Dropbar" })
-keymap("n", "<Leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
-keymap("n", "<Leader>F", "<cmd>FlutterRun<cr>", { desc = "Flutter run" })
 
 -- Git conflit
 keymap("n", "<Leader>Cc", "<cmd>GitConflictChooseOurs<cr>", { desc = "Select current" })
@@ -98,21 +95,30 @@ keymap("n", "<Leader>;u", "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = "Unstage
 keymap("n", "<leader>;n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" })
 keymap("n", "<leader>;p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" })
 
+-- Harpoon
+keymap("n", "<Leader>Ha", "<cmd>lua require('harpoon.mark').add_file()<cr>", { desc = "Add to marks" })
+keymap("n", "<Leader>Hl", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", { desc = "List marks" })
+keymap("n", "<Leader>Hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", { desc = "Next mark" })
+keymap("n", "<Leader>Hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", { desc = "Prev mark" })
+
 keymap("n", "<C-\\>", "<cmd>LazyGit<cr>", { desc = "LazyGit in float term" })
 
 -- Show ror commands
 keymap("n", "<Leader>r", ":lua require('ror.commands').list_commands()<CR>", { desc = "RoR" })
 
 -- Quit
-keymap('n', '<C-q>', function()
-  -- close current win if there are more than 1 win
-  -- else close current tab if there are more than 1 tab
-  -- else close current vim
-  if #vim.api.nvim_tabpage_list_wins(0) > 1 then
-    vim.cmd([[close]])
-  elseif #vim.api.nvim_list_tabpages() > 1 then
-    vim.cmd([[tabclose]])
-  else
-    vim.cmd([[qa]])
-  end
-end, { desc = 'Super <C-q>' })
+keymap("n", "<C-q>", function()
+	-- close current win if there are more than 1 win
+	-- else close current tab if there are more than 1 tab
+	-- else close current vim
+	if #vim.api.nvim_tabpage_list_wins(0) > 1 then
+		vim.cmd([[close]])
+	elseif #vim.api.nvim_list_tabpages() > 1 then
+		vim.cmd([[tabclose]])
+	else
+		vim.cmd([[qa]])
+	end
+end, { desc = "Super <C-q>" })
+
+-- Select folder in ~/Dev
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>")

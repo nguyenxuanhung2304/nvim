@@ -1,5 +1,4 @@
 local M = {}
-
 function M.keymap(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
 
