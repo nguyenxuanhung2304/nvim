@@ -122,3 +122,9 @@ end, { desc = "Super <C-q>" })
 
 -- Select folder in ~/Dev
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>")
+
+keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
+
+keymap("n", "yr", function ()
+
+end, { desc = "Buffers" })

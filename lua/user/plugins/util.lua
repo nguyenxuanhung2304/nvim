@@ -14,12 +14,12 @@ return {
 	{
 		"tpope/vim-rails",
 		event = {
-			"InsertEnter",
+			"BufReadPre",
 		},
 	},
 	{
 		"Pocco81/auto-save.nvim",
-		event = "InsertEnter",
+		event = "BufReadPre",
 		opts = {},
 	},
 	{
@@ -34,7 +34,7 @@ return {
 	},
 	{
 		"kevinhwang91/nvim-hlslens",
-		event = "InsertEnter",
+		event = "BufReadPre",
 		opts = {},
 	},
 	{
@@ -46,7 +46,12 @@ return {
 	},
 	{
 		"karb94/neoscroll.nvim",
-		opts = {},
+		opts = {
+			mappings = {'<C-u>', '<C-d>', '<C-b>',
+        '<C-y>', '<C-e>', 'zt', 'zz', 'zb'
+			},
+		},
+		event = "BufReadPre",
 	},
 	{
 		"NvChad/nvim-colorizer.lua",
@@ -63,6 +68,7 @@ return {
 	},
 	{
 		"windwp/nvim-ts-autotag",
+		event = "BufReadPre",
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				autotag = {

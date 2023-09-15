@@ -73,7 +73,7 @@ return {
 	},
 	{
 		"akinsho/git-conflict.nvim",
-		event = "InsertEnter",
+		event = "BufReadPre",
 		opts = function()
 			vim.cmd([[
         hi GitconflictCurrent guibg=#307365 ctermbg=4 guifg=#ffffff

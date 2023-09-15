@@ -111,11 +111,11 @@ return {
 	{ "williamboman/mason-lspconfig.nvim" },
 	{
 		"onsails/lspkind.nvim",
-		event = "InsertEnter",
+		event = "BufReadPre",
 	},
 	{
 		"ray-x/lsp_signature.nvim",
-		event = "InsertEnter",
+		event = "BufReadPre",
 		opts = {},
 	},
 	{

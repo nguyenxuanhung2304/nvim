@@ -10,7 +10,7 @@ return {
 			respect_buf_cwd = true,
 			update_focused_file = {
 				enable = true,
-				update_root = true,
+				update_root = false,
 			},
 			filters = {
 				custom = {
@@ -80,12 +80,12 @@ return {
 		config = function()
 			require("leap").add_default_mappings()
 		end,
-		event = "BufRead",
+		event = "BufReadPre",
 	},
 
 	{
 		"famiu/bufdelete.nvim",
-		event = "BufRead",
+		event = "BufReadPre",
 	},
 
 	{
@@ -93,7 +93,7 @@ return {
 		config = function()
 			require("nvim-surround").setup({})
 		end,
-		event = "BufRead",
+		event = "BufReadPre",
 	},
 
 	{
