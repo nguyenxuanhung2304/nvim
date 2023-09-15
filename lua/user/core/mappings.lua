@@ -126,5 +126,6 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 
 keymap("n", "yr", function ()
-
+	local relative_filepath = vim.fn.expand("%:.")
+	vim.fn.setreg("+", relative_filepath)
 end, { desc = "Buffers" })
