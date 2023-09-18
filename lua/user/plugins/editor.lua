@@ -228,7 +228,6 @@ return {
 				["<leader>z"] = { name = "+Fold" },
 				["<leader>C"] = { name = "+Conflict" },
 				["<leader>;"] = { name = "+Git" },
-				["<leader>H"] = { name = "+Harpoon" },
 			},
 			window = {
 				border = "single",

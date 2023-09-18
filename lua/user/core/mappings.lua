@@ -96,10 +96,10 @@ keymap("n", "<leader>;n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" })
 keymap("n", "<leader>;p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" })
 
 -- Harpoon
-keymap("n", "<Leader>Ha", "<cmd>lua require('harpoon.mark').add_file()<cr>", { desc = "Add to marks" })
-keymap("n", "<Leader>Hl", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", { desc = "List marks" })
-keymap("n", "<Leader>Hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", { desc = "Next mark" })
-keymap("n", "<Leader>Hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", { desc = "Prev mark" })
+keymap("n", "<Leader>a", "<cmd>lua require('harpoon.mark').add_file()<cr>", { desc = "Add to marks" })
+keymap("n", "<Leader>l", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", { desc = "List marks" })
+keymap("n", "<Leader>n", "<cmd>lua require('harpoon.ui').nav_next()<cr>", { desc = "Next mark" })
+keymap("n", "<Leader>p", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", { desc = "Prev mark" })
 
 keymap("n", "<C-\\>", "<cmd>LazyGit<cr>", { desc = "LazyGit in float term" })
 
@@ -125,7 +125,7 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-
 
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 
-keymap("n", "yr", function ()
+keymap("n", "yr", function()
 	local relative_filepath = vim.fn.expand("%:.")
 	vim.fn.setreg("+", relative_filepath)
-end, { desc = "Buffers" })
+end, { desc = "Copy relative filepath" })
