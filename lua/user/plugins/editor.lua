@@ -206,6 +206,7 @@ return {
 	},
 	{
 		"akinsho/flutter-tools.nvim",
+		ft = "dart",
 		opts = {
 			lsp = {
 				settings = {
@@ -245,9 +246,9 @@ return {
 	},
 	{
 		"iamcco/markdown-preview.nvim",
-		-- cmd = {
-		-- 	"MarkdownPreview",
-		-- },
+		cmd = {
+			"MarkdownPreview",
+		},
 		config = function()
 			vim.fn["mkdp#util#install"]()
 		end,
@@ -261,5 +262,8 @@ return {
 	},
 	{
 		"ThePrimeagen/harpoon",
+		event = {
+			"BufReadPre"
+		}
 	},
 }

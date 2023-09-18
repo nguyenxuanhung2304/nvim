@@ -244,6 +244,7 @@ return {
 	},
 	{
 		"Bekaboo/dropbar.nvim",
+		event = "BufReadPre",
 		opts = {
 			icons = {
 				ui = {

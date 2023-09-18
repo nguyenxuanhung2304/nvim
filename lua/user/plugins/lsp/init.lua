@@ -121,5 +121,6 @@ return {
 	{
 		"VidocqH/lsp-lens.nvim",
 		opts = {},
+		event = "BufReadPre",
 	},
 }
