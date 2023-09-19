@@ -129,3 +129,9 @@ keymap("n", "yr", function()
 	local relative_filepath = vim.fn.expand("%:.")
 	vim.fn.setreg("+", relative_filepath)
 end, { desc = "Copy relative filepath" })
+
+keymap("n", "gp", function()
+	local branch = vim.fn.system "git branch --show-current | tr -d '\n'"
+	local cmd = "G push origin " .. branch
+	vim.cmd(cmd)
+end, { desc = "Git push current branch"})
