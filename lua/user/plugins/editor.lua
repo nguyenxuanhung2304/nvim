@@ -254,13 +254,6 @@ return {
 		end,
 	},
 	{
-		"weizheheng/ror.nvim",
-		opts = {},
-		event = {
-			"InsertEnter",
-		},
-	},
-	{
 		"ThePrimeagen/harpoon",
 		event = {
 			"BufReadPre"

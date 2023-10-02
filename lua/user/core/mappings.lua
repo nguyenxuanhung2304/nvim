@@ -103,9 +103,6 @@ keymap("n", "<Leader>p", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", { desc
 
 keymap("n", "<C-\\>", "<cmd>LazyGit<cr>", { desc = "LazyGit in float term" })
 
--- Show ror commands
-keymap("n", "<Leader>r", ":lua require('ror.commands').list_commands()<CR>", { desc = "RoR" })
-
 -- Quit
 keymap("n", "<C-q>", function()
 	-- close current win if there are more than 1 win
