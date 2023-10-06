@@ -127,3 +127,6 @@ keymap("n", "yr", function()
 	local relative_filepath = vim.fn.expand("%:.")
 	vim.fn.setreg("+", relative_filepath)
 end, { desc = "Copy relative filepath" })
+
+keymap("n", "<C-d>", "<C-d>zz", { desc = "Center cursor after moving down half-page" })
+keymap("n", "<C-u>", "<C-u>zz", { desc = "Center cursor after moving up half-page" })
