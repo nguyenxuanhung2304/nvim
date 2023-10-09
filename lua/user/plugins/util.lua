@@ -85,4 +85,8 @@ return {
 			lastplace_open_folds = true,
 		},
 	},
+	{
+		"levouh/tint.nvim",
+		opts = {}
+	}
 }
