@@ -87,6 +87,14 @@ return {
 	},
 	{
 		"levouh/tint.nvim",
-		opts = {}
-	}
+		opts = {},
+	},
+	{
+		"tzachar/local-highlight.nvim",
+		opts = {
+			 disable_file_types = {
+				 "log"
+			 }
+		}
+	},
 }
