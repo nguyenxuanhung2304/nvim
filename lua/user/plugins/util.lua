@@ -54,6 +54,9 @@ return {
 	{
 		"NvChad/nvim-colorizer.lua",
 		opts = {
+			filetypes = {
+				"html", "css", "vue", "sass", "scss"
+			},
 			user_default_options = {
 				mode = "background",
 				tailwind = true,
@@ -92,9 +95,9 @@ return {
 	{
 		"tzachar/local-highlight.nvim",
 		opts = {
-			 disable_file_types = {
-				 "log"
-			 }
-		}
+			disable_file_types = {
+				"log",
+			},
+		},
 	},
 }
