@@ -64,24 +64,6 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
 			local keymap = require("user.core.utils").keymap
-			require("mason").setup({})
-			local mason_servers = {
-				"clang-format",
-				"clangd",
-				"css-lsp",
-				"deno",
-				"html-lsp",
-				"lua-language-server",
-				"prettier",
-				"rubocop",
-				"stylua",
-				"typescript-language-server",
-				"vetur-vls",
-				"vue-language-server",
-			}
-			require("mason-lspconfig").setup({
-				ensure_installed = mason_servers,
-			})
 
 			for _, server in pairs(servers) do
 				local opts = {
