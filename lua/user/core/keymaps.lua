@@ -95,10 +95,6 @@ keymap("n", "<Leader>;u", "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = "Unstage
 keymap("n", "<leader>;n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" })
 keymap("n", "<leader>;p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" })
 
--- Harpoon
-keymap("n", "<Leader>a", "<cmd>lua require('harpoon.mark').add_file()<cr>", { desc = "Add to marks" })
-keymap("n", "<Leader>l", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", { desc = "List marks" })
-
 -- Diffview
 keymap("n", "<Leader>Do", "<cmd>DiffviewOpen<cr>", { desc = "Open Diffiview" })
 keymap("n", "<Leader>Dc", "<cmd>DiffviewClose<cr>", { desc = "Close Diffiview" })

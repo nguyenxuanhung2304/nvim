@@ -53,6 +53,7 @@ return {
 	},
 	{
 		"NvChad/nvim-colorizer.lua",
+		event = "BufReadPre",
 		opts = {
 			filetypes = {
 				"html", "css", "vue", "sass", "scss"
@@ -90,6 +91,7 @@ return {
 	},
 	{
 		"levouh/tint.nvim",
+		event = "BufReadPre",
 		opts = {},
 	},
 	{

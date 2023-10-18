@@ -260,13 +260,11 @@ return {
 		end,
 	},
 	{
-		"ThePrimeagen/harpoon",
-		event = {
-			"BufReadPre",
-		},
-	},
-	{
 		"akinsho/toggleterm.nvim",
+		cmd = {
+			"ToggleTerm"
+		},
+		keys = "<C-\\>",
 		version = "*",
 		config = true,
 		opts = {
