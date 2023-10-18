@@ -1,6 +1,9 @@
 return {
 	{
 		"kyazdani42/nvim-tree.lua",
+		cmd = {
+			"NvimTreeToggle"
+		},
 		setup = function()
 			vim.g.loaded_netrw = 1
 			vim.g.loaded_netrwPlugin = 1
@@ -74,7 +77,7 @@ return {
 				},
 			})
 			require("telescope").load_extension("media_files")
-			require("telescope").load_extension "frecency"
+			require("telescope").load_extension("frecency")
 		end,
 	},
 	{
@@ -259,7 +262,16 @@ return {
 	{
 		"ThePrimeagen/harpoon",
 		event = {
-			"BufReadPre"
+			"BufReadPre",
+		},
+	},
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
+		opts = {
+			direction = "float",
+			 open_mapping = [[<c-\>]],
 		}
 	},
 }
