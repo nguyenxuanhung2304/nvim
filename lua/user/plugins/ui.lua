@@ -55,26 +55,6 @@ return {
 		end,
 	},
 	{
-		"lukas-reineke/indent-blankline.nvim",
-		event = { "BufReadPre" },
-		opts = function()
-			vim.g.indent_blankline_filetype_exclude = {
-				"help",
-				"startify",
-				"dashboard",
-				"packer",
-				"neogitstatus",
-				"NvimTree",
-				"alpha",
-			}
-
-			return {
-				show_current_context = true,
-				show_current_context_start = false,
-			}
-		end,
-	},
-	{
 		"p00f/nvim-ts-rainbow",
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
