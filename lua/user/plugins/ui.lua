@@ -17,7 +17,7 @@ return {
 			dashboard.section.buttons.val = {
 				dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
 				dashboard.button("r", "  Frecency files", ":Telescope frecency workspace=CWD<CR>"),
-				dashboard.button("t", "  Find text", ":Telescope live_grep<CR>"),
+				dashboard.button("t", "  Find text", ":lua require('spectre').toggle()<CR>"),
 				dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),
 				dashboard.button("q", " " .. " Quit", ":qa<CR>"),
 			}

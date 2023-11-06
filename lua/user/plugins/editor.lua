@@ -272,4 +272,8 @@ return {
 			 open_mapping = [[<c-\>]],
 		}
 	},
+	{
+		'nvim-pack/nvim-spectre',
+		lazy = true
+	}
 }

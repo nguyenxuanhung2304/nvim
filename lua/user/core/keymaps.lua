@@ -46,14 +46,27 @@ keymap("n", "#", "#<Cmd>lua require('hlslens').start()<CR>")
 keymap("n", "g*", "g*<Cmd>lua require('hlslens').start()<CR>")
 keymap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>")
 
--- Telescope
+-- Search
 keymap("n", "<leader>sf", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
-keymap("n", "<leader>sg", "<cmd>Telescope live_grep<cr>", { desc = "Find text" })
-keymap("n", "<leader>sc", "<cmd>Telescope grep_string<cr>", { desc = "Find text current cursor" })
+keymap("n", "<leader>sg", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
+keymap(
+	"n",
+	"<leader>sw",
+	'<cmd>lua require("spectre").open_visual({select_word=true})<CR>',
+	{ desc = "Search current word" }
+)
+keymap("v", "<leader>sw", '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
+keymap(
+	"n",
+	"<leader>sp",
+	'<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
+	{ desc = "Search on current file" }
+)
 keymap("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>", { desc = "Find oldfiles" })
 keymap("n", "<leader>sb", "<cmd>Telescope git_branches<cr>", { desc = "Find branches" })
 keymap("n", "<leader>ss", "<cmd>Telescope git_stash<cr>", { desc = "Find stashes" })
 keymap("n", "<leader>si", "<cmd>Telescope media_files<cr>", { desc = "Find media files" })
+keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
@@ -116,8 +129,6 @@ end, { desc = "Super <C-q>" })
 
 -- Select folder in ~/Dev
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>")
-
-keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 
 keymap("n", "yr", function()
 	local relative_filepath = vim.fn.expand("%:.")
