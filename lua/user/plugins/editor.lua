@@ -58,7 +58,6 @@ return {
 		cmd = "Telescope",
 		dependencies = {
 			"nvim-telescope/telescope-media-files.nvim",
-			"nvim-telescope/telescope-frecency.nvim",
 		},
 		opts = {
 			pickers = {
@@ -77,7 +76,6 @@ return {
 				},
 			})
 			require("telescope").load_extension("media_files")
-			require("telescope").load_extension("frecency")
 		end,
 	},
 	{
