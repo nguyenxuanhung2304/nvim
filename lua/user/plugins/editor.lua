@@ -56,9 +56,6 @@ return {
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
 		cmd = "Telescope",
-		dependencies = {
-			"nvim-telescope/telescope-media-files.nvim",
-		},
 		opts = {
 			pickers = {
 				colorscheme = {
@@ -66,17 +63,6 @@ return {
 				},
 			},
 		},
-		config = function()
-			require("telescope").setup({
-				extensions = {
-					media_files = {
-						filetypes = { "png", "webp", "jpg", "jpeg", "svg" },
-						find_cmd = "rg",
-					},
-				},
-			})
-			require("telescope").load_extension("media_files")
-		end,
 	},
 	{
 		"ggandor/leap.nvim",
