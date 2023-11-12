@@ -53,6 +53,11 @@ return {
 		},
 	},
 	{
+		"stevearc/oil.nvim",
+		opts = {},
+		cmd = "Oil"
+	},
+	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
 		cmd = "Telescope",
@@ -287,7 +292,7 @@ return {
 			"ChatGPT",
 			"ChatGPTActAs",
 			"ChatGPTEditWithInstructions",
-			"ChatGPTRun"
+			"ChatGPTRun",
 		},
 		config = function()
 			require("chatgpt").setup()
