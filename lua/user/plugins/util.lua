@@ -23,8 +23,9 @@ return {
 		opts = {},
 	},
 	{
-		"windwp/nvim-autopairs",
-		event = "BufRead",
+		"altermo/ultimate-autopair.nvim",
+		event = { "InsertEnter", "CmdlineEnter" },
+		branch = "v0.6", --recomended as each new version will have breaking changes
 		opts = {},
 	},
 	{
@@ -155,8 +156,8 @@ return {
 			-- Which character to use for drawing scope indicator
 			symbol = "╎",
 		},
-		config = function (opts)
-			require('mini.indentscope').setup(opts)
-		end
+		config = function(opts)
+			require("mini.indentscope").setup(opts)
+		end,
 	},
 }
