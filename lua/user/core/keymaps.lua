@@ -89,7 +89,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l")
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
 keymap("n", "<Leader>f", "<cmd>Format<cr>", { desc = "Format" })
-keymap("n", "<Leader>g", "<cmd>Gtabedit:<cr>", { desc = "Open fugitive" })
+keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })
 keymap("n", "<Leader>c", "<cmd>Bdelete<cr>", { desc = "Close buffer" })
 keymap("n", "<Leader>d", "<cmd>lua require('dropbar.api').pick()<cr>", { desc = "Dropbar" })
 
