@@ -115,9 +115,6 @@ keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open files h
 
 -- Quit
 keymap("n", "<C-q>", function()
-	-- close current win if there are more than 1 win
-	-- else close current tab if there are more than 1 tab
-	-- else close current vim
 	if #vim.api.nvim_tabpage_list_wins(0) > 1 then
 		vim.cmd([[close]])
 	elseif #vim.api.nvim_list_tabpages() > 1 then
@@ -127,13 +124,9 @@ keymap("n", "<C-q>", function()
 	end
 end, { desc = "Super <C-q>" })
 
--- Select folder in ~/Dev
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>")
+keymap("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>", { desc = "Find folders in ~/Dev" })
 
 keymap("n", "yr", function()
 	local relative_filepath = vim.fn.expand("%:.")
 	vim.fn.setreg("+", relative_filepath)
 end, { desc = "Copy relative filepath" })
-
-keymap("n", "<C-d>", "<C-d>zz", { desc = "Center cursor after moving down half-page" })
-keymap("n", "<C-u>", "<C-u>zz", { desc = "Center cursor after moving up half-page" })

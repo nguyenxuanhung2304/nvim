@@ -35,17 +35,6 @@ return {
 				vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 			end
 
-			-- handlers
-			vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-				border = "rounded",
-				width = 60,
-			})
-
-			vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-				border = "rounded",
-				width = 60,
-			})
-
 			-- attach servers
 			local servers = {
 				"solargraph",
@@ -114,11 +103,6 @@ return {
 	{
 		"onsails/lspkind.nvim",
 		event = "BufReadPre",
-	},
-	{
-		"ray-x/lsp_signature.nvim",
-		event = "BufReadPre",
-		opts = {},
 	},
 	{
 		"VidocqH/lsp-lens.nvim",

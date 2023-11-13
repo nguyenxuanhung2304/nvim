@@ -1,5 +1,4 @@
 local opt = vim.opt
-local g = vim.g
 
 opt.cursorline = true -- Show current line
 
