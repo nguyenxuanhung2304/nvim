@@ -59,8 +59,11 @@ return {
 		"sainnhe/gruvbox-material",
 		lazy = true
 	},
-	{ 
+	{
 		'projekt0n/github-nvim-theme',
 		lazy = true
+	},
+	{
+		'LunarVim/synthwave84.nvim'
 	}
 }
