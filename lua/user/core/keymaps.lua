@@ -86,13 +86,6 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j")
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k")
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l")
 
--- Common
-keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
-keymap("n", "<Leader>f", "<cmd>Format<cr>", { desc = "Format" })
-keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })
-keymap("n", "<Leader>c", "<cmd>Bdelete<cr>", { desc = "Close buffer" })
-keymap("n", "<Leader>d", "<cmd>lua require('dropbar.api').pick()<cr>", { desc = "Dropbar" })
-
 -- Git conflit
 keymap("n", "<Leader>Cc", "<cmd>GitConflictChooseOurs<cr>", { desc = "Select current" })
 keymap("n", "<Leader>Ci", "<cmd>GitConflictChooseTheirs<cr>", { desc = "Select incomming" })
@@ -113,7 +106,18 @@ keymap("n", "<Leader>Do", "<cmd>DiffviewOpen<cr>", { desc = "Open Diffiview" })
 keymap("n", "<Leader>Dc", "<cmd>DiffviewClose<cr>", { desc = "Close Diffiview" })
 keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open files history" })
 
--- Quit
+-- Common
+keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
+keymap("n", "<Leader>f", "<cmd>Format<cr>", { desc = "Format" })
+keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })
+keymap("n", "<Leader>c", "<cmd>Bdelete<cr>", { desc = "Close buffer" })
+keymap("n", "<Leader>d", "<cmd>lua require('dropbar.api').pick()<cr>", { desc = "Dropbar" })
+keymap("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>", { desc = "Find folders in ~/Dev" })
+keymap("n", "yr", function()
+	local relative_filepath = vim.fn.expand("%:.")
+	vim.fn.setreg("+", relative_filepath)
+end, { desc = "Copy relative filepath" })
+
 keymap("n", "<C-q>", function()
 	if #vim.api.nvim_tabpage_list_wins(0) > 1 then
 		vim.cmd([[close]])
@@ -122,11 +126,7 @@ keymap("n", "<C-q>", function()
 	else
 		vim.cmd([[qa]])
 	end
-end, { desc = "Super <C-q>" })
+end, { desc = "Quit buffer" })
 
-keymap("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>", { desc = "Find folders in ~/Dev" })
-
-keymap("n", "yr", function()
-	local relative_filepath = vim.fn.expand("%:.")
-	vim.fn.setreg("+", relative_filepath)
-end, { desc = "Copy relative filepath" })
+keymap('i', '<C-c>', '<esc>$<S-a>,<CR>', { desc = "Add comma to endline" })
+keymap('i', '<C-v>', '<esc>$<S-a>:<space>', { desc = "Add two dots to next word" })
