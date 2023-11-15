@@ -18,4 +18,5 @@ function M.signs()
 		{ name = "DiagnosticSignInfo", text = "" },
 	}
 end
+
 return M

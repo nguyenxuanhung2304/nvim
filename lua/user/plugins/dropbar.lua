@@ -15,4 +15,7 @@ return {
 			},
 		},
 	},
+	keys = {
+		{ "<Leader>d", "<cmd>lua require('dropbar.api').pick()<cr>", desc = "Dropbar" },
+	},
 }

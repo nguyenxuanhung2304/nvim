@@ -47,7 +47,7 @@ return {
 	},
 	{
 		"marko-cerovac/material.nvim",
-		lazy = true
+		lazy = true,
 	},
 	{
 		"folke/tokyonight.nvim",
@@ -57,13 +57,14 @@ return {
 	},
 	{
 		"sainnhe/gruvbox-material",
-		lazy = true
+		lazy = true,
 	},
 	{
-		'projekt0n/github-nvim-theme',
-		lazy = true
+		"projekt0n/github-nvim-theme",
+		lazy = true,
 	},
 	{
-		'LunarVim/synthwave84.nvim'
+		"LunarVim/synthwave84.nvim",
+		lazy = true,
 	}
 }
