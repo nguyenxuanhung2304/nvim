@@ -72,13 +72,6 @@ keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
 keymap("n", "<leader>.", "<cmd>NvimTreeFindFile<cr>", { desc = "Find file in NvimTree" })
 
--- Fold
-keymap("n", "<Leader>zR", "<cmd>lua require('ufo').openAllFolds()<CR>", { desc = "Open all folds" })
-keymap("n", "<Leader>zM", "<cmd>lua require('ufo').closeAllFolds()<CR>", { desc = "Close all folds" })
-keymap("n", "<Leader>zr", "<cmd>lua require('ufo').openFoldsExceptKinds()<CR>")
-keymap("n", "<Leader>zm", "<cmd>lua require('ufo').closeFoldsWith()<CR>")
-keymap("n", "<Leader>zp", "<cmd>lua require('ufo').peekFoldedLinesUnderCursor()<CR>", { desc = "Preview fold " })
-
 -- Move in term mode
 keymap("t", "<C-o>", "<C-\\><C-n>")
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h")
@@ -111,7 +104,6 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
 keymap("n", "<Leader>f", "<cmd>Format<cr>", { desc = "Format" })
 keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })
 keymap("n", "<Leader>c", "<cmd>Bdelete<cr>", { desc = "Close buffer" })
-keymap("n", "<Leader>d", "<cmd>lua require('dropbar.api').pick()<cr>", { desc = "Dropbar" })
 keymap("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>", { desc = "Find folders in ~/Dev" })
 keymap("n", "yr", function()
 	local relative_filepath = vim.fn.expand("%:.")
