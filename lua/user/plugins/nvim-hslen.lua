@@ -1,5 +1,5 @@
 return {
-	"echasnovski/mini.surround",
+	"kevinhwang91/nvim-hlslens",
 	event = "BufReadPre",
 	opts = {},
 }

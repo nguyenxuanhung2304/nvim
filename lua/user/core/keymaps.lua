@@ -4,10 +4,6 @@ local keymap = utils.keymap
 -- Yank and hold current cursor
 keymap("v", "y", "ygv<Esc>")
 
--- Ctrl+s is save file
-keymap("n", "<C-s>", "<cmd>w!<cr>")
-keymap("i", "<C-s>", "<cmd>w!<cr>")
-
 -- Navigator between window
 keymap("n", "<C-h>", "<C-w>h")
 keymap("n", "<C-j>", "<C-w>j")
