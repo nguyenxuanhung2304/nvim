@@ -19,26 +19,6 @@ function M.signs()
 	}
 end
 
-function M.ignore_filetypes()
-	return {
-		"help",
-		"alpha",
-		"dashboard",
-		"Trouble",
-		"trouble",
-		"lazy",
-		"mason",
-		"notify",
-		"toggleterm",
-		"lazyterm",
-		"netrw",
-		"tutor",
-		"NeogitStatus",
-		"NeogitPopup",
-		"DiffviewFiles",
-	}
-end
-
 function M.on_load(name, fn)
 	local Config = require("lazy.core.config")
 	if Config.plugins[name] and Config.plugins[name]._.loaded then
