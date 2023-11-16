@@ -46,32 +46,6 @@ keymap("n", "#", "#<Cmd>lua require('hlslens').start()<CR>")
 keymap("n", "g*", "g*<Cmd>lua require('hlslens').start()<CR>")
 keymap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>")
 
--- Search
-keymap("n", "<leader>sf", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
-keymap("n", "<leader>sg", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
-keymap(
-	"n",
-	"<leader>sw",
-	'<cmd>lua require("spectre").open_visual({select_word=true})<CR>',
-	{ desc = "Search current word" }
-)
-keymap("v", "<leader>sw", '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
-keymap(
-	"n",
-	"<leader>sp",
-	'<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
-	{ desc = "Search on current file" }
-)
-keymap("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>", { desc = "Find oldfiles" })
-keymap("n", "<leader>sB", "<cmd>Telescope git_branches<cr>", { desc = "Find branches" })
-keymap("n", "<leader>ss", "<cmd>Telescope git_stash<cr>", { desc = "Find stashes" })
-keymap("n", "<leader>si", "<cmd>Telescope media_files<cr>", { desc = "Find media files" })
-keymap("n", "<leader>sb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
-
--- NvimTree
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
-keymap("n", "<leader>.", "<cmd>NvimTreeFindFile<cr>", { desc = "Find file in NvimTree" })
-
 -- Move in term mode
 keymap("t", "<C-o>", "<C-\\><C-n>")
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h")
@@ -101,9 +75,7 @@ keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open files h
 
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
-keymap("n", "<Leader>f", "<cmd>Format<cr>", { desc = "Format" })
 keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })
-keymap("n", "<Leader>c", "<cmd>Bdelete<cr>", { desc = "Close buffer" })
 keymap("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>", { desc = "Find folders in ~/Dev" })
 keymap("n", "yr", function()
 	local relative_filepath = vim.fn.expand("%:.")
