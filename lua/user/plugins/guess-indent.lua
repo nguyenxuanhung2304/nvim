@@ -1,16 +1,10 @@
+local Util = require("user.core.utils")
+
 return {
 	"nmac427/guess-indent.nvim",
 	event = "BufReadPre",
 	opts = {
-		filetype_exclude = {
-			"netrw",
-			"tutor",
-      "alpha",
-      "lazy",
-      "DiffviewFiles",
-      "NeogitStatus",
-      "NeogitPopup"
-		},
+		filetype_exclude = Util.ignore_filetypes(),
 		buftype_exclude = {
 			"help",
 			"nofile",

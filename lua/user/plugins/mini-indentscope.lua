@@ -6,20 +6,10 @@ return {
 		options = { try_as_border = true },
 	},
 	init = function()
+		local Util = require("user.core.utils")
+
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = {
-				"help",
-				"alpha",
-				"dashboard",
-				"neo-tree",
-				"Trouble",
-				"trouble",
-				"lazy",
-				"mason",
-				"notify",
-				"toggleterm",
-				"lazyterm",
-			},
+			pattern = Util.ignore_filetypes(),
 			callback = function()
 				vim.b.miniindentscope_disable = true
 			end,
