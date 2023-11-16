@@ -63,10 +63,10 @@ keymap(
 	{ desc = "Search on current file" }
 )
 keymap("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>", { desc = "Find oldfiles" })
-keymap("n", "<leader>sb", "<cmd>Telescope git_branches<cr>", { desc = "Find branches" })
+keymap("n", "<leader>sB", "<cmd>Telescope git_branches<cr>", { desc = "Find branches" })
 keymap("n", "<leader>ss", "<cmd>Telescope git_stash<cr>", { desc = "Find stashes" })
 keymap("n", "<leader>si", "<cmd>Telescope media_files<cr>", { desc = "Find media files" })
-keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
+keymap("n", "<leader>sb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
