@@ -6,6 +6,21 @@ return {
         ["bem.enabled"] = true,
       },
     },
+    css = {
+      options = {
+        ["bem.enabled"] = true,
+      },
+    },
+    vue = {
+      options = {
+        ["bem.enabled"] = true,
+      },
+    },
+    sass = {
+      options = {
+        ["bem.enabled"] = true,
+      },
+    },
     scss = {
       options = {
         ["bem.enabled"] = true,
