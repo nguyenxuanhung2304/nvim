@@ -32,15 +32,6 @@ return {
 			end,
 			offsets = {
 				{
-					filetype = "NvimTree",
-					text = function()
-						return "File Explorer"
-					end,
-					text_align = "center",
-					separator = true,
-					highlight = "Directory",
-				},
-				{
 					filetype = "fugitive",
 					text = "Fugitive",
 					padding = 1,
