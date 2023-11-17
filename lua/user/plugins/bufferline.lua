@@ -1,6 +1,6 @@
 return {
 	"akinsho/bufferline.nvim",
-	event = "VeryLazy",
+	event = "FileReadPre",
 	opts = {
 		options = {
 			numbers = "none",
