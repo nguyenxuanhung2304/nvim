@@ -4,10 +4,6 @@ local keymap = utils.keymap
 -- Yank and hold current cursor
 keymap("v", "y", "ygv<Esc>")
 
--- Ctrl+s is save file
-keymap("n", "<C-s>", "<cmd>w!<cr>")
-keymap("i", "<C-s>", "<cmd>w!<cr>")
-
 -- Navigator between window
 keymap("n", "<C-h>", "<C-w>h")
 keymap("n", "<C-j>", "<C-w>j")
@@ -94,3 +90,5 @@ end, { desc = "Quit buffer" })
 
 keymap('i', '<C-c>', '<esc>$<S-a>,<CR>', { desc = "Add comma to endline" })
 keymap('i', '<C-v>', '<esc>$<S-a>:<space>', { desc = "Add two dots to next word" })
+
+keymap('n', '<leader>l', '<cmd>Lazy<cr>', { desc = "Lazy" })

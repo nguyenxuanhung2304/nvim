@@ -1,17 +1,17 @@
+local Configs = require('user.core.configs')
+
 return {
 	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
-			local signs = require("user.core.utils").signs()
-
 			return {
 				diagnostics = {
 					-- disable virtual text
 					virtual_text = true,
 					-- show signs
 					signs = {
-						active = signs,
+						active = Configs.icons.diagnostics,
 					},
 					update_in_insert = true,
 					underline = true,
@@ -29,9 +29,7 @@ return {
 		end,
 		config = function()
 			-- diagnostics
-			local signs = require("user.core.utils").signs()
-
-			for _, sign in ipairs(signs) do
+			for _, sign in ipairs(Configs.icons.diagnostics) do
 				vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 			end
 

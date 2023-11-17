@@ -1,5 +1,5 @@
 return {
-	"echasnovski/mini.surround",
+	"Pocco81/auto-save.nvim",
 	event = "BufReadPre",
 	opts = {},
 }
