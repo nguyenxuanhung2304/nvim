@@ -19,7 +19,14 @@ return {
 					icon = "",
 				},
 			},
-			lualine_c = {},
+			lualine_c = {
+				{
+					function ()
+						local recorder = require("recorder")
+						return recorder.recordingStatus()
+					end
+				}
+			},
 			lualine_x = {
 				{
 					function()
