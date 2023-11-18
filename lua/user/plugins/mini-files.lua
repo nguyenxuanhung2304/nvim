@@ -5,15 +5,18 @@ return {
 	opts = {},
 	keys = {
 		{
-			"<leader>e",
+			"<leader>ec",
 			function()
-				local MiniFiles = require("mini.files")
-
-				if not MiniFiles.close() then
-					MiniFiles.open()
-				end
+				require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
 			end,
-			desc = "Toggle file explore",
+			desc = "Open mini.files (directory of current file)",
+		},
+		{
+			"<leader>er",
+			function()
+				require("mini.files").open(vim.loop.cwd(), true)
+			end,
+			desc = "Open mini.files (cwd)",
 		},
 	},
 }
