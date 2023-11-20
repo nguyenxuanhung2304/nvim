@@ -90,7 +90,17 @@ return {
 	},
 	{
 		"sindrets/diffview.nvim",
-		opts = {},
+		opts = {
+			hooks = {
+				view_opened = function()
+					vim.cmd.colorscheme("tokyonight")
+				end,
+				view_closed = function()
+					local colorscheme = vim.g.main_colorscheme
+					vim.cmd.colorscheme(colorscheme)
+				end,
+			},
+		},
 		cmd = {
 			"DiffviewOpen",
 			"DiffviewClose",
