@@ -103,11 +103,6 @@ return {
 		event = "BufReadPre",
 	},
 	{
-		"VidocqH/lsp-lens.nvim",
-		opts = {},
-		event = "BufReadPre",
-	},
-	{
 		"kosayoda/nvim-lightbulb",
 		event = "BufReadPre",
 		opts = {
