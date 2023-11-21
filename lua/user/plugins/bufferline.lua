@@ -36,6 +36,12 @@ return {
 					text = "Fugitive",
 					padding = 1,
 				},
+				{
+					filetype = "neo-tree",
+					text = "Neo-tree",
+					highlight = "Directory",
+					text_align = "left",
+				},
 			},
 			color_icons = true, -- whether or not to add the filetype icon highlights
 			show_buffer_icons = true, -- disable filetype icons for buffers
