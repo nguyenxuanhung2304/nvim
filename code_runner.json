@@ -1,0 +1,5 @@
+{
+  "swift": "swift $fileName",
+  "javascript": "node $fileName",
+  "ruby": "ruby $fileName"
+}
