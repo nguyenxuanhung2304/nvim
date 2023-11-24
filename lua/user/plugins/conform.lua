@@ -26,6 +26,9 @@ return {
 			json = {
 				"prettier",
 			},
+			swift = {
+				"swiftformat"
+			}
 		},
 	},
 	event = { "BufWritePre" },

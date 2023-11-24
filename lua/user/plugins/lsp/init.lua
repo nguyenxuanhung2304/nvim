@@ -42,7 +42,6 @@ return {
 				"emmet_ls",
 				"vuels",
 				"lua_ls",
-				"eslint",
 				"dartls",
 				"pyright",
 				"tailwindcss",

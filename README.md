@@ -30,9 +30,27 @@ My Neovim setup powered by 💤 lazy.nvim to make it easy to customize and exten
 
 ## ⚡️ Requirements
 
+### 🚀 Need have:
 - Neovim >= **0.10** (needs to be built with **LuaJIT**)
 - Git >= **2.19.0** (for partial clones support)
 - a [Nerd Font](https://www.nerdfonts.com/) **_(optional)_**
+
+### 🔥 Lsp
+- sourcekit: `sourcekit`
+- solargraph: `gem install --user-install solargraph`
+- tsserver: `npm install -g typescript typescript-language-server`
+- eslint: `npm i -g vscode-langservers-extracted`
+- jsonls: `npm i -g vscode-langservers-extracted`
+- emmet_ls: `npm install -g emmet-ls`
+- vuels: `npm install -g vls`
+- lua_ls: `brew install lua-language-server`
+- tailwindcss: `npm install -g @tailwindcss/language-server`
+ 
+### 🧹 Formatters
+- rubocop: `gem install rubocop`
+- swiftformat: `brew install swiftformat`
+- prettier: `npm install --save-dev --save-exact prettier`
+- styluad: `brew install stylua`
 
 ## 📂 File Structure
 
