@@ -1,3 +1,7 @@
+vim.api.nvim_create_user_command('TeleSmartOpen', function()
+  require('telescope').extensions.smart_open.smart_open()
+end, { desc = "Open smart-open" })
+
 return {
 	"goolord/alpha-nvim",
 	opts = function()
@@ -13,7 +17,7 @@ return {
 			"                                                     ",
 		}
 		dashboard.section.buttons.val = {
-			dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
+			dashboard.button("f", "  Find file", ":TeleSmartOpen<cr>"),
 			dashboard.button("r", "  Frecency files", ":Telescope oldfiles<CR>"),
 			dashboard.button("t", "  Find text", ":lua require('spectre').toggle()<CR>"),
 			dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),
