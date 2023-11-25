@@ -3,4 +3,8 @@ return {
 	event = {
 		"BufReadPre",
 	},
+	ft = {
+		"ruby",
+		"eruby",
+	},
 }
