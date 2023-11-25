@@ -91,5 +91,7 @@ end, { desc = "Quit buffer" })
 
 keymap('i', '<C-c>', '<esc>$<S-a>,<CR>', { desc = "Add comma to endline" })
 keymap('i', '<C-v>', '<esc>$<S-a>:<space>', { desc = "Add two dots to next word" })
+keymap('i', '<C-b>', '<Esc>o', { desc = "Jump to new line" })
+keymap('i', '<C-d>', '<Esc>$i,<space>', { desc = "Add a comma and space" })
 
 keymap('n', '<leader>l', '<cmd>Lazy<cr>', { desc = "Lazy" })
