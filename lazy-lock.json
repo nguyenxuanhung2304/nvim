@@ -37,7 +37,6 @@
   "mason.nvim": { "branch": "main", "commit": "ee6a7f179ebf8aa9da9d53b1cf1b57d292ea0182" },
   "material.nvim": { "branch": "main", "commit": "1ecaa2d065a1ea308bd7702a77c2bf35ede8f536" },
   "mini.ai": { "branch": "main", "commit": "4a2e387b121352dfb478f440c9a5313a9d97006c" },
-  "mini.animate": { "branch": "main", "commit": "626c51eba5d344572d6da0938044a73369de8b8b" },
   "mini.bufremove": { "branch": "main", "commit": "7821606e35c1ac931b56d8e3155f45ffe76ee7e5" },
   "mini.comment": { "branch": "main", "commit": "3d9c8009615857e982f09bc5357fc95f2a2175f3" },
   "mini.indentscope": { "branch": "main", "commit": "f60e9b51a6214c73a170ffc5445ce91560981031" },
