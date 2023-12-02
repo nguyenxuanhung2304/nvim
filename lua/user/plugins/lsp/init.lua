@@ -57,8 +57,6 @@ return {
 					on_attach = function()
 						keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>")
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-						keymap("n", "gr", "<cmd>lua vim.lsp.buf.rename()<CR>")
-						keymap("n", "gR", "<cmd>Telescope lsp_references<CR>")
 						keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 					end,
 					capabilities = cmp_nvim_lsp.default_capabilities(capabilities),
