@@ -1,4 +1,4 @@
-local Configs = require('user.core.configs')
+local Configs = require("user.core.configs")
 
 return {
 	{
@@ -25,6 +25,7 @@ return {
 						prefix = "",
 					},
 				},
+				inlay_hints = { enabled = true },
 			}
 		end,
 		config = function()
@@ -45,7 +46,7 @@ return {
 				"dartls",
 				"pyright",
 				"tailwindcss",
-				"sourcekit"
+				"sourcekit",
 			}
 			local lspconfig = require("lspconfig")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
