@@ -1,5 +1,6 @@
 {
   "LuaSnip": { "branch": "master", "commit": "ea7d7ea510c641c4f15042becd27f35b3e5b3c2b" },
+  "aerial.nvim": { "branch": "master", "commit": "ef81ab9184385eb2ad4f80344960d9db2c255c49" },
   "alpha-nvim": { "branch": "main", "commit": "29074eeb869a6cbac9ce1fbbd04f5f5940311b32" },
   "arctic.nvim": { "branch": "v2", "commit": "b83837879d7228b409466c0040ce85ec42ac273e" },
   "auto-save.nvim": { "branch": "main", "commit": "979b6c82f60cfa80f4cf437d77446d0ded0addf0" },
