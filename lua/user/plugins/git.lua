@@ -96,8 +96,7 @@ return {
 					vim.cmd.colorscheme("tokyonight")
 				end,
 				view_closed = function()
-					local colorscheme = vim.g.main_colorscheme
-					vim.cmd.colorscheme(colorscheme)
+					vim.cmd.colorscheme("gruvbox-material")
 				end,
 			},
 		},
