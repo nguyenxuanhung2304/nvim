@@ -43,7 +43,6 @@
   "mini.indentscope": { "branch": "main", "commit": "f60e9b51a6214c73a170ffc5445ce91560981031" },
   "neogit": { "branch": "master", "commit": "d3c5687a78cffc25026ff31d2fcbd61a2a3e067f" },
   "none-ls.nvim": { "branch": "main", "commit": "7bf88cd3b37a411fdacfdca1745408a77a420493" },
-  "nui.nvim": { "branch": "main", "commit": "c0c8e347ceac53030f5c1ece1c5a5b6a17a25b32" },
   "nvim-cmp": { "branch": "main", "commit": "5dce1b778b85c717f6614e3f4da45e9f19f54435" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "dde3084106a70b9a79d48f426f6d6fec6fd203f7" },
   "nvim-hlslens": { "branch": "main", "commit": "5e3e9088fba7508cee3612ee50b14dfdd3ab19af" },
@@ -72,6 +71,5 @@
   "ultimate-autopair.nvim": { "branch": "v0.6", "commit": "6fd0d6aa976a97dd6f1bed4d46be1b437613a52f" },
   "vim-rails": { "branch": "master", "commit": "2b8c4fc831e0de2681beda0a2f48222812920a1d" },
   "vim-visual-multi": { "branch": "master", "commit": "724bd53adfbaf32e129b001658b45d4c5c29ca1a" },
-  "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" },
-  "wtf.nvim": { "branch": "main", "commit": "03775272c9ba88cbaae1d1802078a3f751969350" }
+  "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }
 }
