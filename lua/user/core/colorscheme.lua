@@ -1,3 +1,3 @@
-local mainColorscheme = "gruvbox-material"
+local mainColorscheme = "tokyonight"
 
 vim.cmd.colorscheme(mainColorscheme)
