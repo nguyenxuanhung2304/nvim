@@ -70,6 +70,9 @@ keymap("n", "<Leader>Do", "<cmd>DiffviewOpen<cr>", { desc = "Open Diffiview" })
 keymap("n", "<Leader>Dc", "<cmd>DiffviewClose<cr>", { desc = "Close Diffiview" })
 keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open files history" })
 
+-- Marks
+keymap("n", "<Leader>l", "<cmd>MarksListAll<cr>", { desc = "List all marks" })
+
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
 keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })
@@ -94,7 +97,7 @@ keymap('i', '<C-v>', '<esc>$<S-a>:<space>', { desc = "Add two dots to next word"
 keymap('i', '<C-b>', '<Esc>o', { desc = "Jump to new line" })
 keymap('i', '<C-d>', '<Esc>$i,<space>', { desc = "Add a comma and space" })
 
-keymap('n', '<leader>l', '<cmd>Lazy<cr>', { desc = "Lazy" })
+keymap('n', '<leader>L', '<cmd>Lazy<cr>', { desc = "Lazy" })
 
 keymap("v", ">", ">gv")
 keymap("v", "<", "<gv")
