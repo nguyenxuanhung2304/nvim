@@ -95,3 +95,6 @@ keymap('i', '<C-b>', '<Esc>o', { desc = "Jump to new line" })
 keymap('i', '<C-d>', '<Esc>$i,<space>', { desc = "Add a comma and space" })
 
 keymap('n', '<leader>l', '<cmd>Lazy<cr>', { desc = "Lazy" })
+
+keymap("v", ">", ">gv")
+keymap("v", "<", "<gv")
