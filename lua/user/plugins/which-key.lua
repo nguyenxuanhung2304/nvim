@@ -13,6 +13,7 @@ return {
 			["<leader>C"] = { name = "+Conflict" },
 			["<leader>;"] = { name = "+Git" },
 			["<leader>D"] = { name = "+Diff" },
+			["<leader>B"] = { name = "+Bufferline" },
 		},
 		window = {
 			border = "single",
