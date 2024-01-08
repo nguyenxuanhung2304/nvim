@@ -65,5 +65,8 @@ return {
 	{
 		"LunarVim/synthwave84.nvim",
 		lazy = true,
-	}
+	},
+	{
+		{ "rose-pine/neovim", name = "rose-pine" },
+	},
 }
