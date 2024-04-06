@@ -77,27 +77,17 @@ keymap("n", "<Leader>l", "<cmd>MarksListAll<cr>", { desc = "List all marks" })
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
 keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })
 keymap("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>", { desc = "Find folders in ~/Dev" })
-keymap("n", "yr", function()
-	local relative_filepath = vim.fn.expand("%:.")
-	vim.fn.setreg("+", relative_filepath)
-end, { desc = "Copy relative filepath" })
 
-keymap("n", "<C-q>", function()
-	if #vim.api.nvim_tabpage_list_wins(0) > 1 then
-		vim.cmd([[close]])
-	elseif #vim.api.nvim_list_tabpages() > 1 then
-		vim.cmd([[tabclose]])
-	else
-		vim.cmd([[qa]])
-	end
-end, { desc = "Quit buffer" })
+vim.api.nvim_create_user_command("Cppath", function()
+    local path = vim.fn.expand("%:p")
+    vim.fn.setreg("+", path)
+    vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
 
-keymap('i', '<C-c>', '<esc>$<S-a>,<CR>', { desc = "Add comma to endline" })
-keymap('i', '<C-v>', '<esc>$<S-a>:<space>', { desc = "Add two dots to next word" })
-keymap('i', '<C-b>', '<Esc>o', { desc = "Jump to new line" })
-keymap('i', '<C-d>', '<Esc>$i,<space>', { desc = "Add a comma and space" })
-
+keymap('n', '<leader>c', '<cmd>Cppath<cr>', { desc = "Copy relative filepath" })
 keymap('n', '<leader>L', '<cmd>Lazy<cr>', { desc = "Lazy" })
+keymap('t', '<Esc>', '<C-\\><C-n>')
 
 keymap("v", ">", ">gv")
 keymap("v", "<", "<gv")
+
