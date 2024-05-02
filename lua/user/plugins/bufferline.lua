@@ -37,10 +37,10 @@ return {
 					padding = 1,
 				},
 				{
-					filetype = "neo-tree",
-					text = "Neo-tree",
+					filetype = "NvimTree",
+					text = "File explorer",
 					highlight = "Directory",
-					text_align = "left",
+					text_align = "center",
 				},
 			},
 			color_icons = true, -- whether or not to add the filetype icon highlights
