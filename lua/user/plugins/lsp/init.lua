@@ -36,7 +36,8 @@ return {
 
 			-- attach servers
 			local servers = {
-				"solargraph",
+				-- "solargraph",
+				"phpactor",
 				"tsserver",
 				"eslint",
 				"jsonls",
@@ -56,9 +57,8 @@ return {
 			for _, server in pairs(servers) do
 				local opts = {
 					on_attach = function()
-						keymap("n", "gd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>")
-						keymap("n", "gr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>")
-						keymap("n", "gp", "<cmd>lua require('goto-preview').close_all_win()<CR>")
+						keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
+						keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 						keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 					end,
