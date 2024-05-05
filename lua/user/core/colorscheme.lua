@@ -1,3 +1,3 @@
-local mainColorscheme = "rose-pine"
+local mainColorscheme = "vscode"
 
 vim.cmd.colorscheme(mainColorscheme)

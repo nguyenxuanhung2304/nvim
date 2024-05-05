@@ -70,5 +70,12 @@ return {
 		{ "rose-pine/neovim", name = "rose-pine", opts = {
 			variant = "moon",
 		} },
+	},
+	{
+		'Mofiqul/vscode.nvim',
+		lazy = true,
+		opts = {
+			italic_comments = true,
+		}
 	}
 }

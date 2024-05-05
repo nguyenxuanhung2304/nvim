@@ -72,5 +72,6 @@
   "ultimate-autopair.nvim": { "branch": "v0.6", "commit": "6fd0d6aa976a97dd6f1bed4d46be1b437613a52f" },
   "vim-rails": { "branch": "master", "commit": "2b8c4fc831e0de2681beda0a2f48222812920a1d" },
   "vim-visual-multi": { "branch": "master", "commit": "724bd53adfbaf32e129b001658b45d4c5c29ca1a" },
+  "vscode.nvim": { "branch": "main", "commit": "bf62428d842ed1fb9c33353be10af40bac51e825" },
   "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }
 }
