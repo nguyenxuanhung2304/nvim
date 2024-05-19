@@ -73,6 +73,11 @@ keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open files h
 -- Marks
 keymap("n", "<Leader>l", "<cmd>MarksListAll<cr>", { desc = "List all marks" })
 
+-- Vim-test
+keymap("n", "<Leader>Tc", "<cmd>TestNearest<CR>", { desc = "Run test under cursor" })
+keymap("n", "<Leader>Tf", "<cmd>TestFile<CR>", { desc = "Run test in the current file" })
+keymap("n", "<Leader>Ta", "<cmd>TestSuite<CR>", { desc = "Run all test" })
+
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
 keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })

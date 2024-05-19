@@ -14,6 +14,7 @@ return {
 			["<leader>;"] = { name = "+Git" },
 			["<leader>D"] = { name = "+Diff" },
 			["<leader>B"] = { name = "+Bufferline" },
+			["<leader>T"] = { name = "+Test" },
 		},
 		window = {
 			border = "single",
