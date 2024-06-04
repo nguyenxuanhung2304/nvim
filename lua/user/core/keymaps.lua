@@ -81,18 +81,22 @@ keymap("n", "<Leader>Ta", "<cmd>TestSuite<CR>", { desc = "Run all test" })
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
 keymap("n", "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" })
-keymap("n", "<C-f>", "<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>", { desc = "Find folders in ~/Dev" })
+keymap(
+	"n",
+	"<C-f>",
+	"<cmd>silent !tmux neww '~/.local/bin/scripts/tmux-sessionizer'<CR>",
+	{ desc = "Find folders in ~/Dev" }
+)
 
 vim.api.nvim_create_user_command("Cppath", function()
-    local path = vim.fn.expand("%:p")
-    vim.fn.setreg("+", path)
-    vim.notify('Copied "' .. path .. '" to the clipboard!')
+	local path = vim.fn.expand("%:p")
+	vim.fn.setreg("+", path)
+	vim.notify('Copied "' .. path .. '" to the clipboard!')
 end, {})
 
-keymap('n', '<leader>c', '<cmd>Cppath<cr>', { desc = "Copy relative filepath" })
-keymap('n', '<leader>L', '<cmd>Lazy<cr>', { desc = "Lazy" })
-keymap('t', '<Esc>', '<C-\\><C-n>')
+keymap("n", "<leader>c", "<cmd>Cppath<cr>", { desc = "Copy relative filepath" })
+keymap("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
+keymap("t", "<Esc>", "<C-\\><C-n>")
 
 keymap("v", ">", ">gv")
 keymap("v", "<", "<gv")
-
