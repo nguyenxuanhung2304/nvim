@@ -21,11 +21,9 @@ return {
 			},
 			lualine_c = {
 				{
-					function ()
-						local recorder = require("recorder")
-						return recorder.recordingStatus()
-					end
-				}
+					"filename",
+					path = 1
+				},
 			},
 			lualine_x = {
 				{
