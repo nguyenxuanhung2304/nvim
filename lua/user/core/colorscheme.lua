@@ -1,3 +1,3 @@
-local mainColorscheme = "vscode"
+local mainColorscheme = "gruvbox-material"
 
 vim.cmd.colorscheme(mainColorscheme)
