@@ -47,6 +47,10 @@ return {
 		git = {
 			ignore = false,
 		},
+		view = {
+			relativenumber = true, -- Show relative number in tree
+			adaptive_size = true, -- Set width nvimtree by fit all elements
+		},
 	},
 	keys = {
 		{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
