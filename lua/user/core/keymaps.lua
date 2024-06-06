@@ -70,9 +70,6 @@ keymap("n", "<Leader>Do", "<cmd>DiffviewOpen<cr>", { desc = "Open Diffiview" })
 keymap("n", "<Leader>Dc", "<cmd>DiffviewClose<cr>", { desc = "Close Diffiview" })
 keymap("n", "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", { desc = "Open files history" })
 
--- Marks
-keymap("n", "<Leader>l", "<cmd>MarksListAll<cr>", { desc = "List all marks" })
-
 -- Vim-test
 keymap("n", "<Leader>Tc", "<cmd>TestNearest<CR>", { desc = "Run test under cursor" })
 keymap("n", "<Leader>Tf", "<cmd>TestFile<CR>", { desc = "Run test in the current file" })
