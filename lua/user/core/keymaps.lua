@@ -5,40 +5,30 @@ local keymap = utils.keymap
 keymap("v", "y", "ygv<Esc>")
 
 -- Navigator between window
-keymap("n", "<C-h>", "<C-w>h")
-keymap("n", "<C-j>", "<C-w>j")
-keymap("n", "<C-k>", "<C-w>k")
-keymap("n", "<C-l>", "<C-w>l")
-
--- Resize pane
-keymap("n", "<M-Right>", "<C-w>>")
-keymap("n", "<M-Left>", "<C-w><")
+keymap("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
+keymap("n", "<C-j>", "<C-w>j", { desc = "Move to down window" })
+keymap("n", "<C-k>", "<C-w>k", { desc = "Move to up window" })
+keymap("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>")
-keymap("n", "<S-h>", ":bprevious<CR>")
+keymap("n", "<S-l>", ":bnext<CR>", { desc = "Move to next buffer" })
+keymap("n", "<S-h>", ":bprevious<CR>", { desc = "Move to previous buffer" })
 
--- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>")
 
--- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==")
-keymap("v", "<A-k>", ":m .-2<CR>==")
 keymap("v", "p", '"_dP')
 
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv")
-keymap("x", "K", ":move '<-2<CR>gv-gv")
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv")
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv")
+keymap("x", "J", ":move '>+1<CR>gv-gv", { desc = "Move current line to down" })
+keymap("x", "K", ":move '<-2<CR>gv-gv", { desc = "Move current line to up" })
 
 -- Move in term mode
-keymap("t", "<C-o>", "<C-\\><C-n>")
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h")
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j")
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k")
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l")
+keymap("t", "<C-o>", "<C-\\><C-n>", { desc = "Normal mode in terminal" })
+keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", { desc = "Move to left in terminal" })
+keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", { desc = "Move to bottom in terminal" })
+keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", { desc = "Move to top in terminal" })
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", { desc = "Move to right in terminal" })
 
 -- Common
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Disable hlsearch" })
@@ -56,8 +46,7 @@ vim.api.nvim_create_user_command("Cppath", function()
 end, {})
 
 keymap("n", "<leader>c", "<cmd>Cppath<cr>", { desc = "Copy relative filepath" })
-keymap("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 keymap("t", "<Esc>", "<C-\\><C-n>")
 
-keymap("v", ">", ">gv")
-keymap("v", "<", "<gv")
+keymap("v", ">", ">gv", { desc = "Indent in" })
+keymap("v", "<", "<gv", { desc = "Indent out" })

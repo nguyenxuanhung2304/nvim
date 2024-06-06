@@ -30,6 +30,9 @@ else
 			{ import = "user.plugins" },
 		},
 		change_detection = { enabled = false },
+		keys = {
+			{ "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" } },
+		},
 	})
 
 	require("user.core")
