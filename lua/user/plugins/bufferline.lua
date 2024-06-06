@@ -63,5 +63,6 @@ return {
 	keys = {
 		{ "<leader>Br", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete buffers to the right" },
 		{ "<leader>Bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete buffers to the left" },
+		{ "<leader>Bo", "<Cmd>BufferLineCloseLeft<CR><Cmd>BufferLineCloseRight<CR>", desc = "Delete other buffers" },
 	},
 }
