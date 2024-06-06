@@ -36,7 +36,7 @@ return {
 
 			-- attach servers
 			local servers = {
-				-- "solargraph",
+				"solargraph",
 				"phpactor",
 				"tsserver",
 				"eslint",

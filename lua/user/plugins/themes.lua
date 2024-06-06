@@ -39,43 +39,4 @@ return {
 			)
 		end,
 	},
-	{
-		"rockyzhang24/arctic.nvim",
-		dependencies = { "rktjmp/lush.nvim" },
-		branch = "v2",
-		lazy = true,
-	},
-	{
-		"marko-cerovac/material.nvim",
-		lazy = true,
-	},
-	{
-		"folke/tokyonight.nvim",
-		priority = 1000,
-		opts = {},
-	},
-	{
-		"sainnhe/gruvbox-material",
-		lazy = true,
-	},
-	{
-		"projekt0n/github-nvim-theme",
-		lazy = true,
-	},
-	{
-		"LunarVim/synthwave84.nvim",
-		lazy = true,
-	},
-	{
-		{ "rose-pine/neovim", name = "rose-pine", opts = {
-			variant = "moon",
-		} },
-	},
-	{
-		'Mofiqul/vscode.nvim',
-		lazy = true,
-		opts = {
-			italic_comments = true,
-		}
-	}
 }
