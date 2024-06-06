@@ -1,5 +1,7 @@
 return {
   "luckasRanarison/tailwind-tools.nvim",
-  dependencies = { "nvim-treesitter/nvim-treesitter" },
+  ft = {
+    "css", "eruby", "html"
+  },
   opts = {}
 }
