@@ -58,6 +58,15 @@ return {
 			},
 		},
 		event = "BufRead",
+		keys = {
+			{ "<Leader>;P", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview hunk" } },
+			{ "<Leader>;s", "<cmd>Gitsigns stage_hunk<cr>", { desc = "Stage hunk" } },
+			{ "<Leader>;r", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Discard hunk" } },
+			{ "<Leader>;u", "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = "Unstage hunk" } },
+			{ "<leader>;n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" } },
+			{ "<leader>;p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" } },
+			{ "<leader>;c", "<cmd>GitBlameCopyFileURL<cr>", { desc = "Copy file url in github" } },
+		},
 	},
 	{
 		"f-person/git-blame.nvim",
@@ -87,6 +96,19 @@ return {
 				},
 			}
 		end,
+		keys = {
+			{
+				"<Leader>Cc",
+				"<cmd>GitConflictChooseOurs<cr>",
+				desc = "Select current",
+			},
+			{ "<Leader>Ci", "<cmd>GitConflictChooseTheirs<cr>", desc = "Select incomming" },
+			{ "<Leader>Cb", "<cmd>GitConflictChooseBoth<cr>", desc = "Select both" },
+			"<Leader>Cn",
+			"<cmd>GitConflictNextConflict<cr>",
+			desc = "Next",
+			{ "<Leader>Cp", "<cmd>GitConflictPrevConflict<cr>", desc = "Previous" },
+		},
 	},
 	{
 		"sindrets/diffview.nvim",
@@ -95,6 +117,11 @@ return {
 			"DiffviewOpen",
 			"DiffviewClose",
 			"DiffviewOpenFileHistory",
+		},
+		keys = {
+			{ "<Leader>Do", "<cmd>DiffviewOpen<cr>", desc = "Open Diffiview" },
+			{ "<Leader>Dc", "<cmd>DiffviewClose<cr>", desc = "Close Diffiview" },
+			{ "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", desc = "Open files history" },
 		},
 	},
 	{
@@ -106,6 +133,9 @@ return {
 				telescope = true,
 				diffview = true,
 			},
+		},
+		keys = {
+			{ "<Leader>g", "<cmd>Neogit<cr>", { desc = "Open neogit" } },
 		},
 	},
 }
