@@ -47,8 +47,9 @@ return {
 				"dartls",
 				"pyright",
 				"tailwindcss",
-				"sourcekit"
+				"sourcekit",
 			}
+
 			local lspconfig = require("lspconfig")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -76,6 +77,24 @@ return {
 		"williamboman/mason.nvim",
 		cmd = "Mason",
 		opts = {
+			ensure_installed = {
+				"clang_format",
+				"clangd",
+				"cspell",
+				"css_lsp",
+				"deno",
+				"html_lsp",
+				"kotlin_language_server",
+				"lua_language_server",
+				"phpactor",
+				"prettier",
+				"rubocop",
+				"solargraph",
+				"stylua",
+				"typescript_language_server",
+				"vetur_vls",
+				"vue-language-server",
+			},
 			ui = {
 				border = "rounded",
 			},
