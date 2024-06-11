@@ -15,6 +15,7 @@ return {
 			["<leader>D"] = { name = "+Diff" },
 			["<leader>B"] = { name = "+Bufferline" },
 			["<leader>T"] = { name = "+Test" },
+			["<leader>N"] = { name = "+Note" },
 		},
 		window = {
 			border = "single",
