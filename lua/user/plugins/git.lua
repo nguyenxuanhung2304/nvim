@@ -59,13 +59,8 @@ return {
 		},
 		event = "BufRead",
 		keys = {
-			{ "<Leader>;P", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview hunk" } },
-			{ "<Leader>;s", "<cmd>Gitsigns stage_hunk<cr>", { desc = "Stage hunk" } },
-			{ "<Leader>;r", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Discard hunk" } },
-			{ "<Leader>;u", "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = "Unstage hunk" } },
-			{ "<leader>;n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" } },
-			{ "<leader>;p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" } },
-			{ "<leader>;c", "<cmd>GitBlameCopyFileURL<cr>", { desc = "Copy file url in github" } },
+			{ "]n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" } },
+			{ "]p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" } },
 		},
 	},
 	{
