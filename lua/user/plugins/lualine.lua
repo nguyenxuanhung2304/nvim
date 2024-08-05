@@ -11,7 +11,7 @@ return {
 			always_divide_middle = true,
 		},
 		sections = {
-			lualine_a = { "mode" },
+			lualine_a = {},
 			lualine_b = {
 				{
 					"branch",
@@ -19,12 +19,7 @@ return {
 					icon = "",
 				},
 			},
-			lualine_c = {
-				{
-					"filename",
-					path = 1
-				},
-			},
+			lualine_c = {},
 			lualine_x = {
 				{
 					function()
@@ -52,7 +47,12 @@ return {
 					padding = 0,
 				},
 			},
-			lualine_z = { "progress" },
+			lualine_z = {
+				{
+					"progress",
+					padding = 1,
+				},
+			},
 		},
 		inactive_sections = {
 			lualine_a = {},

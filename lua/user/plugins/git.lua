@@ -59,8 +59,8 @@ return {
 		},
 		event = "BufRead",
 		keys = {
-			{ "]n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" } },
-			{ "]p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" } },
+			{ "<leader>n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" } },
+			{ "<leader>p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" } },
 		},
 	},
 	{
