@@ -4,6 +4,11 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			{ "ms-jpq/coq_nvim", branch = "coq" },
+			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
+			{ "ms-jpq/coq.thirdparty", branch = "3p" },
+		},
 		opts = function()
 			return {
 				diagnostics = {
@@ -26,6 +31,16 @@ return {
 					},
 				},
 				inlay_hints = { enabled = true },
+			}
+		end,
+		init = function()
+			vim.g.coq_settings = {
+				auto_start = true,
+				display = {
+					icons = {
+						mode = "short",
+					},
+				},
 			}
 		end,
 		config = function()
@@ -51,8 +66,6 @@ return {
 			}
 
 			local lspconfig = require("lspconfig")
-			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			local cmp_nvim_lsp = require("cmp_nvim_lsp")
 			local keymap = require("user.core.utils").keymap
 
 			for _, server in pairs(servers) do
@@ -63,7 +76,6 @@ return {
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 						keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 					end,
-					capabilities = cmp_nvim_lsp.default_capabilities(capabilities),
 				}
 				local has_custom_opts, server_custom_opts = pcall(require, "user.plugins.lsp.settings." .. server)
 				if has_custom_opts then
