@@ -7,12 +7,6 @@ return {
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 	end,
-	init = function()
-		local api = require("nvim-tree.api")
-		api.events.subscribe(api.events.Event.FileCreated, function(file)
-			vim.cmd("edit " .. file.fname)
-		end)
-	end,
 	opts = {
 		sync_root_with_cwd = true,
 		respect_buf_cwd = true,
