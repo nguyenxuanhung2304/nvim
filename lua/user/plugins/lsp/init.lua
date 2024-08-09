@@ -8,6 +8,7 @@ return {
 			{ "ms-jpq/coq_nvim", branch = "coq" },
 			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
 			{ "ms-jpq/coq.thirdparty", branch = "3p" },
+			{ "SmiteshP/nvim-navic" },
 		},
 		opts = function()
 			return {
@@ -66,15 +67,18 @@ return {
 			}
 
 			local lspconfig = require("lspconfig")
+			local navic = require("nvim-navic")
 			local keymap = require("user.core.utils").keymap
 
 			for _, server in pairs(servers) do
 				local opts = {
-					on_attach = function()
+					on_attach = function(client, buffer)
 						keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
 						keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 						keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+
+						navic.attach(client, buffer)
 					end,
 				}
 				local has_custom_opts, server_custom_opts = pcall(require, "user.plugins.lsp.settings." .. server)
