@@ -4,16 +4,6 @@ local keymap = utils.keymap
 -- Yank and hold current cursor
 keymap("v", "y", "ygv<Esc>")
 
--- Navigator between window
-keymap("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
-keymap("n", "<C-j>", "<C-w>j", { desc = "Move to down window" })
-keymap("n", "<C-k>", "<C-w>k", { desc = "Move to up window" })
-keymap("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
-
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", { desc = "Move to next buffer" })
-keymap("n", "<S-h>", ":bprevious<CR>", { desc = "Move to previous buffer" })
-
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>")
 
