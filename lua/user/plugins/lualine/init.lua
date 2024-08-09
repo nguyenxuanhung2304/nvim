@@ -1,3 +1,5 @@
+local lualine_components = require("user.plugins.lualine.components")
+
 return {
 	"nvim-lualine/lualine.nvim",
 	event = "VeryLazy",
@@ -11,47 +13,26 @@ return {
 			always_divide_middle = true,
 		},
 		sections = {
-			lualine_a = {},
+			lualine_a = {
+				lualine_components.branch(),
+			},
 			lualine_b = {
-				{
-					"branch",
-					icons_enabled = true,
-					icon = "",
-				},
+				lualine_components.filename(),
 			},
 			lualine_c = {},
 			lualine_x = {
-				{
-					function()
-						local shiftwidth = vim.api.nvim_buf_get_option(0, "shiftwidth")
-						return "Spaces: " .. shiftwidth
-					end,
-					padding = 1,
-				},
+				lualine_components.spaces(),
 				"filetype",
-				{
-					function()
-						if rawget(vim, "lsp") then
-							for _, client in ipairs(vim.lsp.get_active_clients()) do
-								if client.attached_buffers[vim.api.nvim_get_current_buf()] then
-									return string.format(" %s", client.name)
-								end
-							end
-						end
-					end,
-				},
+				lualine_components.lsp(),
 			},
 			lualine_y = {
-				{
-					"location",
-					padding = 0,
-				},
+				lualine_components.location(),
 			},
-			lualine_z = {
-				{
-					"progress",
-					padding = 1,
-				},
+			lualine_z = { lualine_components.progress() },
+		},
+		winbar = {
+			lualine_c = {
+				lualine_components.outline(),
 			},
 		},
 		inactive_sections = {
