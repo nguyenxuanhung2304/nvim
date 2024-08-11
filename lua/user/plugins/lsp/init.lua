@@ -5,9 +5,6 @@ return {
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			{ "ms-jpq/coq_nvim", branch = "coq" },
-			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
-			{ "ms-jpq/coq.thirdparty", branch = "3p" },
 			{ "SmiteshP/nvim-navic" },
 		},
 		opts = function()
@@ -32,16 +29,6 @@ return {
 					},
 				},
 				inlay_hints = { enabled = true },
-			}
-		end,
-		init = function()
-			vim.g.coq_settings = {
-				auto_start = true,
-				display = {
-					icons = {
-						mode = "short",
-					},
-				},
 			}
 		end,
 		config = function()
