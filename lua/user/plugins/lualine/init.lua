@@ -16,9 +16,7 @@ return {
 			lualine_a = {
 				lualine_components.branch(),
 			},
-			lualine_b = {
-				lualine_components.filename(),
-			},
+			lualine_b = {},
 			lualine_c = {},
 			lualine_x = {
 				lualine_components.spaces(),
@@ -38,7 +36,7 @@ return {
 		inactive_sections = {
 			lualine_a = {},
 			lualine_b = {},
-			lualine_c = { "filename" },
+			lualine_c = { },
 			lualine_x = { "location" },
 			lualine_y = {},
 			lualine_z = {},

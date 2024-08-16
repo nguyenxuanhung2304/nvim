@@ -1,6 +1,11 @@
 local utils = require("user.core.utils")
 local keymap = utils.keymap
 
+keymap("n", "<C-h>", "<C-w>h")
+keymap("n", "<C-j>", "<C-w>j")
+keymap("n", "<C-k>", "<C-w>k")
+keymap("n", "<C-l>", "<C-w>l")
+
 -- Yank and hold current cursor
 keymap("v", "y", "ygv<Esc>")
 
