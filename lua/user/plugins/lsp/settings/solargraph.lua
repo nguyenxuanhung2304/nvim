@@ -1,0 +1,5 @@
+return {
+  filetypes = {
+     "ruby", "eruby"
+  }
+}
