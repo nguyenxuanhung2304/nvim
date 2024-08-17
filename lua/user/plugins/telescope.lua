@@ -30,8 +30,6 @@ return {
 			},
 			{ "<leader>sr", "<cmd>Telescope oldfiles<cr>", desc = "Find oldfiles" },
 			{ "<leader>sB", "<cmd>Telescope git_branches<cr>", desc = "Find branches" },
-			{ "<leader>ss", "<cmd>Telescope git_stash<cr>", desc = "Find stashes" },
-			{ "<leader>si", "<cmd>Telescope media_files<cr>", desc = "Find media files" },
 			{ "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
 		},
 	},
