@@ -2,8 +2,8 @@ return {
 	{
 		"luisiacc/gruvbox-baby",
 		branch = "main",
-		config = function()
-			vim.api.nvim_command("colorscheme gruvbox-baby")
+		config = function ()
+			vim.cmd('colorscheme gruvbox-baby')
 		end,
 		init = function()
 			local currentColorscheme = vim.g.colors_name

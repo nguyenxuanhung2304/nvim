@@ -65,7 +65,9 @@ return {
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 						keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 
-						navic.attach(client, buffer)
+						if client.server_capabilities.documentSymbolProvider then
+							navic.attach(client, buffer)
+						end
 					end,
 				}
 				local has_custom_opts, server_custom_opts = pcall(require, "user.plugins.lsp.settings." .. server)
