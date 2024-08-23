@@ -6,7 +6,7 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "auto",
+			theme = "gruvbox",
 			component_separators = { left = "", right = "" },
 			section_separators = { left = "", right = "" },
 			disabled_filetypes = { "alpha", "dashboard", "Outline" },
@@ -16,7 +16,7 @@ return {
 			lualine_a = {
 				lualine_components.branch(),
 			},
-			lualine_b = {"filename"},
+			lualine_b = {},
 			lualine_c = {},
 			lualine_x = {
 				lualine_components.spaces(),
@@ -26,7 +26,7 @@ return {
 			lualine_y = {
 				lualine_components.location(),
 			},
-			lualine_z = { lualine_components.progress() },
+			lualine_z = {},
 		},
 		winbar = {
 			lualine_c = {
@@ -36,7 +36,7 @@ return {
 		inactive_sections = {
 			lualine_a = {},
 			lualine_b = {},
-			lualine_c = { },
+			lualine_c = {},
 			lualine_x = { "location" },
 			lualine_y = {},
 			lualine_z = {},
