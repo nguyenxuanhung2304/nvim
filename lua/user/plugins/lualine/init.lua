@@ -6,7 +6,7 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "gruvbox",
+			theme = "auto",
 			component_separators = { left = "", right = "" },
 			section_separators = { left = "", right = "" },
 			disabled_filetypes = { "alpha", "dashboard", "Outline" },
@@ -16,7 +16,9 @@ return {
 			lualine_a = {
 				lualine_components.branch(),
 			},
-			lualine_b = {},
+			lualine_b = {
+				"filename"
+			},
 			lualine_c = {},
 			lualine_x = {
 				lualine_components.spaces(),
