@@ -9,9 +9,10 @@ function M.branch()
 end
 
 function M.filename()
+	local _filename = vim.fn.expand('%')
+
 	return {
-		"filename",
-		path = 1,
+		_filename
 	}
 end
 

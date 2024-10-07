@@ -17,7 +17,10 @@ return {
 				lualine_components.branch(),
 			},
 			lualine_b = {
-				"filename"
+				{
+					"filename",
+					path = 1,
+				},
 			},
 			lualine_c = {},
 			lualine_x = {
