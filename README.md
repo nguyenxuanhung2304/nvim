@@ -51,6 +51,7 @@ My Neovim setup powered by 💤 lazy.nvim to make it easy to customize and exten
 - swiftformat: `brew install swiftformat`
 - prettier: `npm install --save-dev --save-exact prettier`
 - styluad: `brew install stylua`
+- html, css, eslint: `npm i -g vscode-langservers-extracted`
 
 ## 📂 File Structure
 
