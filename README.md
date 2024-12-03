@@ -45,6 +45,12 @@ My Neovim setup powered by 💤 lazy.nvim to make it easy to customize and exten
 - vuels: `npm install -g vls`
 - lua_ls: `brew install lua-language-server`
 - tailwindcss: `npm install -g @tailwindcss/language-server`
+- xcodebuild.nvim:
+```
+brew install xcode-build-server xcbeautify ruby pipx rg
+gem install xcodeproj
+pipx install pymobiledevice3
+```
  
 ### 🧹 Formatters
 - rubocop: `gem install rubocop`
