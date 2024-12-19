@@ -71,6 +71,7 @@ end
 
 vim.keymap.set("n", "<leader>cd", "<cmd>lua CopyCurrentDiagnostic()<cr>", { desc = "Copy current diagnostic" })
 
+-- Xcode
 vim.keymap.set("n", "<leader>xb", "<cmd>XcodebuildBuild<cr>", { desc = "Build Project" })
 vim.keymap.set("n", "<leader>xr", "<cmd>XcodebuildBuildRun<cr>", { desc = "Build & Run Project" })
 vim.keymap.set("n", "<leader>xl", "<cmd>XcodebuildToggleLogs<cr>", { desc = "Toggle Xcodebuild Logs" })
@@ -79,3 +80,12 @@ vim.keymap.set("n", "<leader>xd", "<cmd>XcodebuildSelectDevice<cr>", { desc = "S
 vim.keymap.set("n", "<leader>xq", "<cmd>Telescope quickfix<cr>", { desc = "Show QuickFix List" })
 vim.keymap.set("n", "<leader>xx", "<cmd>XcodebuildQuickfixLine<cr>", { desc = "Quickfix Line" })
 vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Show Code Actions" })
+
+-- Barbar
+keymap('n', '<leader>bp', '<Cmd>BufferPrevious<CR>', { desc = "Next buffer" })
+keymap('n', '<leader>bn', '<Cmd>BufferNext<CR>', { desc = "Previous buffer" })
+keymap('n', '<leader>bc', '<Cmd>BufferClose<CR>', { desc = "Close buffer" })
+
+keymap('n', '<leader>bh', '<Cmd>BufferCloseBuffersLeft<CR>', { desc = "Close buffers on left side" })
+keymap('n', '<leader>bl', '<Cmd>BufferCloseBuffersRight<CR>', { desc = "Close buffers on right side" })
+keymap('n', '<leader>ba', '<Cmd>BufferCloseAllButCurrent<CR>', { desc = "Close another buffers" })

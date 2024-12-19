@@ -16,12 +16,7 @@ return {
 			lualine_a = {
 				lualine_components.branch(),
 			},
-			lualine_b = {
-				{
-					"filename",
-					path = 1,
-				},
-			},
+			lualine_b = {},
 			lualine_c = {},
 			lualine_x = {
 				lualine_components.spaces(),

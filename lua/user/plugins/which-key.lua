@@ -17,6 +17,7 @@ return {
 			["<leader>g"] = { name = "+Git" },
 			["<leader>x"] = { name = "+Xcode" },
 			["<leader>c"] = { name = "+Code" },
+			["<leader>b"] = { name = "+Buffer" },
 		},
 		window = {
 			border = "single",
