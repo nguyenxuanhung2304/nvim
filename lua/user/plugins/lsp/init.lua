@@ -51,6 +51,7 @@ return {
 				"pyright",
 				"tailwindcss",
 				"sourcekit",
+				"cssls"
 			}
 
 			local lspconfig = require("lspconfig")
