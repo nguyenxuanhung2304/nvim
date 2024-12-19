@@ -11,10 +11,11 @@ return {
 			["<leader>s"] = { name = "+Search" },
 			["<leader>z"] = { name = "+Fold" },
 			["<leader>C"] = { name = "+Conflict" },
-			["<leader>;"] = { name = "+Git" },
 			["<leader>D"] = { name = "+Diff" },
 			["<leader>B"] = { name = "+Bufferline" },
 			["<leader>T"] = { name = "+Test" },
+			["<leader>g"] = { name = "+Git" },
+			["<leader>x"] = { name = "+Xcode" },
 		},
 		window = {
 			border = "single",

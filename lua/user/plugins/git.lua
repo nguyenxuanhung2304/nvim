@@ -1,3 +1,6 @@
+local Utils = require("user.core.utils")
+local map = Utils.keymap
+
 return {
 	{
 		"lewis6991/gitsigns.nvim",
@@ -56,12 +59,21 @@ return {
 			yadm = {
 				enable = false,
 			},
+			on_attach = function(_)
+				local gs = require("gitsigns")
+
+				-- Navigation
+				map("n", "]g", gs.next_hunk, { desc = "Next hunk" })
+				map("n", "[g", gs.prev_hunk, { desc = "Prev hunk" })
+
+				-- Actions
+				map("n", "<leader>gs", gs.stage_hunk, { desc = "Stage hunk" })
+				map("n", "<leader>gr", gs.reset_hunk, { desc = "Reset hunk" })
+				map("n", "<leader>gd", gs.diffthis, { desc = "Diff this" })
+				map("n", "<leader>gp", gs.preview_hunk, { desc = "Preview hunk" })
+			end,
 		},
-		event = "BufRead",
-		keys = {
-			{ "<leader>n", "<cmd>Gitsigns next_hunk<cr>", { desc = "Next hunk" } },
-			{ "<leader>p", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Previous hunk" } },
-		},
+		event = { "BufReadPre", "BufNewFile" },
 	},
 	{
 		"f-person/git-blame.nvim",
@@ -130,7 +142,7 @@ return {
 			},
 		},
 		keys = {
-			{ "<Leader>g", "<cmd>Neogit<cr>", desc = "Open neogit" },
+			{ "<Leader>go", "<cmd>Neogit<cr>", desc = "Open neogit" },
 		},
 	},
 }
