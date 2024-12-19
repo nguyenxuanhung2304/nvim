@@ -16,6 +16,7 @@ return {
 			["<leader>T"] = { name = "+Test" },
 			["<leader>g"] = { name = "+Git" },
 			["<leader>x"] = { name = "+Xcode" },
+			["<leader>c"] = { name = "+Code" },
 		},
 		window = {
 			border = "single",
