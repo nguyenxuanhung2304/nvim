@@ -1,6 +1,6 @@
 return {
   "otavioschwanck/arrow.nvim",
-  event = "BufRead",
+  event = "BufEnter",
   opts = {
     show_icons = true,
     leader_key = ';',

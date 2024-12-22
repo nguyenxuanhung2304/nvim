@@ -1,5 +1,6 @@
 return {
 	"romgrk/barbar.nvim",
+	event = "VeryLazy",
 	init = function()
 		vim.g.barbar_auto_setup = false
 	end,
