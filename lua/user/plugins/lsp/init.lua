@@ -41,7 +41,7 @@ return {
 			local servers = {
 				"solargraph",
 				"phpactor",
-				"tsserver",
+				"ts_ls",
 				"eslint",
 				"jsonls",
 				"emmet_ls",

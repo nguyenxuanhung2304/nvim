@@ -1,31 +1,26 @@
 return {
 	"folke/which-key.nvim",
-	opt = true,
-	init = function()
-		vim.o.timeout = true
-		vim.o.timeoutlen = 100
-	end,
+	event = "VeryLazy",
 	opts = {
-		defaults = {
-			mode = { "n", "v" },
-			["<leader>s"] = { name = "+Search" },
-			["<leader>z"] = { name = "+Fold" },
-			["<leader>C"] = { name = "+Conflict" },
-			["<leader>D"] = { name = "+Diff" },
-			["<leader>B"] = { name = "+Bufferline" },
-			["<leader>T"] = { name = "+Test" },
-			["<leader>g"] = { name = "+Git" },
-			["<leader>x"] = { name = "+Xcode" },
-			["<leader>c"] = { name = "+Code" },
-			["<leader>b"] = { name = "+Buffer" },
-		},
-		window = {
+		win = {
 			border = "single",
 		},
 	},
 	config = function(_, opts)
 		local wk = require("which-key")
+		wk.add({
+			mode = { "n", "v" },
+			{ "<leader>B", desc = "Bufferline" },
+			{ "<leader>C", desc = "Conflict" },
+			{ "<leader>D", desc = "Diff" },
+			{ "<leader>T", desc = "Test" },
+			{ "<leader>b", desc = "Buffer" },
+			{ "<leader>c", desc = "Code" },
+			{ "<leader>g", desc = "Git" },
+			{ "<leader>s", desc = "Search" },
+			{ "<leader>x", desc = "Xcode" },
+		})
 		wk.setup(opts)
-		wk.register(opts.defaults)
+		-- wk.register(opts.defaults)
 	end,
 }
