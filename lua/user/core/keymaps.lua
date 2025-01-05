@@ -38,17 +38,6 @@ keymap("t", "<Esc>", "<C-\\><C-n>")
 keymap("v", ">", ">gv", { desc = "Indent in" })
 keymap("v", "<", "<gv", { desc = "Indent out" })
 
-vim.keymap.set("n", "<leader>cm", function()
-	require("menu").open("default")
-end, {})
-
-vim.keymap.set("n", "<RightMouse>", function()
-	vim.cmd.exec('"normal! \\<RightMouse>"')
-
-	local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
-	require("menu").open(options, { mouse = true })
-end, {})
-
 function CopyCurrentDiagnostic()
 	local diagnostics = vim.diagnostic.get(0)
 	local line = vim.api.nvim_win_get_cursor(0)[1] - 1
@@ -82,8 +71,8 @@ vim.keymap.set("n", "<leader>xx", "<cmd>XcodebuildQuickfixLine<cr>", { desc = "Q
 vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Show Code Actions" })
 
 -- Barbar
-keymap('n', '<leader>bp', '<Cmd>BufferPrevious<CR>', { desc = "Next buffer" })
-keymap('n', '<leader>bn', '<Cmd>BufferNext<CR>', { desc = "Previous buffer" })
+keymap('n', '[b', '<Cmd>BufferPrevious<CR>', { desc = "Next buffer" })
+keymap('n', ']b', '<Cmd>BufferNext<CR>', { desc = "Previous buffer" })
 keymap('n', '<leader>bc', '<Cmd>BufferClose<CR>', { desc = "Close buffer" })
 
 keymap('n', '<leader>bh', '<Cmd>BufferCloseBuffersLeft<CR>', { desc = "Close buffers on left side" })

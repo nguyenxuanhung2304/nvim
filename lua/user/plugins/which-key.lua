@@ -10,7 +10,6 @@ return {
 		local wk = require("which-key")
 		wk.add({
 			mode = { "n", "v" },
-			{ "<leader>B", desc = "Bufferline" },
 			{ "<leader>C", desc = "Conflict" },
 			{ "<leader>D", desc = "Diff" },
 			{ "<leader>T", desc = "Test" },
