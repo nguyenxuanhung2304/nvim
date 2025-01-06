@@ -51,7 +51,7 @@ return {
 				"pyright",
 				"tailwindcss",
 				"sourcekit",
-				"cssls"
+				"cssls",
 			}
 
 			local lspconfig = require("lspconfig")
@@ -123,7 +123,7 @@ return {
 			}
 		end,
 	},
-	{ "williamboman/mason-lspconfig.nvim" },
+	{ "williamboman/mason-lspconfig.nvim", event = { "BufReadPre", "BufNewFile" } },
 	{
 		"onsails/lspkind.nvim",
 		event = "BufReadPre",
