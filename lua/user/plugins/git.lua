@@ -15,7 +15,6 @@ return {
 				-- Actions
 				map("n", "<leader>gs", gs.stage_hunk, { desc = "Stage hunk" })
 				map("n", "<leader>gr", gs.reset_hunk, { desc = "Reset hunk" })
-				map("n", "<leader>gd", gs.diffthis, { desc = "Diff this" })
 				map("n", "<leader>gp", gs.preview_hunk, { desc = "Preview hunk" })
 			end,
 		},
@@ -64,27 +63,12 @@ return {
 		},
 	},
 	{
-		"sindrets/diffview.nvim",
-		opts = {},
-		cmd = {
-			"DiffviewOpen",
-			"DiffviewClose",
-			"DiffviewOpenFileHistory",
-		},
-		keys = {
-			{ "<Leader>Do", "<cmd>DiffviewOpen<cr>", desc = "Open Diffiview" },
-			{ "<Leader>Dc", "<cmd>DiffviewClose<cr>", desc = "Close Diffiview" },
-			{ "<Leader>Dh", "<cmd>DiffviewFileHistory<cr>", desc = "Open files history" },
-		},
-	},
-	{
 		"NeogitOrg/neogit",
 		cmd = "Neogit",
 		config = true,
 		opts = {
 			integrations = {
 				telescope = true,
-				diffview = true,
 			},
 		},
 		keys = {
