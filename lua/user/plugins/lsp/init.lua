@@ -8,6 +8,8 @@ return {
 			{ "SmiteshP/nvim-navic" },
 		},
 		opts = function()
+			vim.opt.winbar = "%{%v:lua.require'user.core.utils'.get_winbar()%}"
+
 			return {
 				diagnostics = {
 					-- disable virtual text
@@ -66,9 +68,9 @@ return {
 						keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 						keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 
-						if client.server_capabilities.documentSymbolProvider then
-							navic.attach(client, buffer)
-						end
+						-- if client.server_capabilities.documentSymbolProvider then
+						-- 	navic.attach(client, buffer)
+						-- end
 					end,
 				}
 				local has_custom_opts, server_custom_opts = pcall(require, "user.plugins.lsp.settings." .. server)

@@ -72,7 +72,8 @@ return {
 			},
 		},
 		keys = {
-			{ "<Leader>go", "<cmd>Neogit<cr>", desc = "Open neogit" },
+			{ "<Leader>go", "<cmd>Neogit<cr>", desc = "Open Neogit" },
+			{ "<Leader>gb", "<cmd>Neogit branch<cr>", desc = "Open Neogit: Branch" },
 		},
 	},
 }

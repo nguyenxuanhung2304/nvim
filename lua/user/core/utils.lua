@@ -36,4 +36,20 @@ function M.on_load(name, fn)
 	end
 end
 
+function M.get_relative_path()
+	local path = vim.fn.expand("%:~:.")
+	return path ~= "" and path or "[No Name]"
+end
+
+M.get_winbar = function()
+	local navic = require("nvim-navic")
+	local relative_path = M.get_relative_path()
+	local navic_location = navic.is_available() and navic.get_location() or ""
+
+	if navic_location ~= "" then
+		return relative_path .. " > " .. navic_location
+	end
+	return relative_path
+end
+
 return M
